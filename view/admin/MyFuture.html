@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十年后 - 与世界分享你的追梦历程</title>
+    <link rel="shortcut icon" href="../../public/images/favicon.ico"/>
+
+    <link rel="stylesheet" href="../css/MyFuture.css" />
+</head>
+<body onload="init();">
+    <nav class="navbar">
+        <ul class="nav-information">
+            <li class="nav-info-lis"><a href="">动态</a></li>
+            <li class="nav-info-lis"><a href="">发现</a></li>
+            <li class="nav-info-three nav-info-third"><a href="">我的未来</a></li>
+            <li class="nav-info-lis"><a href="">来往</a></li>
+        </ul>
+        <div class="nav-img-position"></div>
+        <div class="nav-person">
+            <a class="nav-person-search" href=""><span class="nav-search-icon">f</span></a>
+            <div class="nav-person-img">
+                <figure>
+                    <a href=""><img src="../../public/images/blank.png" /></a>
+                </figure>
+                <div class="nav-logout"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mf-content-top">
+        <textarea cols="50" rows="1" id="proverbs" class="mf-profile-motto-container">在这里输入个人箴言</textarea>
+    </div>
+
+    <div class="mf-profile-content">
+        <div class="mf-profile-content-row"></div>
+        <div class="mf-profile-modify-content">
+            <div class="mf-profile-modcon-name"><h2>某某某</h2></div>
+            <div class="mf-profile-modcon-tro">生活了 <span>22</span> 年的 <span>男生</span> ，在 <span>湖南</span></div>
+            <div class="mf-profile-modcon-futrue">现在是 <span>文艺小清新</span> 丨 想成为 <span>成功男士</span></div>
+        </div>
+        <div class="mf-profile-modify-btn-container"><a href="">编辑资料</a></div>
+    </div>
+
+    <!--时间轴-->
+    <div class="mf-content-timeline"></div>
+
+    <div class="mf-content-bottom">
+        <div class="mf-content-BottConn">
+            <div class="mf-content-BottLeft">               <!--内容部分的低端的左边-->
+                <ul class="mf-Content-BottLeft-nav">
+                    <li><a href=""><span class="record">记录</span></a></li>
+                    <li><a href=""><span class="plan">计划</span></a></li>
+                    <li><a href=""><span class="discuss">讨论</span></a></li>
+                </ul>
+
+                <ul class="mf-content-BottLeft-idea">
+                    <li class="first"><a href="">
+                        <img src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
+                        <p>想法</p>
+                    </a></li>
+                    <li class="second"><a href="">
+                        <img src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
+                        <p>日志</p>
+                    </a></li>
+                </ul>
+
+                <div class="mf-content-BottLeft-publish"></div>
+            </div>
+
+            <div class="mf-content-BottRight">         <!--内容部分的低端的右边-->
+                <div class="mf-BottRight-DreamInfo">
+                    <div class="mf-BottRight-DreamInfo-headline">
+                        梦想信息
+                        <a href="" class="deleteInfo"><img src="../../public/images/delete.png"></a>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-img"><a href="">
+                        <div class="mf-BottRight-DreamInfo-changeImg"></div>
+                    </a></div>
+                    <div class="mf-BottRight-DreamInfo-Name">
+                        <span class="mf-BottRight-DreamInfo-name">名称</span>
+                        <span class="mf-BottRight-DreamInfo-Nword">理解「十年后」以及人生</span>
+                        <span class="mf-BottRight-DreamInfo-Neditor"><a href="">编辑</a></span>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-Dispict">
+                        <span class="mf-BottRight-DreamInfo-dispict">描述</span>
+                        <span class="mf-BottRight-DreamInfo-Dword">
+                            关注自我的状态，关注内心，把现有这个状态的你当作最终的你，而不把外在的干扰当作敌人，因为现在的你具有的一切就已经是所有过去的结果了。
+                        </span>
+                        <span class="mf-BottRight-DreamInfo-Deditor"><a href="">编辑</a></span>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-State">
+                        <span class="mf-BottRight-DreamInfo-state">描述</span>
+                        <span class="mf-BottRight-DreamInfo-Sword">梦</span>
+                        <span class="mf-BottRight-DreamInfo-Seditor"><a href="">编辑</a></span>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-Time">
+                        <span class="mf-BottRight-DreamInfo-time">时间</span>
+                        <span class="mf-BottRight-DreamInfo-Tword">2017 年 04 月 06 日</span>
+                        <span class="mf-BottRight-DreamInfo-Teditor"><a href="">编辑</a></span>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-Privacy">
+                        <span class="mf-BottRight-DreamInfo-privacy">隐私</span>
+                        <span class="mf-BottRight-DreamInfo-Pbtn"></span>
+                    </div>
+                    <div class="mf-BottRight-DreamInfo-Lable">
+                        <span class="mf-BottRight-DreamInfo-lable">标签</span>
+                        <span class="mf-BottRight-DreamInfo-Beditor"><a href="">编辑</a></span>
+                    </div>
+                </div>
+
+                <div class="mf-BottRight-app-download">
+                    <a href="" target="_blank">
+                        <img src="../../public/images/appdownload.png" alt="" />
+                    </a>
+                </div>
+
+                <div class="mf-BottRight-foot-right">
+                    © 2015 - 2016 十年后 ·
+                    <a href="" target="_blank">关于</a> ·
+                    <a href="" target="_blank">成员</a> ·
+                    <a href="" target="_blank">加入我们</a> ·
+                    <a href="" target="_blank">用户协议</a> ·
+                    <a href="" target="_blank">媒体报道</a> ·
+                    <a href="" target="_blank">下载应用</a> ·
+                    <a href="" target="_blank">回到旧版</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--锚点-->
+    <div class="goTop"><a href="#top" class="goTopBtn" title="返回顶部">Ú</a></div>
+
+    <script src="../../public/js/jquery-1.9.1.min.js"></script>
+    <script>
+        <!--下拉滚动条导航栏的变化以及锚点的变化-->
+        $(window.onscroll=function () {
+            var top=$(document).scrollTop() ? $(document).scrollTop() : $("body").scrollTop();
+            /*console.log(top);*/
+            if(top>0){
+                $(".goTopBtn").fadeIn();
+            }else if(top==0){
+                $(".goTopBtn").fadeOut();
+            }
+            if(top<=350){
+                $(".navbar").css("background-color","transparent");
+                $(".navbar").removeClass("navbar-border");
+                $(".nav-information li").removeClass("nav-info-lis");
+                $(".nav-info-three").removeClass("nav-info-third");
+            }else{
+                $(".navbar").css("background-color","#fff");
+                $(".navbar").addClass("navbar-border");
+                $(".nav-information li").addClass("nav-info-lis");
+                $(".nav-info-three").addClass("nav-info-third");
+            }
+        });
+
+        //textarea自适应高度
+        var observe;
+        if (window.attachEvent) {
+            observe = function (element, event, handler) {
+                element.attachEvent('on'+event, handler);
+            };
+        }else{
+            observe = function (element, event, handler) {
+                element.addEventListener(event, handler, false);
+            };
+        }
+        function init () {
+            var proverbs = document.getElementById('proverbs');
+            function resize () {
+                proverbs.style.height = 'auto';
+                proverbs.style.height = proverbs.scrollHeight+'px';
+
+            }
+            /* 0-timeout to get the already changed text */
+            function delayedResize () {
+                window.setTimeout(resize, 0);
+                /*proverbs.style.borderBottom='1px solid red';*/
+            }
+            observe(proverbs, 'change',  resize);
+            observe(proverbs, 'cut',     delayedResize);
+            observe(proverbs, 'paste',   delayedResize);
+            observe(proverbs, 'drop',    delayedResize);
+            observe(proverbs, 'keydown', delayedResize);
+            proverbs.focus();
+            proverbs.select();
+            resize();
+        }
+    </script>
+</body>
+</html>

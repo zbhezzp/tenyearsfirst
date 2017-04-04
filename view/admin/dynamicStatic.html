@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十年后 - 与世界分享你的追梦历程</title>
+    <link rel="shortcut icon" href="../../public/images/favicon.ico"/>
+
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/dynamicStatic.css" />
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-information">
+            <li class="nav-info-first"><a href="">动态</a></li>
+            <li><a href="">发现</a></li>
+            <li><a href="">我的未来</a></li>
+            <li><a href="">来往</a></li>
+        </ul>
+        <div class="nav-img-position"></div>
+        <div class="nav-person">
+            <a class="nav-person-search" href=""><span class="nav-search-icon">f</span></a>
+            <div class="nav-person-img">
+                <figure>
+                    <a href=""><img src="../../public/images/blank.png" /></a>
+                </figure>
+                <div class="nav-logout"></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="content-left">
+                    <div class="cl-btn-container">
+                        <ul>
+                            <li><a href="">
+                                <div class="cl-add-img cl-add-mood-img">
+                                    <img src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;" />
+                                </div>
+                                <p>想法</p>
+                            </a></li>
+                            <li><a href="">
+                                <div class="cl-add-img cl-add-article-img">
+                                    <img src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;" />
+                                </div>
+                                <p>日志</p>
+                            </a></li>
+                            <li class="last"><a href="">
+                                <div class="cl-add-img cl-add-play-img">
+                                    <img src="../../public/images/cl-icon-plan.png" style="width:58px;height:50px;" />
+                                </div>
+                                <p>计划</p>
+                            </a></li>
+                        </ul>
+                    </div>
+                    <div id="cl_feeds_container" >
+                        <div class="cl-loading">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-right hidden-sm hidden-xs">
+                    <div class="cr-part-info">
+                        <div class="cr-card-bg">
+                            <div class="cr-card-dream-top-content">
+                                <img class="cr-card-user-img" src="../../public/images/blank.png" alt=""/>
+                                <h5 class="ty-card-user-name">黄伯伯</h5>
+                                <p class="ty-card-user-now">现在是&nbsp;|&nbsp;抢红包</p>
+                                <p class="ty-card-user-future">想成为&nbsp;|&nbsp;继续抢红包</p>
+                            </div>
+                        </div>
+                        <div class="cr-card-dream">
+                            <a href="">
+                                <div class="cr-card-dream-count ">
+                                    <p class="cr-card-dream-count-num" title="">3</p>
+                                    <p class="cr-card-dream-font">梦想</p>
+                                </div>
+                            </a>
+                            <a class="cr-card-dream-count">
+                                <p class="cr-card-dream-count-num" title="">1</p>
+                                <p class="cr-card-dream-font">关注</p>
+                            </a>
+                            <a class="cr-card-dream-count">
+                                <p class="cr-card-dream-count-num" title="">1</p>
+                                <p class="cr-card-dream-font">关注者</p>
+                            </a>
+                        </div>
+                        <div class="cr-card-dream-feeds">
+                            <a href="" title="工作" target="_blank">
+                                <p class="cr-card-dream-feed cr-layover">
+                                    <span class="ty-card-feed-content" >工作</span>
+                                </p>
+                            </a>
+                            <a href="" title="理解「十年后」以及人生" target="_blank">
+                                <p class="cr-card-dream-feed cr-layover">
+                                    <span class="ty-card-feed-content" >理解「十年后」以及人生</span>
+                                </p>
+                            </a>
+                            <a href="" title="继续抢红包" target="_blank">
+                                <p class="cr-card-dream-feed cr-layover">
+                                    <span class="ty-card-feed-content" >继续抢红包</span>
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="cr-app-download">
+                        <a href="" target="_blank">
+                            <img src="../../public/images/appdownload.png" alt="" />
+                        </a>
+                    </div>
+                    <div class="cr-foot-right">
+                        © 2015 - 2016 十年后 ·
+                        <a href="" target="_blank">关于</a> ·
+                        <a href="" target="_blank">成员</a> ·
+                        <a href="" target="_blank">加入我们</a> ·
+                        <a href="" target="_blank">用户协议</a> ·
+                        <a href="" target="_blank">媒体报道</a> ·
+                        <a href="" target="_blank">下载应用</a> ·
+                        <a href="" target="_blank">回到旧版</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--锚点-->
+    <div class="goTop"><a href="#top" class="goTopBtn" title="返回顶部">Ú</a></div>
+    <script src="../../public/js/jquery-1.9.1.min.js"></script>
+    <script>
+        $(window.onscroll=function () {
+            var top=$(document).scrollTop() ? $(document).scrollTop() : $("body").scrollTop();
+            console.log(top);
+            if(top>0){
+                $(".goTopBtn").fadeIn();
+            }else if(top==0){
+                $(".goTopBtn").fadeOut();
+            }
+        });
+
+    </script>
+
+</body>
+</html>

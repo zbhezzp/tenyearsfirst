@@ -1,0 +1,376 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height:100%;
+    background: url("../../public/images/body-img2.jpg") no-repeat -100px;
+    -webkit-box-shadow:10px 10px 1000px inset #eee;
+}
+@font-face{       /*特定字体*/
+    font-family:'unlogficon';
+    src:url(../woff/unlogficon.woff),url(../woff/unlogficon.woff) format('woff');
+}
+a{
+    text-decoration: none;
+}
+p{
+    color:#fff;
+    font-weight: bold;
+}
+ul li{
+    list-style: none;
+}
+.body-first-screen,.body-second-screen,.body-third-screen{
+    height:100%;
+    font-family: tyWebIcon !important;
+}
+
+
+
+
+/*首页的第一个屏幕*/
+.body-first-screen .bf-background{
+    position: relative;
+    width:100%;
+    height:100%;
+    background: url("../images/bf_bg.jpg");
+    background-size:cover;
+}
+.click{
+    float: left;
+    width: 5px;
+    height:5px;
+    background-color: lavenderblush;
+    position: fixed;
+    left: 35px;
+    z-index: 999;
+    border-radius:10px;
+}
+.click-show{
+    width: 10px;
+    height: 10px;
+    left: 32.5px;
+    margin-top: -2.5px;
+}
+.click:hover{
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    left: 32.5px;
+    margin-top: -2.5px;
+}
+.click-box1{
+    top:267.5px;
+}
+.click-box2{
+    top:297.5px;
+}
+.click-box3{
+    top:327.5px;
+}
+.bf-goto-register{
+    float:right;
+    margin-top:40px;
+    margin-right:40px;
+}
+.bf-goto-register a{
+    color:#fff;
+    padding: 6px 18px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+}
+.bf-goto-register a:hover{
+    transition: background-color 0.6s ease-out;
+    transition: border 1.0s ease;
+    background: #746761;
+    border:none;
+}
+
+
+/*首页的第二个屏幕*/
+.body-second-screen .bs-background{
+    position: relative;
+    height:100%;
+    text-align: center;
+    background: url("../images/bs-bg.jpg");
+    background-size: cover;
+}
+.bs-background .bs-explore{
+    position: relative;
+    top:160px;
+}
+.bs-explore h2{
+    color:#fff;
+    font-size: 54px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+.bs-explore .bs-explore-animation{
+    color:#fff;
+    font-size: 36px;
+    font-weight: 400;
+    height: 52px;
+    line-height: 52px;
+}
+.bs-explore-content{
+    width:72px;
+    height:40px;
+    display: inline-block;
+    border-bottom:3px solid #fff;
+    padding: 0px 24px 5px 24px;
+    overflow: hidden;
+    position: relative;
+}
+.bs-explore-content ul{
+
+    position: absolute;
+    top:0px;
+}
+.bs-explore-content ul li a{
+    color:#fff;
+}
+
+
+/*首页的第三个屏幕*/
+.body-third-screen{
+    position: relative;
+    height:100%;
+    width:100%;
+}
+.body-third-screen .bt-background{
+    width:100%;
+    height:92%;
+    background: url("../images/bt_bg.jpg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.bt-channel-content-sum{
+    width:1000px;
+    height:74%;
+    margin: 40px auto;
+}
+.bt-channel{
+    float:left;
+    width:230px;
+    height:130px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1000px #8A8791 inset;
+}
+.bt-ch1{
+    background: url("../images/bt-c1.jpg");
+    background-size: cover;
+}
+.bt-ch2{
+    background: url("../images/bt-c2.jpg");
+    background-size: cover;
+}
+.bt-ch3{
+    background: url("../images/bt-c3.jpg");
+    background-size: cover;
+}
+.bt-ch4{
+    background: url("../images/bt-c4.jpg");
+    background-size: cover;
+}
+.bt-ch5{
+    background: url("../images/bt-c5.jpg");
+    background-size: cover;
+}
+.bt-ch2{
+    background: url("../images/bt-c2.jpg");
+    background-size: cover;
+}
+.bt-ch6{
+    background: url("../images/bt-c6.jpg");
+    background-size: cover;
+}
+.bt-ch7{
+    background: url("../images/bt-c7.jpg");
+    background-size: cover;
+}
+.bt-ch8{
+    background: url("../images/bt-c8.jpg");
+    background-size: cover;
+}
+.bt-channel-content{
+    width:100%;
+    height:100%;
+    display: inline-block;
+    overflow: hidden;
+}
+.bt-channel-panel{
+    color:#fff;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    height:130px;
+    line-height: 130px;
+    -moz-transition:all 0.6s ease-in-out;
+    -webkit-transition:all 0.6s ease-in-out;
+}
+.bt-channel-panel:hover{
+    height:78px;
+    line-height:78px;
+}
+.bt-channel-dynamic{
+    width:230px;
+    height:52px;
+}
+.bt-channel-dynamic .bt-col-6{
+    width:114px;
+    margin: 8px 0px;
+    float:left;
+}
+@media (max-width: 600px) {
+    .bt-channel-content-sum{
+        width:400px;
+        height:88%;
+        margin: auto;
+    }
+    .bt-channel{
+        float:left;
+        width:180px;
+        height:100px;
+    }
+    .bt-channel-panel{
+        text-align: center;
+        height:100px;
+        line-height: 100px;
+        -moz-transition:all 0.4s ease-in-out;
+        -webkit-transition:all 0.4s ease-in-out;
+    }
+    .bt-channel-panel:hover{
+        height:58px;
+        line-height:58px;
+    }
+    .bt-channel-dynamic{
+        width:180px;
+        height:42px;
+    }
+    .bt-channel-dynamic .bt-col-6{
+        width:88px;
+        margin: 8px 0px;
+        float:left;
+    }
+}
+@media (min-width:600px) and (max-width: 1000px) {
+    .bt-channel-content-sum{
+        width:600px;
+        height:90%;
+        text-align: center;
+    }
+    .bt-channel{
+        float:left;
+        width:180px;
+        height:100px;
+    }
+    .bt-channel-panel{
+        text-align: center;
+        height:100px;
+        line-height: 100px;
+        -moz-transition:all 0.4s ease-in-out;
+        -webkit-transition:all 0.4s ease-in-out;
+    }
+    .bt-channel-panel:hover{
+        height:58px;
+        line-height:58px;
+    }
+    .bt-channel-dynamic{
+        width:180px;
+        height:42px;
+    }
+    .bt-channel-dynamic .bt-col-6{
+        width:88px;
+        margin: 8px 0px;
+        float:left;
+    }
+}
+
+/*首页的第三个屏幕--底部信息*/
+.body-third-screen .bt-bottom{
+    width:100%;
+    height:322px;
+    padding:30px 0px;
+    background: #9D95C1;
+    overflow: hidden;
+    position: relative;
+}
+.bt-bottom-content{
+    width:1000px;
+    height:249px;
+    margin: auto;
+}
+.bottom-contant-col{
+    width:250px;
+    height:189px;
+    float:left;
+}
+.app{            /*下载应用距下的距离*/
+    position: relative;
+    top: 20px;
+}
+.bottom-contant-col ul li a{
+    color:#ccc;
+
+}
+.bottom-contant-col p{
+    color:#ccc;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px 0px 20px 0px;
+}
+.bottom-contant-col .bottom-contantX2{
+    width:200px;
+    line-height:1.5;
+    color:#ccc;
+    font-size: 14px;
+}
+.bottom-contant-col .bottom-aboutMe,.bottom-mediaReport,.bottom-downloadApp{
+    height:36px;
+    line-height: 36px;
+    color:#eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+.bottom-contant-col ul li{
+    height:30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.bottom-contant-col .download-btn{
+    width:115px;
+    height:35px;
+    text-align: center;
+    line-height: 35px;
+    border:1px solid #04A6EA;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.bottom-contant-col .download-btn a{
+    color:#04A6EA;
+}
+.bottom-contant-col .download-btn a b{
+    font-family:'unlogficon';
+    font-size: 24px;
+    font-weight: 400;
+    color:#04A6EA;
+}
+.download-QRcode{
+    position: absolute;
+    top:0px;
+    left:125px;
+}
+.bt-bottom-foot{
+    width:100%;
+    height:73px;
+    text-align: center;
+    color:#657277;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+}
+.bt-bottom-foot a{
+    color:#ccc;
+}

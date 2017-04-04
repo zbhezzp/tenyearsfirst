@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>十年后 - 与世界分享你的追梦历程</title>
+    <link rel="shortcut icon" href="../../public/images/favicon.ico"/>
+
+    <link rel="stylesheet" href="../../public/css/index.css" />
+    <script src="../../public/js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div class="click-box1 click" onclick="light(1)"></div>
+<div class="click-box2 click" onclick="light(2)"></div>
+<div class="click-box3 click" onclick="light(3)"></div>
+    <!--首页的第一个屏幕-->
+    <div class="body-first-screen show-box1" >
+        <div class="bf-background">
+            <!--登陆跳转-->
+            <div class="bf-goto-register">
+                <a href="">注册</a>
+            </div>
+            <!--时间轴-->
+            <div class="timeLine"></div>
+        </div>
+    </div>
+
+    <!--首页的第二个屏幕-->
+    <div class="body-second-screen show-box2" >
+        <div class="bs-background">
+            <div class="bs-explore">
+                <h2>探索更多有趣的梦想</h2>
+                <div class="bs-explore-animation">
+                    发现在
+                    <span class="bs-explore-content">
+                        <ul>
+                            <li style="display:block"><a href="">生活</a></li>
+                            <li><a href="">学习</a></li>
+                            <li><a href="">工作</a></li>
+                            <li><a href="">创新</a></li>
+                            <li><a href="">健康</a></li>
+                            <li><a href="">旅行</a></li>
+                            <li><a href="">文艺</a></li>
+                            <li><a href="">情感</a></li>
+                        </ul>
+                    </span>
+                    的梦想家
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--首页的第三个屏幕-->
+    <div class="body-third-screen show-box3" >
+        <div class="bt-background">
+            <div class="bt-channel-content-sum">
+                <div class="bt-channel bt-ch1">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">生活</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch2">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">学习</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch3">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">工作</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch4">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">创新</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch5">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">健康</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch6">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">旅行</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch7">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">文艺</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="bt-channel bt-ch8">
+                    <a class="bt-channel-content" href="">
+                        <div class="bt-channel-panel">情感</div>
+                        <div class="bt-channel-dynamic">
+                            <div class="bt-col-6" style="text-align: center;border-right: 2px solid #B0ABA3">
+                                <p class="bt-bold-count">13405</p>
+                                <p>梦想</p>
+                            </div>
+                            <div class="bt-col-6" style="text-align: center">
+                                <p class="bt-bold-count">19965</p>
+                                <p>动态</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="bt-bottom">
+            <div class="bt-bottom-content">
+                <div class="bottom-contant-col future">
+                    <h2><img src="../../public/images/logo_login.png" style="width:134px;"></h2>
+                    <p>与世界分享你的追梦历程</p>
+                    <div class="bottom-contantX2">「十年后」是一个基于梦想的经验交流社区。在这里，你可以自由的分享关于未来梦想的真实想法，并探索更多有趣的梦想，结交志同道合的人。</div>
+                </div>
+                <div class="bottom-contant-col about">
+                    <div class="bottom-aboutMe">关于我们</div>
+                    <ul>
+                        <li><a href="">关于十年后</a></li>
+                        <li><a href="">团队成员</a></li>
+                        <li><a href="">加入我们</a></li>
+                        <li><a href="">用户协议</a></li>
+                        <li><a href="">回到旧版本</a></li>
+                    </ul>
+                </div>
+                <div class="bottom-contant-col media">
+                    <div class="bottom-mediaReport">媒体报道</div>
+                    <ul>
+                        <li><a href="">PingWest</a></li>
+                        <li><a href="">动点科技</a></li>
+                        <li><a href="">IT桔子</a></li>
+                        <li><a href="">创业邦</a></li>
+                        <li><a href="">i黑马</a></li>
+                    </ul>
+                </div>
+                <div class="bottom-contant-col download">
+                    <div class="bottom-downloadApp">下载应用</div>
+                    <div class="bottom-download-col app">
+                        <div class="download-btn">
+                            <a href="" target="_blank">
+                                <b class="ty-icon-ios"></b>
+                                <span>iOS 版</span>
+                            </a>
+                        </div>
+                        <div class="download-btn">
+                            <a href="" target="_blank">
+                                <b class="ty-icon-android"></b>
+                                <span>Android 版</span>
+                            </a>
+                        </div>
+                        <div class="download-QRcode">
+                            <img src="../../public/images/qrcode.png" alt="二维码" width="83" height="83"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="bt-bottom-foot">
+                &copy; 2013 - 2015 <a href="">10years.me</a>. 上海秦誓网络科技有限公司 All Rights Reserved. <a href="" target="_blank">沪ICP备13021804号</a><br><br>
+                <a href="http://www.upyun.com"><img src="../../public/images/90X45.png" /></a>&nbsp;
+                <a href="http://www.oneapm.com"><img src="../../public/images/badge2xblue.png" height="45" /></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var index=1;
+        function light(x) {
+            change(x);
+        }
+
+        $(window.onscroll=function () {
+            //定义一个变量H，表示滚动条和顶部的距离
+            var H=document.documentElement.scrollTop||document.body.scrollTop;
+            if(H<1||H==undefined){
+                flag=true;
+                change();
+            }else if(H>0){
+                if(document.addEventListener){
+                    document.addEventListener("DOMMouseScroll",function (event) {
+                    },false);
+                }
+                window.onmousewheel=document.onmousewheel=function (event) {
+                }
+            }
+
+        });
+        var flag=true;
+        function scrollFun(event,x) {
+            if(flag) {
+                var scrollchange = 0;
+                event = event || window.event;
+                scrollchange = -(event.wheelDelta / 120) || (event.detail / 3);
+                if (scrollchange != 0) {
+                    index = index + (scrollchange);
+                }
+                ;
+                if (x) {
+                    index = x;
+                };
+                if (index < 1) {
+                    index = 1;
+                } else if (index > 3) {
+                    index = 3;
+                }
+                ;
+                var show = 0;
+                var hide1 = 0;
+                var hide2 = 0;
+                if (index == 1) {
+                    show = index;
+                    hide1 = 2;
+                    hide2 = 3;
+                } else if (index == 2) {
+                    show = index;
+                    hide1 = 1;
+                    hide2 = 3;
+                } else if (index == 3) {
+                    show = index;
+                    hide1 = 1;
+                    hide2 = 2;
+                };
+                $(".click-box" + show) .addClass("click-show");
+                $(".click-box" + hide1).removeClass("click-show");
+                $(".click-box" + hide2).removeClass("click-show");
+
+                if (show == 3) {
+                    $(".show-box" + show).css({
+                        margin: "-5px"
+                    })
+                }
+                $(".show-box" + show).fadeIn(1000);
+                $(".show-box" + hide1).hide();
+                $(".show-box" + hide2).hide();
+                flag=false;
+            }
+                setTimeout(function () {
+                    flag=true;
+                },200);
+            };
+			var evt;
+			function change(x){
+				if(document.addEventListener){
+					document.addEventListener("DOMMouseScroll",function (event) {
+						evt=event;
+						scrollFun(evt,x);
+					},false);
+				}
+				window.onmousewheel=document.onmousewheel=function (event) {
+					evt=event;
+					scrollFun(evt,x);
+				}
+				if(x){
+                    scrollFun(evt,x);
+					x=undefined;
+                }
+			}
+
+        $(function(){
+            $(".click-box1").addClass("click-show");
+            $(".show-box1").show();
+            $(".show-box2").hide();
+            $(".show-box3").hide();
+            var n=0;
+            setInterval(function xx() {
+                var index=52*n;
+                var index2=index;
+                var timer=setInterval(function bsShowHide(){
+                    var bsLis=document.getElementsByClassName("bs-explore-content")[0].getElementsByTagName("ul")[0];
+                    bsLis.style.top=-index+'px';
+                    index++;
+                    if(index>index2+54){
+                        index=undefined;
+                    }
+                },20);
+                n++;
+                if(n==7){
+                    n=0;
+                    var bsLis=document.getElementsByClassName("bs-explore-content")[0].getElementsByTagName("ul")[0];
+                    bsLis.style.top=0+'px';
+                }
+            },2000)
+        });
+    </script>
+</body>
+</html>
