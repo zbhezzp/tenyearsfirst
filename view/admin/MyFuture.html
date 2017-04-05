@@ -28,7 +28,7 @@
     </nav>
 
     <div class="mf-content-top">
-        <textarea cols="50" rows="1" id="proverbs" class="mf-profile-motto-container">在这里输入个人箴言</textarea>
+        <textarea cols="45" rows="1" id="proverbs" class="mf-profile-motto-container">在这里输入个人箴言</textarea>
     </div>
 
     <div class="mf-profile-content">
@@ -171,12 +171,11 @@
             function resize () {
                 proverbs.style.height = 'auto';
                 proverbs.style.height = proverbs.scrollHeight+'px';
-
             }
             /* 0-timeout to get the already changed text */
             function delayedResize () {
                 window.setTimeout(resize, 0);
-                /*proverbs.style.borderBottom='1px solid red';*/
+                proverbs.style.borderBottom='1px solid red';
             }
             observe(proverbs, 'change',  resize);
             observe(proverbs, 'cut',     delayedResize);
