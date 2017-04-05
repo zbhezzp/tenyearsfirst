@@ -415,6 +415,32 @@ li{
     margin-right: 6px;
     margin-left: 7px;
 }
+
+/*对底部内容部分进行放大缩小*/
+.ec-content-dreamContent:hover .ec-content-dreamConnFoot{
+    transition: all 0.5s linear;
+    transform: translate(0px,90px);
+    opacity: 0;
+}
+.ec-content-dreamContentZoom{
+    /*animation: dreamContentZoomShow 0.5s linear;*/
+    transition: all 0.5s linear;
+    transform: scale(1.02);
+}
+/*@-webkit-keyframes dreamContentZoomShow {
+    0%{
+        transform: scale(0.9);
+        -webkit-transform: scale(0.9);
+        -moz-transform: scale(0.9);
+    }
+    100%{
+        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+    }
+}*/
+
+
 @media  (max-width: 672px) {
     .ec-content-bottom{
         width:100%;
@@ -448,7 +474,7 @@ li{
     }
 }
 
-.ec-dreamContent1,.ec-dreamContent2,.ec-dreamContent3,.ec-dreamContent4,.ec-dreamContent5,.ec-dreamContent6,.ec-dreamContent7,.ec-dreamContent8{
+.ec-dreamContent3,.ec-dreamContent4,.ec-dreamContent5,.ec-dreamContent6,.ec-dreamContent7,.ec-dreamContent8{
     margin-top:13px;
 }
 .ec-content-dreamConnUp{
