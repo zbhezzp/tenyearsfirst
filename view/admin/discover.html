@@ -14,7 +14,7 @@
             <li><a href="">动态</a></li>
             <li class="nav-info-second"><a href="">发现</a></li>
             <li><a href="">我的未来</a></li>
-            <li><a href="">来往</a></li>
+            <li><a href="">来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -154,9 +154,9 @@
 
         <div class="ec-content-bottom">
             <ul class="ec-content-nav">
-                <li class="ec-content-dream"><a href="">梦想</a></li>
-                <li class="ec-content-dreamer"><a href="">梦想家</a></li>
-                <li class="ec-content-activity"><a href="">动态</a></li>
+                <li class="ec-content-dream">梦想</li>
+                <li class="ec-content-dreamer">梦想家</li>
+                <li class="ec-content-activity">动态</li>
             </ul>
 
             <div class="ec-content-dreamConn">
@@ -684,13 +684,11 @@
             $(".ec-content-dreamConn").show();
             $(".ec-content-dreamerConn").hide();
             $(".ec-content-activityConn").hide();
-
         });
         $(".ec-content-dreamer").click(function(){
             $(".ec-content-dreamConn").hide();
             $(".ec-content-dreamerConn").show();
             $(".ec-content-activityConn").hide();
-
         });
         $(".ec-content-activity").click(function(){
             $(".ec-content-dreamConn").hide();

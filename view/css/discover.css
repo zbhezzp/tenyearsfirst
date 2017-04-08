@@ -63,6 +63,9 @@ li{
 .nav-information li:hover a{
     color:#333;
 }
+span.dropDown-bow{
+    font-family: wbficon;
+}
 
 .nav-img-position{
     width: 100px;
@@ -367,20 +370,27 @@ li{
     border-radius: 5px;
     background: #fff;
 }
+
 .ec-content-nav li{
     width:33%;
     height:40px;
     text-align: center;
     display: inline-block;
     cursor: pointer;
-}
-.ec-content-nav li a{
     color:#333;
     font-weight: 600;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.ec-content-nav li:hover a{
+.ec-content-nav li:hover{
     color:#16BAFF;
+}
+li.ec-content-dream{          /*下划线*/
+    border-bottom: 2px solid #16BAFF;
+    color: #16BAFF;
+}
+li.ec-content-navLis{
+    border-bottom: 2px solid #16BAFF;
+    color: #16BAFF;
 }
 @media (min-width:650px) and (max-width: 1050px) {
     .ec-content-nav{
@@ -401,12 +411,6 @@ li{
     }
 }
 
-.ec-content-dream{          /*下划线*/
-    border-bottom: 2px solid #16BAFF;
-}
-.ec-content-dream a{
-    color: #16BAFF;
-}
 
 
 /*中间底层内容的梦想*/

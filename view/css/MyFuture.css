@@ -65,6 +65,9 @@ li{
 .nav-information .nav-info-third:hover a{
     color:#000;
 }
+span.dropDown-bow{
+    font-family: wbficon;
+}
 
 .nav-img-position{
     width: 100px;
@@ -269,6 +272,28 @@ li{
 .mf-content-BottLeft-idea li img{
     margin:15px 0px;
 }
+.waggleImg{
+    transform-origin:center;
+    -webkit-animation:0.6s waggle;
+}
+@-webkit-keyframes waggle{
+    0%{
+        -webkit-transform:rotate(15deg);
+    }
+    25%{
+        -webkit-transform:rotate(-15deg);
+    }
+    50%{
+        -webkit-transform:rotate(10deg);
+    }
+    75%{
+        -webkit-transform:rotate(-10deg);
+    }
+    100%{
+        -webkit-transform:rotate(5deg);
+    }
+}
+
 
 .mf-content-BottLeft-publish{     /*内容部分的低端的左边发表文章部分*/
     width:600px;
