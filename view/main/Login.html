@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">-->
+    <title>Title</title>
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/css/component.css"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <style>
+        *{  font-size: 14px;padding:0;}
+        a{text-decoration: none;}
+        .container-fluid{  height:662px;  background: url("../../public/images/login_bg.jpg") 0/cover ;/*box-shadow: 100px 100px 1000px #8A8791 inset;*/  }
+        #login-index-header{height:40px;}
+        #login-index-header h1{display:inline-block;width:136px;height:40px;}
+        #login-index-header h1 a{width:100%;height:100%;text-decoration: none;background: url("../../public/images/logo_login.png");background-size:136px 36px;display:block;margin-left: 20px;}
+        #login-index-header-fast-link{float: right; height:100%; width:200px;margin: 20px 30px 0px 0px;}
+        #login-fast-link-btn{color:#fff;margin-right:20px;border: 1px solid #fff;border-radius: 3px;height:30px;line-height: 30px;text-align: center;width: 74px;display: inline-block;}
+        #a-hover-underline{color:#fff;}
+        #login-fast-link-btn:hover{text-decoration: none; cursor: pointer}
+        #form-title{ width:628px; height:54px;margin:85px auto 60px;
+            background: rgba(0,0,0,0) url("../../public/images/login_index_title.png") no-repeat scroll  0/cover; }
+        #sign-in-form{height:187px;display: block;margin-left: 533px;}
+        #login-index-form-group,#login-index-form-password,#login-index-form-group-register,#login-index-form-password-register{height:100%;margin-bottom: 20px; }
+        #login-index-form-inp,#login-index-form-pwd,#login-index-form-inp-register,#login-index-form-pwd-register{background:rgba(255,255,255,0.3);border: 1px solid #fff;line-height: 20px;text-align: center;padding:18px;}
+        /*
+                #login-index-form-inp-span,#login-index-form-pwd-register-span{ border: 1px solid #fff;border-radius: 4px;line-height:25px;background: #fff;font-size: 13px;}
+        */
+        /*
+                #login-index-form-pwd-span,#login-index-form-inp-register-span{border-radius: 4px;line-height:5px;background: #fff;font-size: 13px;}
+        */
+        #login-index-form-check{margin-bottom: 10px;width: 100%;}
+        #login-index-form-check label{color: #e5e5e5;}
+        #login-index-form-check a{display: block;float: right;color: #fff;font-size: 13px;}
+        .form-btn{background: #00B4FF;width: 300px;border-radius: 16px; padding: 9px;border: none;color:#fff;}
+        #login-index-desc {  color: #eee;  letter-spacing: 2px;  text-align: center;  width: 100%;  margin-top: 75px;  }
+        #login-index-desc p{  font-size: 10px;  }
+        #forget_pwd_form{ background: #fff none repeat scroll 0 0; border: 1px solid #ddd;  font-size: 14px;  border-radius: 3px; box-shadow: 0 0 12px #ddd;  height: 240px;  padding: 20px;  width: 300px;}
+        .forget-pwd-form-group{  color: #333;  font-size: 14px;  height: 40px;  margin-bottom: 15px;  position: relative;  width: 100%;  }
+        .forget-fixed-content-close{  font-size: 18px;  font-weight: 400;  color:#666;  margin-left: 180px;  cursor: pointer;  }
+        .forget-pwd-title{color: #333;  font-size: 14px;  height: 40px;  margin-bottom: 15px; /*position: relative;*/  width: 100%;}
+        #forget_pwd_account{border: 1px solid #ddd;  border-radius: 4px;  box-sizing: border-box;  color: #444;  line-height: 20px;  padding: 8px;  width: 100%;}
+        #check_code{font-size: 14px;  height: 100%;text-align: center;}
+        .half{width: 50%;float: left;}
+        .forget-pwd-input{ border: 1px solid #ddd;  border-radius:4px;  box-sizing: border-box;  color: #444;  line-height: 20px;  text-align: center;  padding: 8px; /* transition: all 0.3s ease 0s;*/  width: 100%;}
+        .half{width: 50%;float: left;display: block;text-align: center;}
+        .send-code{font-size: 14px;  height: 100%;  text-align: center;  cursor: pointer;  line-height: 38px;  color: #00b4ff;  text-decoration: none;}
+        .login-btn{background: #00b4ff none repeat scroll 0 0;  border: 0 none;  border-radius: 30px;  color: #fff;  cursor: pointer;  display: block;  font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+            font-size: 15px;  height: 36px;  line-height: 32px;  margin-bottom: 10px;  text-align: center;  width: 100%;}
+
+    </style>
+</head>
+<body>
+<div class="container-fluid" >
+    <div id="login-index-header" >
+        <h1><a href=""></a></h1>
+        <div id="login-index-header-fast-link">
+            <a id="login-fast-link-btn">注册</a>
+            <a href="" id="a-hover-underline">关于我们</a>
+        </div>
+    </div>
+    <div id="form-title"></div>
+    <div>
+        <form id="sign-in-form">
+            <!--登录-->
+            <div id="a" style="position: absolute;">
+                <div id="login-index-form-group">
+                    <input type="text"  id="login-index-form-inp" class="form-control" placeholder="邮箱和手机号"/>
+                    <span id="login-index-form-inp-span"></span>
+                </div>
+
+                <div id="login-index-form-password">
+                    <input type="password" id="login-index-form-pwd" class="form-control"  placeholder="密码"/>
+                    <span id="login-index-form-pwd-span"></span>
+                </div>
+
+                <div id="login-index-form-check">
+                    <label>
+                        <input type="checkbox"> 记住我
+                    </label>
+                    <a  id="forget_pwd" style="cursor: pointer;" class="md-trigger md-setperspective" data-modal="modal-1">忘记密码？</a>
+                </div>
+                <button type="button" class="form-btn">登录</button>
+            </div>
+            <!--去未来-->
+            <div  id="b" style="position: absolute; display: none;">
+                <div id="login-index-form-group-register">
+                    <input type="text"  id="login-index-form-inp-register" class="form-control" placeholder="邮箱"/>
+                    <span id="login-index-form-inp-register-span"></span>
+                </div>
+                <div id="login-index-form-password-register">
+                    <input type="password" id="login-index-form-pwd-register" class="form-control"  placeholder="密码"/>
+                    <span id="login-index-form-pwd-register-span"></span>
+                </div>
+                <button type="button" class="form-btn">去未来</button>
+            </div>
+        </form>
+        <div id="login-index-desc">
+            <p>「十年后」是一个基于梦想的经验交流社区。</p>
+            <p>在这里，你可以自由的分享关于未来梦想的真实想法，</p>
+            <p>并探索更多有趣的梦想，结交志同道合的人。</p>
+        </div>
+        <a id="ty_login_next" class="ty-login-next" href="javascript:void(0);">
+            <i class="ty-icon-arrow-down"></i>
+        </a>
+    </div>
+
+</div>
+
+<!--弹出框-->
+<div class="md-modal md-effect-11" id="modal-1">
+    <div id="forget_pwd_form" class="md-content">
+        <div class="forget-pwd-title" >找回密码  <a class="md-close forget-fixed-content-close">x</a></div>
+        <div class="forget-pwd-form-group">
+            <input id="forget_pwd_account" class="forget-pwd-input" placeholder="邮箱或手机号"  type="text">
+        </div>
+        <div  class="forget-pwd-form-group">
+            <span class="half">
+                <input id="check_code" class="forget-pwd-input" placeholder="验证码" data-maxlength="3" maxlength="6" type="text">
+            </span>
+            <span class="half">
+                <a id="send_code" class="send-code">发送验证码</a>
+            </span>
+        </div>
+        <button id="get_reset_code" class="login-btn">下一步</button>
+    </div>
+</div>
+<div class="md-overlay"></div>
+<script src="../../public/js/jquery-1.9.1.min.js"></script>
+<script src="../../public/js/bootstrap.min.js"></script>
+<script src="../../public/js/classie.js"></script>
+<script src="../../public/js/modalEffects.js"></script>
+
+<script>
+    $(function () {
+        $("#login-fast-link-btn").hover(function () {
+            $(this).css("backgroundColor","#00B4FF");
+            $(this).css("transition","background-color 1.5s");
+
+        },function () {
+            $(this).css("backgroundColor","");
+            $(this).css("transition","background-color 0.8s");
+        });
+
+
+        $("#login-index-form-inp").bind({focus:function () {
+            $(this).css("background","#fff");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","");
+        },blur:function() {
+            $(this).css("background","");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","邮箱和手机号");
+        }});
+        $("#login-index-form-inp-register").bind({focus:function () {
+            $(this).css("background","#fff");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","");
+        },blur:function() {
+            $(this).css("background","");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","邮箱和手机号");
+        }});
+
+        $("#login-index-form-pwd").bind({focus:function () {
+            $(this).css("background","#fff");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","");
+        },blur:function () {
+            $(this).css("background","");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","密码");
+        }});
+        $("#login-index-form-pwd-register").bind({focus:function () {
+            $(this).css("background","#fff");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","");
+        },blur:function () {
+            $(this).css("background","");
+            $(this).css("transition","background-color 0.5s");
+            $(this).attr("placeholder","密码");
+        }});
+
+        $("#login-fast-link-btn").click(function () {
+            if($(this).html()=='注册'){
+                $(this).html('登录');
+                $("#a").fadeOut("slow");
+                $("#b").fadeIn("slow");
+            }else if($(this).html()=='登录'){
+                $(this).html('注册');
+                $("#b").fadeOut("slow");
+                $("#a").fadeIn("slow");
+            }
+        })
+    });
+</script>
+
+</body>
+</html>
