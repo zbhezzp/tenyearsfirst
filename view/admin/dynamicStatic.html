@@ -14,7 +14,7 @@
             <li class="nav-info-first"><a href="">动态</a></li>
             <li><a href="">发现</a></li>
             <li><a href="">我的未来</a></li>
-            <li><a href="">来往</a></li>
+            <li><a href="">来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -37,19 +37,19 @@
                         <ul>
                             <li><a href="">
                                 <div class="cl-add-img cl-add-mood-img">
-                                    <img src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;" />
+                                    <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;" />
                                 </div>
                                 <p>想法</p>
                             </a></li>
                             <li><a href="">
                                 <div class="cl-add-img cl-add-article-img">
-                                    <img src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;" />
+                                    <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;" />
                                 </div>
                                 <p>日志</p>
                             </a></li>
                             <li class="last"><a href="">
                                 <div class="cl-add-img cl-add-play-img">
-                                    <img src="../../public/images/cl-icon-plan.png" style="width:58px;height:50px;" />
+                                    <img id="waggleImgs2" src="../../public/images/cl-icon-plan.png" style="width:58px;height:50px;" />
                                 </div>
                                 <p>计划</p>
                             </a></li>
@@ -140,6 +140,18 @@
             }
         });
 
+        /*鼠标移入进行晃动*/
+        var clBtnLis=$(".cl-btn-container ul li");
+        for(var i=0;i<clBtnLis.length;i++){
+            (function(i){
+                clBtnLis.eq(i).mouseover(function(){
+                    $("#waggleImgs"+i).addClass("waggleImg");
+                });
+                clBtnLis.eq(i).mouseout(function(){
+                    $("#waggleImgs"+i).removeClass("waggleImg");
+                });
+            })(i);
+        }
     </script>
 
 </body>

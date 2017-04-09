@@ -14,7 +14,7 @@
             <li><a href="">动态</a></li>
             <li class="nav-info-second"><a href="">发现</a></li>
             <li><a href="">我的未来</a></li>
-            <li><a href="">来往</a></li>
+            <li><a href="">来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -154,12 +154,12 @@
 
         <div class="ec-content-bottom">
             <ul class="ec-content-nav">
-                <li class="ec-content-dream"><a href="">梦想</a></li>
-                <li class="ec-content-dreamer"><a href="">梦想家</a></li>
-                <li class="ec-content-activity"><a href="">动态</a></li>
+                <li class="ec-content-dream ec-nav-li0 ec-content-navLis" onclick="li(0)">梦想</li>
+                <li class="ec-content-dreamer ec-nav-li1"  onclick="li(1)">梦想家</li>
+                <li class="ec-content-activity ec-nav-li2"  onclick="li(2)">动态</li>
             </ul>
 
-            <div class="ec-content-dreamConn">
+            <div class="ec-content-dreamConn ec-content0">
                 <div class="ec-content-dreamContent ec-dreamContent0">
                     <a href="">
                         <i class="ec-content-dreamConnLog"></i>
@@ -393,7 +393,7 @@
                 </div>
             </div>
 
-            <div class="ec-content-dreamerConn">
+            <div class="ec-content-dreamerConn ec-content1">
                 <div class="ec-content-dreamerContent ec-dreamerContent0">
                     <a href="">
                         <i class="ec-content-dreamerConnLog"></i>  <!--字体图标-->
@@ -545,7 +545,7 @@
                 </div>
             </div>
 
-            <div class="ec-content-activityConn">
+            <div class="ec-content-activityConn ec-content2">
                 <div class="ec-content-activityContent activityContent1">
                     <div class="ec-content-activityConTop">
                         <span class="ec-activityConTop-icon">
@@ -680,24 +680,16 @@
         }
 
         <!--底部内容进行切换-->
-        $(".ec-content-dream").click(function(){
-            $(".ec-content-dreamConn").show();
-            $(".ec-content-dreamerConn").hide();
-            $(".ec-content-activityConn").hide();
-
-        });
-        $(".ec-content-dreamer").click(function(){
-            $(".ec-content-dreamConn").hide();
-            $(".ec-content-dreamerConn").show();
-            $(".ec-content-activityConn").hide();
-
-        });
-        $(".ec-content-activity").click(function(){
-            $(".ec-content-dreamConn").hide();
-            $(".ec-content-dreamerConn").hide();
-            $(".ec-content-activityConn").show();
-
-        });
+       function li(i) {
+           var j=(i+1)%3;
+           var l=(i+2)%3;
+           $(".ec-nav-li"+i).addClass("ec-content-navLis");
+           $(".ec-nav-li"+j).removeClass("ec-content-navLis");
+           $(".ec-nav-li"+l).removeClass("ec-content-navLis");
+           $(".ec-content"+i).show();
+           $(".ec-content"+j).hide();
+           $(".ec-content"+l).hide();
+       }
     </script>
 </body>
 </html>

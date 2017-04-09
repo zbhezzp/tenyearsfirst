@@ -13,7 +13,7 @@
             <li class="nav-info-lis"><a href="">动态</a></li>
             <li class="nav-info-lis"><a href="">发现</a></li>
             <li class="nav-info-three nav-info-third"><a href="">我的未来</a></li>
-            <li class="nav-info-lis"><a href="">来往</a></li>
+            <li class="nav-info-lis"><a href="">来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -90,11 +90,11 @@
 
                 <ul class="mf-content-BottLeft-idea">
                     <li class="first"><a href="">
-                        <img src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
+                        <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
                         <p>想法</p>
                     </a></li>
                     <li class="second"><a href="">
-                        <img src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
+                        <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
                         <p>日志</p>
                     </a></li>
                 </ul>
@@ -220,6 +220,19 @@
             proverbs.focus();
             proverbs.select();
             resize();
+        }
+
+        /*鼠标移入进行晃动*/
+        var mfIdeaLis=$(".mf-content-BottLeft-idea li");
+        for(var i=0;i<mfIdeaLis.length;i++){
+            (function(i){
+                mfIdeaLis.eq(i).mouseover(function(){
+                    $("#waggleImgs"+i).addClass("waggleImg");
+                });
+                mfIdeaLis.eq(i).mouseout(function(){
+                    $("#waggleImgs"+i).removeClass("waggleImg");
+                });
+            })(i);
         }
     </script>
 </body>
