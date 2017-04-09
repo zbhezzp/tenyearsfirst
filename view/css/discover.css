@@ -384,10 +384,10 @@ span.dropDown-bow{
 .ec-content-nav li:hover{
     color:#16BAFF;
 }
-li.ec-content-dream{          /*下划线*/
+/*li.ec-content-dream{          !*下划线*!
     border-bottom: 2px solid #16BAFF;
     color: #16BAFF;
-}
+}*/
 li.ec-content-navLis{
     border-bottom: 2px solid #16BAFF;
     color: #16BAFF;
