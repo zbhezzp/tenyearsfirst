@@ -231,19 +231,27 @@ span.dropDown-bow{
     width: 250px;
     box-shadow: 0 7px 21px rgba(0, 0, 0, 0.1);
     z-index: 999;
+    transform: scale(0);
 }
 .mf-avatar-content{
     background-color: #fff;
     border-radius: 3px;
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
     font-size: 12px;
-    margin-top: 6px;
+    margin-top: -32px;
     position: relative;
+}
+.mf-avater-dropdown-content{
+    color: #333;
+    cursor: pointer;
+    float: left;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
 }
 
 .mf-avatar-modal-tab{
-    border-color: #00b4ff;
-  /*  color: #00b4ff;*/
+    border-bottom:1px solid #ccc;
     cursor: pointer;
     float: left;
     height: 40px;
@@ -252,6 +260,84 @@ span.dropDown-bow{
     display: inline-block;
     font-size: 15px;
     text-align: center;
+}
+.mf-avatar-modal-content{
+    box-sizing: border-box;
+    display: none;
+    height: 290px;
+    padding-top: 40px;
+    width: auto;
+}
+.mf-avatar-modal-content-show{
+
+    background-color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    border-radius: 5px;
+    color: #777;
+    font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin:20px auto 10px;
+    position: relative;
+    text-align: center;
+    width: 200px;
+    display: block;
+}
+.mf-avatar-upload-image-btn{
+    font-size: 16px;
+    font-weight: 100;
+
+}
+.mf_avatar_bg_image{
+    opacity: 0;
+    position: absolute;
+    display: inline-block;
+    height:40px;
+    top:0px;
+    left:0px;
+
+}
+.mf-color-picker-content{
+    padding-top: 10px;
+    overflow: hidden;
+   margin-left: 20px;
+}
+.mf-color-picker{
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 21px;
+    margin: 0 2px;
+    width: 21px;
+    border: 2px solid #fff;
+}
+.mf-active{
+    border: 2px solid #fff;
+    width: 21px;
+    height:21px;
+}
+.mf-color-picker-content-item{
+    padding-top: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+}
+.mf-color-picker-item{
+    cursor: pointer;
+    display: inline-block;
+    float: left;
+    height: 35px;
+    margin: 3px;
+    width: 29%;
+}
+
+.mf-avatar-modal-change-big{
+    transition:transform 0.1s linear;
+    transform: scale(1);
+}
+.mf-avatar-modal-change-small{
+    transition:transform 0.1s linear;
+    transform: scale(0);
+
 }
 
 

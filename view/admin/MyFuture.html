@@ -33,28 +33,28 @@
 
     <div class="mf-profile-content">
         <div class="mf-profile-content-row"><a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a></div>
-        <div id="mf-avatar_modal" class="mf-avatar-modal">
+        <div id="mf-avatar-modal" class="mf-avatar-modal" >
             <div class="mf-avatar-content">
             <div class="mf-avater-dropdown-content">
-                <p class="mf-avatar-modal-tab " data-index="0">文字</p>
-                <p class="mf-avatar-modal-tab" data-index="1">背景</p>
+                <p class="mf-avatar-modal-tab " id="mf-avatar-modal-tab-font" data-index="0">文字</p>
+                <p class="mf-avatar-modal-tab" id="mf-avatar-modal-tab-background" data-index="1">背景</p>
             </div>
             <div id="mf_avatar_modal_content" class="mf-avatar-modal-content" style="display: block;">
-                <input id="mf_avatar_name_input" class="mf-avatar-modal-content-show mf-active" placeholder="空" maxlength="4" type="text">
-                <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" href="javascript:void(0);">
+                <input id="mf-avatar-name-input" class="mf-avatar-modal-content-show" placeholder="空" maxlength="4" type="text" >
+                <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" id="mf-avatar-upload-image-btn" href="javascript:void(0);" style="display: none;">
                     <i class="mf-icon-camera-add"></i>
                     使用图片
-                    <input id="mf_avatar_bg_image" type="file">
+                    <input id="mf_avatar_bg_image" type="file" class="mf_avatar_bg_image">
                 </a>
                     <div class="mf-color-picker-content">
-                        <span class="mf-color-picker ty-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;" data-index="0"></span>
+                        <span class="mf-color-picker" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;" data-index="0"></span>
                         <span class="mf-color-picker" style="background-color: #d85f46; box-shadow: 0px 0px 0px 2px #d85f46;" data-index="1"></span>
                         <span class="mf-color-picker" style="background-color: #f1993c; box-shadow: 0px 0px 0px 2px #f1993c;" data-index="2"></span>
                         <span class="mf-color-picker" style="background-color: #5bbc8c; box-shadow: 0px 0px 0px 2px #5bbc8c;" data-index="3"></span>
                         <span class="mf-color-picker" style="background-color: #529ecc; box-shadow: 0px 0px 0px 2px #529ecc;" data-index="4"></span>
                         <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;" data-index="5"></span>
                     </div>
-                <div class="mf-color-picker-content">
+                <div class="mf-color-picker-content-item">
                     <div class="mf-color-picker-item" style="background-color: rgb(255, 255, 255);" data-color="#ffffff"></div>
                     <div class="mf-color-picker-item" style="background-color: rgb(204, 204, 204);" data-color="#cccccc"></div>
                     <div class="mf-color-picker-item" style="background-color: rgb(68, 68, 68);" data-color="#444444"></div>
@@ -234,6 +234,36 @@
                 });
             })(i);
         }
+
+        $(function () {
+            $("#mf-profile-content-row-a").click(function () {
+                $("#mf-avatar-modal-tab-font").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
+                var a=$("#mf-avatar-modal").attr('class');
+               if(a=='mf-avatar-modal mf-avatar-modal-change-big') {
+                   $("#mf-avatar-modal").addClass("mf-avatar-modal-change-small");
+                   $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-big");
+
+               }else {
+                   $("#mf-avatar-modal").addClass("mf-avatar-modal-change-big");
+                   $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-small");
+
+               }
+               $("#mf-avatar-modal-tab-font").click(function (){
+                   $("#mf-avatar-modal-tab-font").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
+                   $("#mf-avatar-modal-tab-background").css({'border-color': '#ccc', 'color': '#777'});
+                   $("#mf-avatar-name-input").css('display','block');
+                   $("#mf-avatar-upload-image-btn").css('display','none');
+               });
+                $("#mf-avatar-modal-tab-background").click(function (){
+                    $("#mf-avatar-modal-tab-background").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
+                    $("#mf-avatar-modal-tab-font").css({'border-color': '#ccc', 'color': '#777'});
+                    $("#mf-avatar-upload-image-btn").css('display','block');
+                    $("#mf-avatar-name-input").css('display','none');
+                });
+            });
+        });
+
+
     </script>
 </body>
 </html>
