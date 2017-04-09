@@ -32,7 +32,42 @@
     </div>
 
     <div class="mf-profile-content">
-        <div class="mf-profile-content-row"></div>
+        <div class="mf-profile-content-row"><a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a></div>
+        <div id="mf-avatar_modal" class="mf-avatar-modal">
+            <div class="mf-avatar-content">
+            <div class="mf-avater-dropdown-content">
+                <p class="mf-avatar-modal-tab " data-index="0">文字</p>
+                <p class="mf-avatar-modal-tab" data-index="1">背景</p>
+            </div>
+            <div id="mf_avatar_modal_content" class="mf-avatar-modal-content" style="display: block;">
+                <input id="mf_avatar_name_input" class="mf-avatar-modal-content-show mf-active" placeholder="空" maxlength="4" type="text">
+                <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" href="javascript:void(0);">
+                    <i class="mf-icon-camera-add"></i>
+                    使用图片
+                    <input id="mf_avatar_bg_image" type="file">
+                </a>
+                    <div class="mf-color-picker-content">
+                        <span class="mf-color-picker ty-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;" data-index="0"></span>
+                        <span class="mf-color-picker" style="background-color: #d85f46; box-shadow: 0px 0px 0px 2px #d85f46;" data-index="1"></span>
+                        <span class="mf-color-picker" style="background-color: #f1993c; box-shadow: 0px 0px 0px 2px #f1993c;" data-index="2"></span>
+                        <span class="mf-color-picker" style="background-color: #5bbc8c; box-shadow: 0px 0px 0px 2px #5bbc8c;" data-index="3"></span>
+                        <span class="mf-color-picker" style="background-color: #529ecc; box-shadow: 0px 0px 0px 2px #529ecc;" data-index="4"></span>
+                        <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;" data-index="5"></span>
+                    </div>
+                <div class="mf-color-picker-content">
+                    <div class="mf-color-picker-item" style="background-color: rgb(255, 255, 255);" data-color="#ffffff"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(204, 204, 204);" data-color="#cccccc"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(68, 68, 68);" data-color="#444444"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(246, 246, 246);" data-color="#f6f6f6"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(136, 136, 136);" data-color="#888888"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(34, 34, 34);" data-color="#222222"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(238, 238, 238);" data-color="#eeeeee"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(102, 102, 102);" data-color="#666666"></div>
+                    <div class="mf-color-picker-item" style="background-color: rgb(0, 0, 0);" data-color="#000000"></div>
+                </div>
+            </div>
+            </div>
+        </div>
         <div class="mf-profile-modify-content">
             <div class="mf-profile-modcon-name"><h2>某某某</h2></div>
             <div class="mf-profile-modcon-tro">生活了 <span>22</span> 年的 <span>男生</span> ，在 <span>湖南</span></div>
