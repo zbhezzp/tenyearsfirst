@@ -55,15 +55,15 @@
                         <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;"></span>
                     </div>
                 <div class="mf-color-picker-content-item">
-                    <div class="mf-color-picker-item" style="background-color: #ffffff" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #cccccc" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #444444" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #f6f6f6" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #888888" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #222222" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #eeeeee" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #666666" ></div>
-                    <div class="mf-color-picker-item" style="background-color: #000000" ></div>
+                    <div class="mf-color-picker-item0 mf-color-picker-item" style="background-color: #ffffff" ></div>
+                    <div class="mf-color-picker-item1 mf-color-picker-item" style="background-color: #cccccc" ></div>
+                    <div class="mf-color-picker-item2 mf-color-picker-item" style="background-color: #444444" ></div>
+                    <div class="mf-color-picker-item3 mf-color-picker-item" style="background-color: #f6f6f6" ></div>
+                    <div class="mf-color-picker-item4 mf-color-picker-item" style="background-color: #888888" ></div>
+                    <div class="mf-color-picker-item5 mf-color-picker-item" style="background-color: #222222" ></div>
+                    <div class="mf-color-picker-item6 mf-color-picker-item" style="background-color: #eeeeee" ></div>
+                    <div class="mf-color-picker-item7 mf-color-picker-item" style="background-color: #666666" ></div>
+                    <div class="mf-color-picker-item8 mf-color-picker-item" style="background-color: #000000" ></div>
                 </div>
             </div>
             </div>
@@ -263,14 +263,17 @@
                            var arr3=["#b9e2ce","#72c69c","#418664","#a1d9bd","#5bbc8c","#346b50","#8acfad","#4ea178","#27513c"];
                            var arr4=["#b5d5e9","#6bacd3","#3b7192","#9cc8e2","#529ecc","#2f5a75","#83badb","#4687af","#234457"];
                            var arr5=["#d9c9e4","#b492ca","#775b8a","#cdb6dc","#a780c1","#5f496e","#c0a4d3","#8f6ea5","#483753"];
-                            var j=i;
-                           $(".mf-color-picker-item").each(function (a) {
-                                var arr='arr'+j;
-
-
-                           })
-
-
+                           var arr=[arr0,arr1,arr2,arr3,arr4,arr5];
+                           /*alert(arr[0]);*/
+                           $.each(arr,function (index,value) {
+                               if(index==i){
+                                    /*alert(arr[index]);*/
+                                  $.each(arr[index],function (ind,va) {
+                                      var b='.mf-color-picker-item'+ind;
+                                      $(b).css("backgroundColor",va);
+                                  })
+                               }
+                           });
                        });
 
                    });
