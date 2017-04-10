@@ -300,21 +300,21 @@ span.dropDown-bow{
 .mf-color-picker-content{
     padding-top: 10px;
     overflow: hidden;
-   margin-left: 20px;
+   margin-left: 22px;
 }
 .mf-color-picker{
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
-    height: 21px;
+    height: 25px;
     margin: 0 2px;
-    width: 21px;
-    border: 2px solid #fff;
+    width: 25px;
+    /*border: 2px solid #fff;*/
 }
 .mf-active{
     border: 2px solid #fff;
     width: 21px;
-    height:21px;
+    height: 21px;
 }
 .mf-color-picker-content-item{
     padding-top: 10px;

@@ -47,23 +47,23 @@
                     <input id="mf_avatar_bg_image" type="file" class="mf_avatar_bg_image">
                 </a>
                     <div class="mf-color-picker-content">
-                        <span class="mf-color-picker" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;" data-index="0"></span>
-                        <span class="mf-color-picker" style="background-color: #d85f46; box-shadow: 0px 0px 0px 2px #d85f46;" data-index="1"></span>
-                        <span class="mf-color-picker" style="background-color: #f1993c; box-shadow: 0px 0px 0px 2px #f1993c;" data-index="2"></span>
-                        <span class="mf-color-picker" style="background-color: #5bbc8c; box-shadow: 0px 0px 0px 2px #5bbc8c;" data-index="3"></span>
-                        <span class="mf-color-picker" style="background-color: #529ecc; box-shadow: 0px 0px 0px 2px #529ecc;" data-index="4"></span>
-                        <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;" data-index="5"></span>
+                        <span class="mf-color-picker mf-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;"></span>
+                        <span class="mf-color-picker" style="background-color: #d85f46; box-shadow: 0px 0px 0px 2px #d85f46;"></span>
+                        <span class="mf-color-picker" style="background-color: #f1993c; box-shadow: 0px 0px 0px 2px #f1993c;"></span>
+                        <span class="mf-color-picker" style="background-color: #5bbc8c; box-shadow: 0px 0px 0px 2px #5bbc8c;"></span>
+                        <span class="mf-color-picker" style="background-color: #529ecc; box-shadow: 0px 0px 0px 2px #529ecc;"></span>
+                        <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;"></span>
                     </div>
                 <div class="mf-color-picker-content-item">
-                    <div class="mf-color-picker-item" style="background-color: rgb(255, 255, 255);" data-color="#ffffff"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(204, 204, 204);" data-color="#cccccc"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(68, 68, 68);" data-color="#444444"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(246, 246, 246);" data-color="#f6f6f6"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(136, 136, 136);" data-color="#888888"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(34, 34, 34);" data-color="#222222"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(238, 238, 238);" data-color="#eeeeee"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(102, 102, 102);" data-color="#666666"></div>
-                    <div class="mf-color-picker-item" style="background-color: rgb(0, 0, 0);" data-color="#000000"></div>
+                    <div class="mf-color-picker-item" style="background-color: #ffffff" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #cccccc" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #444444" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #f6f6f6" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #888888" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #222222" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #eeeeee" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #666666" ></div>
+                    <div class="mf-color-picker-item" style="background-color: #000000" ></div>
                 </div>
             </div>
             </div>
@@ -246,6 +246,34 @@
                }else {
                    $("#mf-avatar-modal").addClass("mf-avatar-modal-change-big");
                    $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-small");
+                 
+                  $(".mf-color-picker").each(function (i) {
+                       $(this).click(function (index) {
+                           $(".mf-color-picker").each(function (index) {
+                               if ($(this).attr('class') == 'mf-color-picker mf-active') {
+                                   /*alert(index)*/
+                                   $(this).removeClass('mf-active');
+                               }
+                           });
+                           $(this).addClass('mf-active');
+                          /* alert(i);*/
+                           var arr0=["#ffffff","#cccccc","#444444","#f6f6f6","#888888","#222222","#eeeeee","#666666","#000000"];
+                           var arr1=["#eebab0","#de7660","#9a4432","#e9a495","#d85f46","#7b3628","#e38d7b","#b9513c","#5d291e"];
+                           var arr2=["#f9d3ab","#f3a858","#ac6d2b","#f7c590","#f1993c","#8a5722","#f5b674","#cf8333","#67421a"];
+                           var arr3=["#b9e2ce","#72c69c","#418664","#a1d9bd","#5bbc8c","#346b50","#8acfad","#4ea178","#27513c"];
+                           var arr4=["#b5d5e9","#6bacd3","#3b7192","#9cc8e2","#529ecc","#2f5a75","#83badb","#4687af","#234457"];
+                           var arr5=["#d9c9e4","#b492ca","#775b8a","#cdb6dc","#a780c1","#5f496e","#c0a4d3","#8f6ea5","#483753"];
+                            var j=i;
+                           $(".mf-color-picker-item").each(function (a) {
+                                var arr='arr'+j;
+
+
+                           })
+
+
+                       });
+
+                   });
 
                }
                $("#mf-avatar-modal-tab-font").click(function (){
