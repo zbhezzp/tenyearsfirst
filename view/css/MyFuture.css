@@ -369,7 +369,7 @@ span.dropDown-bow{
     border-radius: 10px;
     background: #fff;
 }
-.mf-Content-BottLeft-nav li a{
+.mf-Content-BottLeft-nav li{
     width:200px;
     height:40px;
     text-align: center;
@@ -380,11 +380,12 @@ span.dropDown-bow{
     font-size: 13px;
     font-weight: bold;
     transition: color 1s;
+    cursor: pointer;
 }
-.mf-Content-BottLeft-nav li:hover a{
+.mf-Content-BottLeft-nav li:hover{
     color:#16BAFF;
 }
-.mf-Content-BottLeft-nav li a .record{
+.mf-Content-BottLeft-nav li .record{
     padding:12px;
     color:#16BAFF;
     border-bottom: 2px solid #16BAFF;
@@ -467,8 +468,10 @@ span.dropDown-bow{
     border-radius: 10px 10px 0px 0px;
 }
 .mf-BottRight-DreamInfo-headline .deleteInfo{
+    font-family: wbficon;
+    font-size:20px;
+    color:#999;
     float:right;
-    margin-top:8px;
     margin-right:10px;
 }
 

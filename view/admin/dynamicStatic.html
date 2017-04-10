@@ -14,7 +14,7 @@
             <li class="nav-info-first"><a href="">动态</a></li>
             <li><a href="">发现</a></li>
             <li><a href="">我的未来</a></li>
-            <li><a href="">来往<span class="dropDown-bow">c</span></a></li>
+            <li class="nav-info-fourth"><a>来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -28,6 +28,35 @@
         </div>
     </nav>
 
+    <!--来往的弹出框-->
+    <div class="contact-box" style="display: none;">
+        <span class="out"></span><span class="iner"></span>
+        <div class="contact-box-nav">
+            <li class="contact-box-nav-concern">H</li>
+            <li class="contact-box-nav-admire">C</li>
+            <li class="contact-box-nav-comment">-</li>
+            <li class="contact-box-nav-message">I</li>
+        </div>
+        <div class="contact-box-content">
+            <div class="contact-box-conn contact-conn0" style="display: none">
+                <p class="contactBoxTitle">目前还没有人关注你</p>
+                <p class="contactBoxWord">有时候主动一点，会有意想不到的收获</p>
+            </div>
+            <div class="contact-box-conn contact-conn1" >
+                <p class="contactBoxTitle">目前还没有钦佩哦</p>
+                <p class="contactBoxWord">有时候多做比多说更容易得到别人的钦佩</p>
+            </div>
+            <div class="contact-box-conn contact-conn2" style="display: none">
+                <p class="contactBoxTitle">目前还没有人评论</p>
+                <p class="contactBoxWord">成为改变世界的人之前，先改变自己</p>
+            </div>
+            <div class="contact-box-conn contact-conn3" style="display: none">
+                <p class="contactBoxTitle">目前还没有消息</p>
+                <p class="contactBoxWord">我们总是在抱怨事与愿违，却不愿意回头看看自己</p>
+            </div>
+        </div>
+        <div class="contact-box-foot">查看更多</div>
+    </div>
 
     <div class="content">
         <div class="container-fluid">
@@ -55,9 +84,38 @@
                             </a></li>
                         </ul>
                     </div>
+
                     <div id="cl_feeds_container" >
                         <div class="cl-loading">
-
+                            <div class="cl-loading-up">
+                                <div class="cl-loading-upIcon"></div>
+                                <div class="cl-loading-upTitle">
+                                    <div class="cl-upTitle-name">彭敬亭</div>
+                                    <div class="cl-upTitle-date">几秒前</div>
+                                </div>
+                            </div>
+                            <div class="cl-loading-middle">
+                                <div class="cl-loading-middleConn">
+                                    <img src="../../public/images/13.jpeg" />
+                                    <div class="cl-loading-middleConnBg">
+                                        <div class="cl-middleConnBg-title"><em>梦</em>新疆</div>
+                                        <div class="cl-middleConnBg-date"> 2017年04月09日 </div>
+                                        <div class="cl-middleConnBg-status"><b>进行中</b></div>
+                                    </div>
+                                    <span>来一场说走就走的旅行</span>
+                                </div>
+                            </div>
+                            <div class="cl-loading-down">
+                                <div class="cl-loading-downike">
+                                    <em>â</em><span></span>
+                                </div>
+                                <div class="cl-loadding-downComment">
+                                    <em>-</em><span></span>
+                                </div>
+                                <div class="cl-loadding-downMore">
+                                    <span>D</span><span>D</span><span>D</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -128,11 +186,13 @@
 
     <!--锚点-->
     <div class="goTop"><a href="#top" class="goTopBtn" title="返回顶部">Ú</a></div>
+
+
     <script src="../../public/js/jquery-1.9.1.min.js"></script>
     <script>
         $(window.onscroll=function () {
             var top=$(document).scrollTop() ? $(document).scrollTop() : $("body").scrollTop();
-            console.log(top);
+            /*console.log(top);*/
             if(top>0){
                 $(".goTopBtn").fadeIn();
             }else if(top==0){
@@ -152,7 +212,16 @@
                 });
             })(i);
         }
-    </script>
 
+        /*来往的弹出框效果*/
+        var display =$('.contact-box').css('display');
+        $(".nav-info-fourth").click(function(){
+            if(display == 'none'){
+                $('.contact-box').show();
+            }else if(display == 'block'){
+                $('.contact-box').hide();
+            }
+        });
+    </script>
 </body>
 </html>
