@@ -32,7 +32,10 @@
     </div>
 
     <div class="mf-profile-content">
-        <div class="mf-profile-content-row"><a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a></div>
+        <div class="mf-profile-content-row">
+            <img src="" id="preImg" />
+            <a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a>
+        </div>
         <div id="mf-avatar-modal" class="mf-avatar-modal" >
             <div class="mf-avatar-content">
             <div class="mf-avater-dropdown-content">
@@ -44,7 +47,7 @@
                 <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" id="mf-avatar-upload-image-btn" href="javascript:void(0);" style="display: none;">
                     <i class="mf-icon-camera-add"></i>
                     使用图片
-                    <input id="mf_avatar_bg_image" type="file" class="mf_avatar_bg_image">
+                    <input id="mf_avatar_bg_image" type="file" class="mf_avatar_bg_image" onchange="loadImageFile()"/>
                 </a>
                     <div class="mf-color-picker-content">
                         <span class="mf-color-picker mf-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;"></span>
@@ -248,6 +251,28 @@
                }else {
                    $("#mf-avatar-modal").addClass("mf-avatar-modal-change-big");
                    $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-small");
+
+                   var oFReader = new FileReader();
+                   //利用正则过滤图片文件
+                   var rFilter = /^(?:image\/bmp|image\/gif|image\/jpeg|image\/pipeg|image\/png)$/i;
+                   function loadImageFile(){
+                       if($("#uploadImage").files.length!=0){
+                           var oFile=$("#uploadImage").files[0];
+                           if(!rFilter.test(oFile.type)){
+                               alert("你必须选择一个图片文件");
+                               return;
+                           }
+                           oFReader.readAsDataURL(oFile);
+                       }
+                   }
+
+                   oFReader.onload(function(event){
+                       //console.log(event.target.result);
+                       //console.log(this.result);
+                       $("#preImg").src=event.target.result;
+                   });
+
+
                  
                   $(".mf-color-picker").each(function (i) {
                        $(this).click(function (index) {
@@ -279,6 +304,7 @@
                        });
 
                    });
+
 
                }
                $("#mf-avatar-modal-tab-font").click(function (){
