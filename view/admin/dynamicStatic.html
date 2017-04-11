@@ -32,10 +32,10 @@
     <div class="contact-box" style="display: none;">
         <span class="out"></span><span class="iner"></span>
         <div class="contact-box-nav">
-            <li class="contact-box-nav-concern">H</li>
-            <li class="contact-box-nav-admire">C</li>
-            <li class="contact-box-nav-comment">-</li>
-            <li class="contact-box-nav-message">I</li>
+            <li class="contact-box-nav-concern" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message" onclick="contactNav(3)">I</li>
         </div>
         <div class="contact-box-content">
             <div class="contact-box-conn contact-conn0" style="display: none">
@@ -214,14 +214,28 @@
         }
 
         /*来往的弹出框效果*/
-        var display =$('.contact-box').css('display');
+        var flag=true;
         $(".nav-info-fourth").click(function(){
-            if(display == 'none'){
+            if(flag){
                 $('.contact-box').show();
-            }else if(display == 'block'){
+                flag=false;
+            }else{
                 $('.contact-box').hide();
+                flag=true;
             }
         });
+        /**/
+        function contactNav(i){
+            for(var j=0;j<4;j++){
+                if(j==i){
+                    $(".contact-conn"+i).show();
+                }else{
+                    $(".contact-conn"+j).hide();
+                }
+            }
+
+
+        }
     </script>
 </body>
 </html>
