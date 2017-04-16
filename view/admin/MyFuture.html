@@ -33,6 +33,7 @@
 
     <div class="mf-profile-content">
         <div class="mf-profile-content-row">
+
             <img src="" id="preImg" />
             <a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a>
         </div>
@@ -47,7 +48,7 @@
                 <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" id="mf-avatar-upload-image-btn" href="javascript:void(0);" style="display: none;">
                     <i class="mf-icon-camera-add"></i>
                     使用图片
-                    <input id="mf_avatar_bg_image" type="file" class="mf_avatar_bg_image" onchange="loadImageFile()"/>
+                    <input id="mf-avatar-bg-image" type="file" class="mf_avatar_bg_image" onchange="loadImageFile();" />
                 </a>
                     <div class="mf-color-picker-content">
                         <span class="mf-color-picker mf-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;"></span>
@@ -76,7 +77,7 @@
             <div class="mf-profile-modcon-tro">生活了 <span>22</span> 年的 <span>男生</span> ，在 <span>湖南</span></div>
             <div class="mf-profile-modcon-futrue">现在是 <span>文艺小清新</span> 丨 想成为 <span>成功男士</span></div>
         </div>
-        <div class="mf-profile-modify-btn-container"><a href="">编辑资料</a></div>
+        <div class="mf-profile-modify-btn-container"><a href="javascript:;">编辑资料</a></div>
     </div>
 
     <!--时间轴-->
@@ -240,6 +241,26 @@
             })(i);
         }
 
+        var oFReader = new FileReader();
+        //利用正则过滤图片文件
+        var rFilter = /^(?:image\/bmp|image\/gif|image\/jpeg|image\/pipeg|image\/png)$/i;
+        function loadImageFile(){
+            if(document.getElementById("mf-avatar-bg-image").files.length!=0){
+                var oFile=document.getElementById("mf-avatar-bg-image").files[0];
+                if(!rFilter.test(oFile.type)){
+                    alert("你必须选择一个图片文件");
+                    return;
+                }
+                oFReader.readAsDataURL(oFile);
+            }
+        }
+
+        oFReader.onload=function(event){
+            //console.log(event.target.result);
+            //console.log(this.result);
+            document.getElementById("preImg").src=event.target.result;
+        };
+
         $(function () {
             $("#mf-profile-content-row-a").click(function () {
                 $("#mf-avatar-modal-tab-font").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
@@ -251,29 +272,6 @@
                }else {
                    $("#mf-avatar-modal").addClass("mf-avatar-modal-change-big");
                    $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-small");
-
-                   var oFReader = new FileReader();
-                   //利用正则过滤图片文件
-                   var rFilter = /^(?:image\/bmp|image\/gif|image\/jpeg|image\/pipeg|image\/png)$/i;
-                   function loadImageFile(){
-                       if($("#uploadImage").files.length!=0){
-                           var oFile=$("#uploadImage").files[0];
-                           if(!rFilter.test(oFile.type)){
-                               alert("你必须选择一个图片文件");
-                               return;
-                           }
-                           oFReader.readAsDataURL(oFile);
-                       }
-                   }
-
-                   oFReader.onload(function(event){
-                       //console.log(event.target.result);
-                       //console.log(this.result);
-                       $("#preImg").src=event.target.result;
-                   });
-
-
-                 
                   $(".mf-color-picker").each(function (i) {
                        $(this).click(function (index) {
                            $(".mf-color-picker").each(function (index) {
@@ -318,9 +316,16 @@
                     $("#mf-avatar-modal-tab-font").css({'border-color': '#ccc', 'color': '#777'});
                     $("#mf-avatar-upload-image-btn").css('display','block');
                     $("#mf-avatar-name-input").css('display','none');
+                    $('.mf-color-picker-item').each(function () {
+                        $(this).click(function () {
+                            $('.mf-profile-content-row').css({'background-color':$(this).css('background-color'),'background-image':'none'});
+                        });
+                    })
                 });
             });
         });
+
+
 
 
     </script>
