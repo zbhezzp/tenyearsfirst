@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>十年后 - 关于我们</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <link rel="shortcut icon" href="../../public/images/favicon.ico"/>
-
+    <link rel="stylesheet" href="../../public/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../../public/css/about.css"/>
     <link rel="stylesheet" type="text/css" href="../../public/css/AboutUs.css"/>
     <script src="../../public/js/jquery-1.9.1.min.js"></script>
 </head>
 <body>
-    <div class="au-top">
+    <div class="au-top" >
         <div class="au-top-vedio">
             <video src="../../public/images/about_video.mp4" autoplay loop></video>
         </div>
@@ -44,12 +46,13 @@
         <div id="au-sameCamp_container" class="au-sameCamp-container"></div>
     </div>
 
-    <div class="au-jionUs">
+
+        <div class="au-jionUs">
         <h1>想一起改变世界吗，来<span class="au-jionUs-green">加入我们</span>吧</h1>
         <p>简历投递邮箱</p>
         <p><a href="">[ join@10years.me ]</a></p>
         <div class="au-jionUs-container">
-            <div class="au-jionUs-job">
+            <div class="au-jionUs-job md-trigger md-setperspective"  data-modal="modal-1">
                 <div class="au-jionUs-job-summary">
                     <div class="au-jionUs-job-icon">
                         <img class="au_join_circle" src="../../public/images/ic_join_circle.png" alt=""/>
@@ -60,29 +63,34 @@
                     <div class="au-jionUs-job-name">iOS工程师</div>
                 </div>
 
-                <div class="au-jionUs-job-detail" style="display:none">
-                    <a class="au-jionUs-job-close" href=""></a>
-                    <div class="au-jionUs-detail-container">
-                        <h3>iOS工程师</h3>
-                        <p>10 - 20K</p>
-                        <div class="au-jionUs-job-responsibilities">
-                            <p>职位描述：</p>
-                            <ol>
-                                <li>参与十年后项目的iOS客户端的开发，包括 iPhone、iPad。</li>
-                            </ol>
-                            <p>职位要求:</p>
-                            <ol>
-                                <li>具备扎实的 Objective-C 基础；</li>
-                                <li>一年以上的 iOS 开发经验，有商业项目开发经验或 App Store上架应用者优先；</li>
-                                <li>善于研究和掌握相关领域内的前沿技术、技术难点及技术趋势；</li>
-                                <li>逻辑思维清晰，有较强的解决问题的能力；</li>
-                                <li>遵守团队的代码格式、代码安全、代码结构规定，编写易读、易维护、高质量、高效率的代码；</li>
-                                <li>有非常强的创新意识，希望通过自己的努力和我们一起创造出互联网世界下一个伟大的产品。</li>
-                            </ol>
+                <!--弹出框-->
+                <div class="md-modal md-effect-16" id="modal-1">
+                    <div class="au-jionUs-job-detail md-content"  >
+                        <a class="au-jionUs-job-close md-close" href="javascript:;">X</a>
+                        <div class="au-jionUs-detail-container">
+                            <h3>iOS工程师</h3>
+                            <p id="au-jionUs-salary">10 - 20K</p>
+                            <div class="au-jionUs-job-responsibilities">
+                                <p id="au-jionUs-post1">职位描述：</p>
+                                <ol class="au-jionUs-post1-ol">
+                                    <li>参与十年后项目的iOS客户端的开发，包括 iPhone、iPad。</li>
+                                </ol>
+                                <p id="au-jionUs-post2">职位要求:</p>
+                                <ol class="au-jionUs-post2-ol">
+                                    <li>具备扎实的 Objective-C 基础；</li>
+                                    <li>一年以上的 iOS 开发经验，有商业项目开发经验或 App Store上架应用者优先；</li>
+                                    <li>善于研究和掌握相关领域内的前沿技术、技术难点及技术趋势；</li>
+                                    <li>逻辑思维清晰，有较强的解决问题的能力；</li>
+                                    <li>遵守团队的代码格式、代码安全、代码结构规定，编写易读、易维护、高质量、高效率的代码；</li>
+                                    <li>有非常强的创新意识，希望通过自己的努力和我们一起创造出互联网世界下一个伟大的产品。</li>
+                                </ol>
+                            </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
 
             <div class="au-jionUs-job">
                 <div class="au-jionUs-job-summary">
@@ -146,6 +154,7 @@
         </div>
     </div>
 
+
     <div class="au-media">
         <h1>关于我们的<span class="au-media-green">媒体报道</span></h1>
         <div class="au-media-container">
@@ -164,25 +173,26 @@
         <h1>和我们交流你关于十年后的<span class="au-think-green">任何想法</span></h1>
         <div class="au-think-container">
             <div id="au-think-title" class="au-think-title clearfix">
-                <a href="" class="au-think-col-4 au-think-share-weibo">
+                <a href="javasccript:;" class="au-think-col-4 au-think-share-weibo" onclick="auThinkClick(0)">
                     <img src="../../public/images/ic_contact_weibo.png">
                 </a>
-                <a href="" class="au-think-col-4 au-think-share-wechat">
+                <a href="javasccript:;" class="au-think-col-4 au-think-share-wechat" onclick="auThinkClick(1)">
                     <img src="../../public/images/ic_contact_weixin.png">
                 </a>
-                <a href="" class="au-think-col-4 au-think-share-renren">
+                <a href="javasccript:;" class="au-think-col-4 au-think-share-renren" onclick="auThinkClick(2)">
                     <img src="../../public/images/ic_contact_renren.png">
                 </a>
-                <a href="" class="au-think-col-4 au-think-share-mail">
+                <a href="javasccript:;" class="au-think-col-4 au-think-share-mail" onclick="auThinkClick(3)">
                     <img src="../../public/images/ic_contact_mail.png">
                 </a>
             </div>
             <div class="au-think-content">
                 <span class="au-think-out"></span><span class="au-think-iner"></span>
-                <!--<div class="au-think-content-details">
+                <div class="au-think-content-details">
                     <p>如果你对「十年后」有任何的建议，或乐意和我们交流关于未来、人生和社交网络的理念的,请通过以上方式联系我们。</p>
-                </div>-->
-                <!--<div class="au-think-content-officialWebsite">
+                </div>
+
+                <div class="au-think-content-officialWebsite au-think-conn0" style="display: none">
                     <div class="officialWebsite-left">
                         <img src="../../public/images/weibo_avatar.jpeg">
                     </div>
@@ -201,9 +211,9 @@
                             <p class="officialWebsite-p">微博</p>
                         </div>
                     </div>
-                </div>-->
+                </div>
 
-                <!--<div class="au-think-content-WebXin">
+                <div class="au-think-content-WebXin au-think-conn1" style="display: none">
                     <div class="au-think-WebXin-left">
                         <img src="../../public/images/wechat_avatar.gif" />
                     </div>
@@ -211,9 +221,9 @@
                         <h3>关注官方微信，了解更多内容</h3>
                         <p>微信号: tenyearsme</p>
                     </div>
-                </div>-->
+                </div>
 
-                <!--<div class="au-think-content-public">
+                <div class="au-think-content-public au-think-conn2" style="display: none">
                     <div class="au-think-public-left">
                         <img src="../../public/images/renren_avatar.jpg" />
                     </div>
@@ -223,9 +233,9 @@
                         </h3>
                         <p>关注者：8737</p>
                     </div>
-                </div>-->
+                </div>
 
-                <div class="au-think-content-email">
+                <div class="au-think-content-email au-think-conn3" style="display: none">
                     <a class="au-think-email" href="mailto:talk@10years.me">
                         <img src="../../public/images/icon_mail.png" alt="">&nbsp;&nbsp;|&nbsp;&nbsp;talk@10years.me
                         <span class="au-think-email-line"></span>
@@ -259,7 +269,6 @@
             </div>
         </div>
     </div>
-
 
     <div class="au-foot">
         <div class="au-foot-content">
@@ -315,12 +324,97 @@
             <a href="http://www.oneapm.com"><img src="../../public/images/badge2xblue.png" height="45" /></a>
         </div>
     </div>
+    <div class="md-overlay"></div>
 
+    <script src="../../public/js/classie.js"></script>
+    <script src="../../public/js/modalEffects.js"></script>
     <script>
+        /*加入我们的弹出框*/
+
+
+
+        /*交流想法部分*/
+        $(auThinkHover());
+        function auThinkHover() {
+            $(".au-think-share-weibo img").hover(function(){
+                $(".au-think-share-weibo img").attr("src","../../public/images/ic_contact_weibo_hover.png");
+            },function(){
+                $(".au-think-share-weibo img").attr("src","../../public/images/ic_contact_weibo.png");
+            });
+            $(".au-think-share-wechat img").hover(function(){
+                $(".au-think-share-wechat img").attr("src","../../public/images/ic_contact_weixin_ahover.png");
+            },function(){
+                $(".au-think-share-wechat img").attr("src","../../public/images/ic_contact_weixin.png");
+            });
+            $(".au-think-share-renren img").hover(function(){
+                $(".au-think-share-renren img").attr("src","../../public/images/ic_contact_renren_hover.png");
+            },function(){
+                $(".au-think-share-renren img").attr("src","../../public/images/ic_contact_renren.png");
+            });
+            $(".au-think-share-mail img").hover(function(){
+                $(".au-think-share-mail img").attr("src","../../public/images/ic_contact_mail_ahover.png");
+            },function(){
+                $(".au-think-share-mail img").attr("src","../../public/images/ic_contact_mail.png");
+            });
+        }
+
+        $(".au-think-col-4").click(function(){
+
+        });
+        function auThinkClick(i){
+            for(var j=0;j<4;j++){
+                if(j==i){
+                    $(".au-think-conn"+i).show();
+                    $(".au-think-content-details").hide();
+                }else{
+                    $(".au-think-conn"+j).hide();
+                }
+            }
+        }
+        $(".au-think-share-weibo img").click(function(){
+            $(".au-think-out").animate({"left":"30px"},1000);
+            $(".au-think-iner").animate({"left":"30px"},1000);
+            $(this).unbind("mouseenter").unbind("mouseleave");
+            $(this).attr("src","../../public/images/ic_contact_weibo_hover.png");
+        });
+        $(".au-think-share-wechat img").click(function(){
+            auThinkHover();
+            $(".au-think-share-weibo img").attr("src","../../public/images/ic_contact_weibo.png");
+            $(".au-think-share-renren img").attr("src","../../public/images/ic_contact_renren.png");
+            $(".au-think-share-mail img").attr("src","../../public/images/ic_contact_mail.png");
+            $(this).attr("src","../../public/images/ic_contact_weixin_ahover.png");
+            $(".au-think-out").animate({"left":"175px"},1000);
+            $(".au-think-iner").animate({"left":"175px"},1000);
+            $(this).unbind("mouseenter").unbind("mouseleave");
+
+        });
+        $(".au-think-share-renren img").click(function(){
+            auThinkHover();
+            $(".au-think-share-weibo img").attr("src","../../public/images/ic_contact_weibo.png");
+            $(".au-think-share-wechat img").attr("src","../../public/images/ic_contact_weixin.png");
+            $(".au-think-share-mail img").attr("src","../../public/images/ic_contact_mail.png");
+            $(this).attr("src","../../public/images/ic_contact_renren_hover.png");
+            $(".au-think-out").animate({"left":"330px"},1000);
+            $(".au-think-iner").animate({"left":"330px"},1000);
+            $(this).unbind("mouseenter").unbind("mouseleave");
+        });
+        $(".au-think-share-mail img").click(function(){
+            auThinkHover();
+            $(".au-think-share-weibo img").attr("src","../../public/images/ic_contact_weibo.png");
+            $(".au-think-share-wechat img").attr("src","../../public/images/ic_contact_weixin.png");
+            $(".au-think-share-renren img").attr("src","../../public/images/ic_contact_renren.png");
+            $(this).attr("src","../../public/images/ic_contact_mail_ahover.png");
+            $(".au-think-out").animate({"left":"480px"},1000);
+            $(".au-think-iner").animate({"left":"480px"},1000);
+            $(this).unbind("mouseenter").unbind("mouseleave");
+        });
+
+
         /*下载移动端部分*/
         $(".au_MT-android_btn").hover(function(){
             $(this).css("backgroundColor","#fff");
             $(".au_MT_android_load").show(3000);
+
         },function(){
             $(".au_MT_android_load").hide();
         });
