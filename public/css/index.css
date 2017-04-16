@@ -93,7 +93,7 @@ ul li{
     position: relative;
     height:100%;
     text-align: center;
-    background: url("../images/bs-bg.jpg");
+    background: url("../images/bs_bg.jpg");
     background-size: cover;
 }
 .bs-background .bs-explore{
