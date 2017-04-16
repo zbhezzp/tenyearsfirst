@@ -1,0 +1,758 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+ul li{
+    list-style: none;
+}
+@font-face{       /*特定字体*/
+    font-family:'wbficon';
+    src:url(../../public/woff/wbficon.woff),url(../../public/woff/wbficon.woff) format('woff');
+}
+@font-face{       /*特定字体*/
+    font-family:'unlogficon';
+    src:url(../woff/unlogficon.woff),url(../woff/unlogficon.woff) format('woff');
+}
+
+/*十年后的首页*/
+.au-top{
+    width: 100%;
+    height: 662px;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+}
+.au-top-vedio{
+    height: 100%;
+    width:100%;
+    overflow: hidden;
+    position: absolute;
+}
+.au-top-vedio video {
+    width:100%;
+}
+
+.au-top-head{
+    width:1000px;
+    height:60px;
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    z-index: 10;
+}
+.au-head-left a img{
+    width:134px;
+    height:36px;
+    margin-left: 10px;
+}
+.au-head-right{
+    float:right;
+    margin-top:-30px;
+    margin-right:15px;
+}
+.au-head-register{
+    color:#A5AAB7;
+    font-size: 12px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    padding: 8px 10px;
+}
+.au-head-register:hover{
+    text-decoration: underline;
+}
+.au-head-login{
+    color:#A5AAB7;
+    font-size: 12px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    padding: 8px 15px;
+    border:1px solid #A5AAB7;
+    border-radius: 5px;
+}
+
+.au-top-become{
+    width:1000px;
+    height:80px;
+    line-height: 80px;
+    margin: auto;
+    text-align: center;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 50px;
+    font-weight: bold;
+    color:#A5AAB7;
+    position: relative;
+    top:90px;
+    z-index: 10;
+}
+
+.au-top-content{
+    width:500px;
+    height:178px;
+    margin: auto;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 15px;
+    color:#fff;
+    position: relative;
+    top:140px;
+    z-index: 10;
+}
+.au-top-content p{
+    line-height:30px;
+    text-align: center;
+}
+.au-top-content ul{
+    position: absolute;
+    left:115px;
+}
+.au-top-content ul li{
+    margin-top:10px;
+}
+
+/*志同道合的页面*/
+.au-sameCamp{
+    width:100%;
+    height:580px;
+    overflow: hidden;
+}
+.au-sameCamp h1{
+    height:40px;
+    line-height: 40px;
+    margin: 60px 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #333;
+}
+.au-sameCamp-green{
+    color: #00B4FF;
+}
+.au-sameCamp-desc{
+    width:800px;
+    margin:auto;
+}
+.au-sameCamp-desc p{
+    margin-top: 20px;
+
+    line-height: 1.6;
+    color: #333;
+    font-size: 14px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.au-sameCamp-container{
+    width:860px;
+    height:240px;
+    margin:50px auto;
+    background: pink;
+}
+
+/*加入我们的页面*/
+.au-jionUs{
+    width:100%;
+    height:610px;
+    background: url("../../public/images/img_about_bg2.jpg");
+    overflow: hidden;
+}
+.au-jionUs h1{
+    height:40px;
+    line-height: 40px;
+    padding: 60px 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+.au-jionUs-green{
+    color: #00B4FF;
+}
+.au-jionUs p{
+    width:155px;
+    height:24px;
+    margin: auto;
+    text-align: center;
+    color:#fff;
+    font-size: 16px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.au-jionUs p a{
+    color:#fff;
+}
+.au-jionUs-container{
+    width:1000px;
+    height:366px;
+    margin: 15px auto;
+}
+.au-jionUs-job{
+    width:300px;
+    height:150px;
+    margin: 16px;
+    float: left;
+}
+.au-jionUs-job-summary{
+    width:300px;
+    height:150px;
+    cursor: pointer;
+    background: rgba(134,134,132,0.6);
+}
+.au-jionUs-job-summary:hover .au_join_circle{
+    -webkit-transform:rotate(360deg);
+    -moz-transform:rotate(360deg);
+}
+.au-jionUs-job-icon{
+    width:68px;
+    height:68px;
+    margin: auto;
+    padding: 20px 0px;
+    position: relative;
+}
+.au_join_circle{
+    -webkit-transition:1s;
+    -webkit-transform-origin:center;
+    -moz-transition:1s;
+    -moz-transform-origin:center;
+}
+.au-jionUs-icon-circle{
+    width:68px;
+    height:68px;
+    text-align: center;
+    line-height: 68px;
+    margin-top: -72px;
+}
+.au-jionUs-icon-circle img{
+    vertical-align: middle;
+}
+.au-jionUs-job-name{
+    width:300px;
+    text-align: center;
+    color:#F9F9F9;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+
+
+/*媒体报道部分*/
+.au-media{
+    width:100%;
+    height:500px;
+    background: pink;
+    border-bottom:1px solid #eee;
+    overflow: hidden;
+}
+.au-media h1{
+    height:40px;
+    line-height: 40px;
+    padding: 60px 0px;
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+}
+.au-media-green{
+    color: #00B4FF;
+}
+.au-media-container{
+    width:1000px;
+    height:240px;
+    padding:0px 30px;
+    margin:40px auto 20px;
+    background: #ffdca2;
+}
+.au-media-report-slide{
+    width:350px;
+    height:240px;
+    border:1px solid #DDDDDD;
+    box-shadow:0 0 10px rgba(0, 180, 255, .5);
+    text-align:center;
+}
+.au-media-report-img{
+    width:218px;
+    height:108px;
+    display: inline-block;
+    margin:auto;
+}
+.au-media-report-img img{
+    padding: 6.5px 28px;
+}
+.au-media-report-slide h4 a{
+    color:#444;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.au-media-report-word{
+    width:328px;
+    height:67px;
+    margin-top:20px;
+    margin-left:10px;
+    color:#777;
+    font-size: 13px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    overflow: hidden;
+}
+
+
+
+/*交流想法部分*/
+.au-think{
+    width:100%;
+    height:550px;
+    border-bottom: 1px solid #ddd;
+    background: url("../../public/images/ic_about_contact.png") no-repeat 80px 20px;
+    overflow: hidden;
+}
+.au-think h1{
+    width:800px;
+    height:40px;
+    line-height: 40px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 40px;
+    margin: 0px auto 20px;
+}
+.au-think-green{
+    color: #00B4FF;
+}
+
+.au-think-container{
+    width:600px;
+    height:350px;
+    margin: auto;
+    background: #c1ffb3;
+}
+.au-think-share-title{
+    width:600px;
+    height:120px;
+    position: relative;
+}
+.au-think-col-4{
+    width:150px;
+    height:120px;
+    line-height: 150px;
+    text-align: center;
+    float: left;
+}
+.au-think-col-4 img{
+    width:60px;
+    height:60px;
+}
+
+.au-think-content{
+    width:540px;
+    height:200px;
+    background: #fff;
+    margin:auto;
+    position: relative;
+    top:150px;
+    box-shadow:0 0 4px rgba(165, 183, 160, 0.5);
+}
+.au-think-content span{
+    position: absolute;
+    left: 260px;
+    height: 0px;
+    width: 0px;
+}
+/*上部小三角实现样式开始*/
+span.au-think-out {
+    line-height: 0;
+    border-width: 20px;
+    border-color: transparent transparent rgb(165, 183, 160) transparent;
+    border-style: dashed dashed solid dashed;
+    top: -41px;
+}
+span.au-think-iner {
+    border-width: 20px;
+    border-color: transparent transparent #FFF transparent;
+    border-style: dashed dashed solid dashed;
+    top: -40px;
+    line-height: 0;
+}
+
+.au-think-content-details{
+    width:500px;
+    height:110px;
+    padding: 40px 20px;
+    position: relative;
+}
+.au-think-content-details p{
+    width:440px;
+    height:70px;
+    line-height: 35px;
+    margin: 20px 30px;
+    color:#777;
+    font-size: 16px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    position: absolute;
+}
+.au-think-content-details > p::after, .au-think-content-details > p::before {
+    content: "“";
+    position: absolute;
+    font-size: 50px;
+    color: rgb(119, 119, 119);
+    margin-left: -25px;
+    margin-top: -10px;
+}
+.au-think-content-details > p::after {
+    content: "”";
+    margin-left: 0px;
+    margin-top: 15px;
+}
+.au-think-content-details>p:first-letter {
+    font-size: 30px;
+    color: #444;
+    margin-right: 2px;
+}
+
+.au-think-content-officialWebsite{
+    width:500px;
+    height:120px;
+    padding:40px 20px;
+    position: relative;
+}
+.officialWebsite-left{
+    width:160px;
+    height:120px;
+    position: absolute;
+    left:20px;
+    top:40px;
+}
+.officialWebsite-left img{
+    width:120px;
+    height:120px;
+    margin: 0px 20px;
+}
+.officialWebsite-right{
+    width:300px;
+    height:120px;
+    position: absolute;
+    left:200px;
+    top:40px;
+}
+.officialWebsite-right h2 a{
+    width:300px;
+    height:60px;
+    text-align: center;
+    line-height: 60px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    color:#444;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+.officialWebsite-col-3{
+    width:100Px;
+    height:50px;
+    float: left;
+}
+.officialWebsite-col-3 p{
+    font-weight: 700;
+    font-size: 16px;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    color:#777777;
+    line-height: 1.7;
+}
+p.officialWebsite-p{
+    font-size:14px;
+    font-weight: normal;
+}
+
+.au-think-content-WebXin{
+    width:500px;
+    height:137px;
+    padding:40px 20px;
+    position: relative;
+}
+.au-think-WebXin-left{
+    position:absolute;
+    top:20px;
+    left:40px;
+}
+.au-think-WebXin-left img{
+    width:140px;
+    height:156px;
+}
+.au-think-WebXin-right{
+    position:absolute;
+    top:50px;
+    left:220px;
+}
+.au-think-WebXin-right h3{
+    width:300px;
+    hight:60px;
+    line-height: 60px;
+    font-size: 22px;
+    color: #777;
+    font-weight: 400;
+    margin-bottom:5px;
+}
+.au-think-WebXin-right p{
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.au-think-content-public{
+    width:500px;
+    height:121px;
+    padding:40px 20px;
+    position: relative;
+}
+.au-think-public-left{
+    position: absolute;
+    left:40px;
+}
+.au-think-public-left img{
+    width:120px;
+    height:120px;
+}
+.au-think-public-right{
+    position:absolute;
+    top:40px;
+    left:220px;
+}
+.au-think-public-right h3 a{
+    width:300px;
+    hight:60px;
+    line-height: 60px;
+    font-size: 22px;
+    color: #777;
+    font-weight: 400;
+    margin-bottom:5px;
+}
+.au-think-public-right p{
+    color: #777;
+    font-size: 13px;
+    line-height: 1.7;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+
+.au-think-content-email{
+    width:500px;
+    height:110px;
+    padding:40px 20px;
+}
+.au-think-email{
+    width:500px;
+    height:110px;
+    line-height: 110px;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    top:-80px;
+    font-size: 28px;
+    color:#999;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+}
+.au-think-email img{
+    width:30px;
+    height:23px;
+    position: relative;
+    top:2px;
+}
+
+
+
+
+/*下载移动端部分*/
+.au-MT {
+    width: 100%;
+    height: 565px;
+    border-bottom: 2px solid #00B4FF;
+    overflow: hidden;
+}
+.au-MT h1{
+    width:800px;
+    height:40px;
+    line-height: 40px;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 40px;
+    margin: 0px auto 54px;
+}
+.au-MT-green{
+    color: #00B4FF;
+}
+
+.au-MT-content{
+    width:700px;
+    height:450px;
+    margin: 20px auto;
+}
+.au-MT-left{
+    position:relative;
+}
+.au_MT_iphone{
+    width: 250px;
+    position:absolute;
+    z-index: -1;
+}
+.au_MT_android{
+    width:280px;
+    position: absolute;
+    left:170px;
+    top:40px;
+    z-index: -2;
+}
+.au-MT-right{
+    position: relative;
+    left:480px;
+}
+.au_MT-iphone_btn{
+    width:160px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    position: absolute;
+    top:0px;
+}
+.au_MT-iphone_btn:hover{
+    background: #0086FF;
+    animation: changColor 5s infinite;
+}
+.au_MT-iphone_btn:hover a{
+    color:#fff;
+}
+@keyframes changColor{
+    0%{
+        background: #fff;
+        color:#999;
+    }
+    100%{
+        color:#fff;
+        background: #0086FF;
+    }
+}
+.au_MT-iphone_btn a,.au_MT-android_icon{
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color:#999;
+}
+.au_MT_type_iPhone{
+    font-family: unlogficon;
+    font-size: 28px;
+}
+
+.au_MT-android_btn{
+    width:160px;
+    height:48px;
+    text-align: center;
+    line-height: 48px;
+    border:1px solid #ccc;
+    border-radius: 8px;
+    position: absolute;
+    top:70px;
+    transition:3s;
+}
+.au_MT-android_btn:hover{
+    height:150px;
+}
+.au_MT_android_load{
+    display: none;
+}
+.au_MT_android_load li{
+    width:160px;
+    height:48px;
+    text-align: center;
+    line-height: 48px;
+    list-style: none;
+}
+.au_MT_android_load li:hover{
+    background: #F4F4F4;
+    border-radius: 8px;
+}
+.au_MT_android_load li a{
+    color:#444;
+    font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    font-size: 14px;
+}
+
+.au_MT-download-qrcode{
+    position: absolute;
+    top:140px;
+    z-index: -1;
+}
+
+
+
+/*底部信息*/
+.au-foot{
+    width:100%;
+    height:322px;
+    padding:30px 0px;
+    background: #9D95C1;
+    overflow: hidden;
+    position: relative;
+}
+.au-foot-content{
+    width:1000px;
+    height:249px;
+    margin: auto;
+}
+.foot-contant-col{
+    width:250px;
+    height:189px;
+    float:left;
+}
+.app{            /*下载应用距下的距离*/
+    position: relative;
+    top: 20px;
+}
+.foot-contant-col ul li a{
+    color:#ccc;
+
+}
+.foot-contant-col p{
+    color:#ccc;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 10px 0px 20px 0px;
+}
+.foot-contant-col .foot-contantX2{
+    width:200px;
+    line-height:1.5;
+    color:#ccc;
+    font-size: 14px;
+}
+.foot-contant-col .foot-aboutMe,.foot-mediaReport,.foot-downloadApp{
+    height:36px;
+    line-height: 36px;
+    color:#eee;
+    font-size: 16px;
+    font-weight: bold;
+}
+.foot-contant-col ul li{
+    height:30px;
+    line-height: 30px;
+    font-size: 14px;
+}
+.foot-contant-col .download-btn{
+    width:115px;
+    height:35px;
+    text-align: center;
+    line-height: 35px;
+    border:1px solid #04A6EA;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.foot-contant-col .download-btn a{
+    color:#04A6EA;
+}
+.foot-contant-col .download-btn a b{
+    font-family:'unlogficon';
+    font-size: 24px;
+    font-weight: 400;
+    color:#04A6EA;
+}
+.download-QRcode{
+    position: absolute;
+    top:0px;
+    left:125px;
+}
+.au-foot-bottom{
+    width:100%;
+    height:73px;
+    text-align: center;
+    color:#657277;
+    font-size: 14px;
+    position: absolute;
+    bottom: 30px;
+}
+.au-foot-bottom a{
+    color:#ccc;
+}
