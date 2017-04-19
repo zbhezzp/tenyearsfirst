@@ -109,6 +109,8 @@ ul li{
     margin-top:10px;
 }
 
+
+
 /*志同道合的页面*/
 .au-sameCamp{
     width:100%;
@@ -144,6 +146,8 @@ ul li{
     margin:50px auto;
     background: pink;
 }
+
+
 
 /*加入我们的页面*/
 .au-jionUs{
@@ -284,6 +288,9 @@ ul li{
 .au-jionUs-job-responsibilities ol.au-jionUs-post2-ol{
     margin-top: 25px;
 }
+
+
+
 
 /*媒体报道部分*/
 .au-media{
@@ -612,6 +619,7 @@ p.officialWebsite-p{
     width:295px;
     -webkit-transform:scaleX(1.1);
 }
+
 
 
 
