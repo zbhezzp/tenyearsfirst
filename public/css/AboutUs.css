@@ -144,8 +144,122 @@ ul li{
     width:860px;
     height:240px;
     margin:50px auto;
-    background: pink;
+    position: relative;
 }
+.au-sameCamp-temp-member{
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    background: #eee;
+    -webkit-transition: all .4s ease-in-out;
+}
+
+.au-sameCamp-temp-member>h3>small{
+    display: block;
+    color: #999;
+    font-size: 13px;
+    margin-top: 5px;
+    width: 150px;
+}
+.au-team-member-circle{
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    left: 7px;
+    top: 7px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 999;
+}
+.au-team-member-info{
+    position: absolute;
+    left: 0;
+    width: 0px;
+    height: 80px;
+    padding-left: 80px;
+    background: #eee;
+    cursor: pointer;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+}
+
+.au-sameCamp-temp-member1{
+    left: 60%;
+    top: 100px;
+    transform: scale(0.8);
+}
+.au-sameCamp-temp-member2{
+    left: 40%;
+    top: 80px;
+    transform: scale(0.6);
+}
+.au-sameCamp-temp-member3{
+    left: 20%;
+    top: 143px;
+    transform: scale(0.58);
+}
+.au-sameCamp-temp-member4{
+    left: 22%;
+    top: 50px;
+}
+.au-sameCamp-temp-member5{
+    left: 31%;
+    top: 143px;
+    transform: scale(0.7);
+}
+.au-sameCamp-temp-member6{
+    left: 33%;
+    top: 7px;
+    transform: scale(0.9);
+}
+.au-sameCamp-temp-member7{
+    left: 48%;
+    top: 140px;
+    transform: scale(0.7);
+}
+.au-sameCamp-temp-member8{
+    left: 65%;
+    top: 0;
+}
+.au-sameCamp-temp-member9{
+    left: 0;
+    top: 139px;
+}
+.au-sameCamp-temp-member10{
+    left: 74%;
+    top: 50px;
+    transform: scale(0.6);
+}
+.au-sameCamp-temp-member11{
+    left: 72%;
+    top: 150px;
+}
+.au-sameCamp-temp-member12{
+    left: 10%;
+    top: 10px;
+    transform: scale(0.58);
+}
+.au-sameCamp-temp-member13{
+    left: 90%;
+    top: 20px;
+
+}
+.au-sameCamp-temp-member14{
+    left: 11%;
+    top: 84px;
+    transform: scale(0.7);
+}
+
 
 
 
@@ -239,7 +353,21 @@ ul li{
     top:0px;
     left:0px;
     z-index: 20;
+    transform: scale(0);
 }
+.au-jionUs-job-detail-big{
+    transition:transform 0.2s linear;
+    transform: scale(1);
+}
+
+.au-jionUs-job-detail-small{
+    transition:transform 0.2s linear;
+    transform: scale(0);
+
+}
+
+
+
 .au-jionUs-job-close{
     font-family: wbficon;
     font-size: 30px;

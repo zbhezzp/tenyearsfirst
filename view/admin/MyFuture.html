@@ -33,7 +33,7 @@
 
     <div class="mf-profile-content">
         <div class="mf-profile-content-row">
-
+            <p id="mf-profile-content-row-p"></p>
             <img src="" id="preImg" />
             <a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a>
         </div>
@@ -80,8 +80,6 @@
         <div class="mf-profile-modify-btn-container"><a href="javascript:;">编辑资料</a></div>
     </div>
 
-    <!--时间轴-->
-    <div class="mf-content-timeline"></div>
 
     <div class="mf-content-bottom">
         <div class="mf-content-BottConn">
@@ -266,13 +264,22 @@
                 $("#mf-avatar-modal-tab-font").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
                 var a=$("#mf-avatar-modal").attr('class');
                if(a=='mf-avatar-modal mf-avatar-modal-change-big') {
+                   $("#mf-profile-content-row-a").text("编辑头像");
                    $("#mf-avatar-modal").addClass("mf-avatar-modal-change-small");
                    $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-big");
-
                }else {
+                   $("#mf-profile-content-row-a").text("取消编辑");
                    $("#mf-avatar-modal").addClass("mf-avatar-modal-change-big");
                    $("#mf-avatar-modal").removeClass("mf-avatar-modal-change-small");
-                  $(".mf-color-picker").each(function (i) {
+                   $("#mf-avatar-name-input").focus(function () {
+                       $(window).keydown(function () {
+                           $(window).keyup(function () {
+                               wvalue = $("#mf-avatar-name-input").val();
+                               $("#mf-profile-content-row-p").text(wvalue);
+                           });
+                       });
+                   });
+                   $(".mf-color-picker").each(function (i) {
                        $(this).click(function (index) {
                            $(".mf-color-picker").each(function (index) {
                                if ($(this).attr('class') == 'mf-color-picker mf-active') {
@@ -305,24 +312,38 @@
 
 
                }
-               $("#mf-avatar-modal-tab-font").click(function (){
+            });
+            if($("#mf-avatar-name-input").css('display')=='block'&&$("#mf-avatar-upload-image-btn").css('display')=='none'){
+                var backColor= $('.mf-profile-content-row').css('background-color');
+                $('.mf-color-picker-item').each(function () {
+                    $(this).click(function () {
+                        $('.mf-profile-content-row').css('backgroundColor',backColor);
+                        $("#mf-profile-content-row-p").css("color", $(this).css('background-color'));
+                    });
+                });
+            }
+            $("#mf-avatar-modal-tab-font").click(function (){
                    $("#mf-avatar-modal-tab-font").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
                    $("#mf-avatar-modal-tab-background").css({'border-color': '#ccc', 'color': '#777'});
                    $("#mf-avatar-name-input").css('display','block');
                    $("#mf-avatar-upload-image-btn").css('display','none');
-               });
-                $("#mf-avatar-modal-tab-background").click(function (){
+            });
+            $("#mf-avatar-modal-tab-background").click(function (){
                     $("#mf-avatar-modal-tab-background").css({'border-color': '#00b4ff', 'color': '#00b4ff'});
                     $("#mf-avatar-modal-tab-font").css({'border-color': '#ccc', 'color': '#777'});
                     $("#mf-avatar-upload-image-btn").css('display','block');
                     $("#mf-avatar-name-input").css('display','none');
-                    $('.mf-color-picker-item').each(function () {
-                        $(this).click(function () {
-                            $('.mf-profile-content-row').css({'background-color':$(this).css('background-color'),'background-image':'none'});
-                        });
-                    })
-                });
+                    if($("#mf-avatar-upload-image-btn").css('display')=='block'&&$("#mf-avatar-name-input").css('display')=='none'){
+                        var writeColor= $("#mf-profile-content-row-p").css("color");
+                        $('.mf-color-picker-item').each(function () {
+                            $(this).click(function () {
+                                $("#mf-profile-content-row-p").css("color",writeColor);
+                               $('.mf-profile-content-row').css({'background-color':$(this).css('background-color'),'background-image':'none'});
+                            });
+                        })
+                    }
             });
+
         });
 
 
