@@ -164,6 +164,14 @@ ul li{
     margin-top: 5px;
     width: 150px;
 }
+.au-sameCamp-temp-member>h3{
+    color: #555;
+    margin: 10px 0 5px;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 5px;
+    width: 150px;
+}
 .au-team-member-circle{
     position: absolute;
     width: 66px;
@@ -272,10 +280,13 @@ ul li{
     overflow: hidden;
     position: relative;
 }
+#au-jionUs-p{
+    margin: 30px auto 0;
+}
 .au-jionUs h1{
     height:40px;
     line-height: 40px;
-    padding: 60px 0px;
+    /*padding: 60px 0px;*/
     text-align: center;
     font-size: 40px;
     color: #fff;
@@ -286,7 +297,7 @@ ul li{
 .au-jionUs p{
     width:155px;
     height:24px;
-    margin: auto;
+    margin:0 auto 30px;
     text-align: center;
     color:#fff;
     font-size: 16px;
@@ -491,10 +502,9 @@ ul li{
     width:800px;
     height:40px;
     line-height: 40px;
-    padding-top: 60px;
     text-align: center;
     font-size: 40px;
-    margin: 0px auto 20px;
+    margin: 80px auto 20px;
 }
 .au-think-green{
     color: #00B4FF;
@@ -525,9 +535,8 @@ ul li{
     width:540px;
     height:200px;
     background: #fff;
-    margin:auto;
+    margin:50px auto;
     position: relative;
-    top:150px;
     box-shadow:0 0 4px rgba(165, 183, 160, 0.5);
 }
 .au-think-content span{
@@ -762,7 +771,7 @@ p.officialWebsite-p{
     width:800px;
     height:40px;
     line-height: 40px;
-    padding-top: 60px;
+
     text-align: center;
     font-size: 40px;
     margin: 0px auto 54px;
@@ -893,6 +902,9 @@ p.officialWebsite-p{
     width:250px;
     height:189px;
     float:left;
+    /*position: relative;
+    left:-50px;
+    top:-20px;*/
 }
 .app{            /*下载应用距下的距离*/
     position: relative;
@@ -956,8 +968,22 @@ p.officialWebsite-p{
     color:#657277;
     font-size: 14px;
     position: absolute;
-    bottom: 30px;
+    bottom: 13px;
 }
 .au-foot-bottom a{
     color:#ccc;
+}
+
+/*图片轮换*/
+  .top-banner {
+      background-color: rgba(255, 255, 255, 0.55);
+  }
+.top-banner a {
+    color: #019135;
+}
+h1 {
+    margin-top: 50px;
+    font-family: 'Microsoft Yahei';
+    font-size: 36px;
+    color: #019157;
 }
