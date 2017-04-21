@@ -355,6 +355,7 @@ ul li{
     text-align: center;
     color:#F9F9F9;
     font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
+    margin-top:30px;
 }
 .au-jionUs-job-detail{
     width:100%;
@@ -489,12 +490,10 @@ ul li{
 }
 
 
-
 /*交流想法部分*/
 .au-think{
     width:100%;
     height:550px;
-    border-bottom: 1px solid #ddd;
     background: url("../../public/images/ic_about_contact.png") no-repeat 80px 20px;
     overflow: hidden;
 }
@@ -731,7 +730,7 @@ p.officialWebsite-p{
     text-align: center;
     display: inline-block;
     position: relative;
-    top:-80px;
+    top:0px;
     font-size: 28px;
     color:#999;
     font-family: "Helvetica Neue","Hiragino Sans GB","Microsoft Yahei","WenQuanYi Micro Hei",sans-serif;
@@ -771,10 +770,9 @@ p.officialWebsite-p{
     width:800px;
     height:40px;
     line-height: 40px;
-
     text-align: center;
     font-size: 40px;
-    margin: 0px auto 54px;
+    margin: 20px auto 54px;
 }
 .au-MT-green{
     color: #00B4FF;

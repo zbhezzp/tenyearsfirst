@@ -94,26 +94,26 @@
 
     <div class="mf-profile-content">
         <div class="mf-profile-content-row">
-<<<<<<< Updated upstream
+
             <p id="mf-profile-content-row-p"></p>
-=======
->>>>>>> Stashed changes
+
             <img src="" id="preImg" />
             <a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a>
         </div>
         <div id="mf-avatar-modal" class="mf-avatar-modal" >
+            <span id="mf-avatar-modal-triangle1"></span><span id="mf-avatar-modal-triangle2"></span>
             <div class="mf-avatar-content">
-            <div class="mf-avater-dropdown-content">
-                <p class="mf-avatar-modal-tab " id="mf-avatar-modal-tab-font" data-index="0">文字</p>
-                <p class="mf-avatar-modal-tab" id="mf-avatar-modal-tab-background" data-index="1">背景</p>
-            </div>
-            <div id="mf_avatar_modal_content" class="mf-avatar-modal-content" style="display: block;">
-                <input id="mf-avatar-name-input" class="mf-avatar-modal-content-show" placeholder="空" maxlength="4" type="text" >
-                <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" id="mf-avatar-upload-image-btn" href="javascript:void(0);" style="display: none;">
-                    <i class="mf-icon-camera-add"></i>
-                    使用图片
-                    <input id="mf-avatar-bg-image" type="file" class="mf_avatar_bg_image" onchange="loadImageFile();" />
-                </a>
+                <div class="mf-avater-dropdown-content">
+                    <p class="mf-avatar-modal-tab " id="mf-avatar-modal-tab-font" data-index="0">文字</p>
+                    <p class="mf-avatar-modal-tab" id="mf-avatar-modal-tab-background" data-index="1">背景</p>
+                </div>
+                <div id="mf_avatar_modal_content" class="mf-avatar-modal-content" style="display: block;">
+                    <input id="mf-avatar-name-input" class="mf-avatar-modal-content-show" placeholder="空" maxlength="4" type="text" >
+                    <a class="mf-avatar-upload-image-btn mf-avatar-modal-content-show" id="mf-avatar-upload-image-btn" href="javascript:void(0);" style="display: none;">
+                        <i class="mf-icon-camera-add">p</i>
+                        使用图片
+                        <input id="mf-avatar-bg-image" type="file" class="mf_avatar_bg_image" onchange="loadImageFile();" />
+                    </a>
                     <div class="mf-color-picker-content">
                         <span class="mf-color-picker mf-active" style="background-color: #888; box-shadow: 0px 0px 0px 2px #888;"></span>
                         <span class="mf-color-picker" style="background-color: #d85f46; box-shadow: 0px 0px 0px 2px #d85f46;"></span>
@@ -122,18 +122,18 @@
                         <span class="mf-color-picker" style="background-color: #529ecc; box-shadow: 0px 0px 0px 2px #529ecc;"></span>
                         <span class="mf-color-picker" style="background-color: #a780c1; box-shadow: 0px 0px 0px 2px #a780c1;"></span>
                     </div>
-                <div class="mf-color-picker-content-item">
-                    <div class="mf-color-picker-item0 mf-color-picker-item" style="background-color: #ffffff" ></div>
-                    <div class="mf-color-picker-item1 mf-color-picker-item" style="background-color: #cccccc" ></div>
-                    <div class="mf-color-picker-item2 mf-color-picker-item" style="background-color: #444444" ></div>
-                    <div class="mf-color-picker-item3 mf-color-picker-item" style="background-color: #f6f6f6" ></div>
-                    <div class="mf-color-picker-item4 mf-color-picker-item" style="background-color: #888888" ></div>
-                    <div class="mf-color-picker-item5 mf-color-picker-item" style="background-color: #222222" ></div>
-                    <div class="mf-color-picker-item6 mf-color-picker-item" style="background-color: #eeeeee" ></div>
-                    <div class="mf-color-picker-item7 mf-color-picker-item" style="background-color: #666666" ></div>
-                    <div class="mf-color-picker-item8 mf-color-picker-item" style="background-color: #000000" ></div>
+                    <div class="mf-color-picker-content-item">
+                        <div class="mf-color-picker-item0 mf-color-picker-item" style="background-color: #ffffff" ></div>
+                        <div class="mf-color-picker-item1 mf-color-picker-item" style="background-color: #cccccc" ></div>
+                        <div class="mf-color-picker-item2 mf-color-picker-item" style="background-color: #444444" ></div>
+                        <div class="mf-color-picker-item3 mf-color-picker-item" style="background-color: #f6f6f6" ></div>
+                        <div class="mf-color-picker-item4 mf-color-picker-item" style="background-color: #888888" ></div>
+                        <div class="mf-color-picker-item5 mf-color-picker-item" style="background-color: #222222" ></div>
+                        <div class="mf-color-picker-item6 mf-color-picker-item" style="background-color: #eeeeee" ></div>
+                        <div class="mf-color-picker-item7 mf-color-picker-item" style="background-color: #666666" ></div>
+                        <div class="mf-color-picker-item8 mf-color-picker-item" style="background-color: #000000" ></div>
+                    </div>
                 </div>
-            </div>
             </div>
         </div>
         <div class="mf-profile-modify-content">
@@ -179,18 +179,46 @@
                     <li><span class="discuss">讨论</span></li>
                 </ul>
 
-                <ul class="mf-content-BottLeft-idea">
-                    <li class="first"><a href="">
-                        <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
-                        <p>想法</p>
-                    </a></li>
-                    <li class="second"><a href="">
-                        <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
-                        <p>日志</p>
-                    </a></li>
-                </ul>
+                <div class="mf-Content-BottLeft-record">
+                    <ul class="mf-content-BottLeft-idea">
+                        <li class="first"><a href="">
+                            <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
+                            <p>想法</p>
+                        </a></li>
+                        <li class="second"><a href="">
+                            <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
+                            <p>日志</p>
+                        </a></li>
+                    </ul>
 
-                <div class="mf-content-BottLeft-publish"></div>
+                    <div class="mf-content-BottLeft-record">
+                        <div class="mf-conn-BottLeft-up">
+                            <div class="mf-conn-BottLeft-upIcon"></div>
+                            <div class="mf-conn-BottLeft-upTitle">
+                                <div class="mf-BottLeft-upTitle-name">彭敬亭</div>
+                                <div class="mf-BottLeft-upTitle-date">几秒前</div>
+                            </div>
+                        </div>
+                        <div class="mf-conn-BottLeft-middle">
+                            <div class="mf-conn-BottLeft-middleConn">
+                                <h4>旅行</h4>
+                                <span>来一场说走就走的旅行</span>
+                            </div>
+                        </div>
+                        <div class="mf-conn-BottLeft-down">
+                            <div class="mf-conn-BottLeft-downike">
+                                <em>â</em><span></span>
+                            </div>
+                            <div class="mf-conn-BottLeft-downComment">
+                                <em>-</em><span></span>
+                            </div>
+                            <div class="mf-conn-BottLeft-downMore">
+                                <span>D</span><span>D</span><span>D</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
             <div class="mf-content-BottRight">

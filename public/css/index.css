@@ -69,6 +69,9 @@ ul li{
 .click-box3{
     top:327.5px;
 }
+.click-box4{
+    top:357.5px;
+}
 .bf-goto-register{
     float:right;
     margin-top:40px;
@@ -140,15 +143,33 @@ ul li{
 }
 .body-third-screen .bt-background{
     width:100%;
-    height:92%;
+    height:100%;
     background: url("../images/bt_bg.jpg") no-repeat;
     background-size: cover;
     overflow: hidden;
 }
 .bt-channel-content-sum{
     width:1000px;
-    height:74%;
+    height:50%;
     margin: 40px auto;
+}
+.bt-channel-content-wordsum{
+    width:1000px;
+    height:20%;
+    line-height:20%;
+    margin: 40px auto;
+}
+.bt-channel-content-wordsum p{
+    font-size: 34px;
+    font-family:  "华文行楷";
+    line-height:50px;
+    color: #193233;
+}
+.bt-channel-content-wordsum p:nth-of-type(2){
+    margin-left:120px;
+}
+.bt-channel-content-wordsum p:nth-of-type(3){
+    margin-left:240px;
 }
 .bt-channel{
     float:left;
@@ -223,6 +244,8 @@ ul li{
     margin: 8px 0px;
     float:left;
 }
+
+
 @media (max-width: 600px) {
     .bt-channel-content-sum{
         width:400px;
@@ -288,14 +311,25 @@ ul li{
     }
 }
 
-/*首页的第三个屏幕--底部信息*/
-.body-third-screen .bt-bottom{
+/*首页的第四个屏幕--底部信息*/
+.body-fourth-screen{
+    height:100%;
     width:100%;
-    height:322px;
-    padding:30px 0px;
-    background: #9D95C1;
-    overflow: hidden;
     position: relative;
+}
+.body-fourth-screen{
+    width:100%;
+    height:100%;
+    background: url("../images/bfo_bg.jpeg") no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.body-fourth-screen .bt-bottom{
+    width:100%;
+    height:335px;
+    padding:140px 0px;
+    overflow: hidden;
 }
 .bt-bottom-content{
     width:1000px;
@@ -311,12 +345,9 @@ ul li{
     position: relative;
     top: 20px;
 }
-.bottom-contant-col ul li a{
-    color:#ccc;
 
-}
 .bottom-contant-col p{
-    color:#ccc;
+    /*color:#ccc;*/
     font-size: 14px;
     font-weight: normal;
     margin: 10px 0px 20px 0px;
@@ -324,7 +355,7 @@ ul li{
 .bottom-contant-col .bottom-contantX2{
     width:200px;
     line-height:1.5;
-    color:#ccc;
+    /*color:#ccc;*/
     font-size: 14px;
 }
 .bottom-contant-col .bottom-aboutMe,.bottom-mediaReport,.bottom-downloadApp{
@@ -369,8 +400,8 @@ ul li{
     color:#657277;
     font-size: 14px;
     position: absolute;
-    bottom: 30px;
+    bottom: 180px;
 }
 .bt-bottom-foot a{
-    color:#ccc;
+    color:#fff;
 }

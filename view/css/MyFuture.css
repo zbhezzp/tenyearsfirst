@@ -402,6 +402,24 @@ span.dropDown-bow{
     z-index: 999;
     transform: scale(0);
 }
+#mf-avatar-modal-triangle1{
+    line-height: 0;
+    border-width: 10px;
+    border-color: transparent transparent #999 transparent;
+    border-style: dashed dashed solid dashed;
+    position: absolute;
+    top: -52px;
+    left:120px;
+}
+#mf-avatar-modal-triangle2{
+    line-height: 0;
+    border-width: 10px;
+    border-color: transparent transparent #fff transparent;
+    border-style: dashed dashed solid dashed;
+    position: absolute;
+    top: -51px;
+    left:120px;
+}
 .mf-avatar-content{
     background-color: #fff;
     border-radius: 3px;
@@ -458,6 +476,10 @@ span.dropDown-bow{
     font-size: 16px;
     font-weight: 100;
 
+}
+.mf-icon-camera-add{
+    display: inline-block;
+    font-family: wbficon;
 }
 .mf_avatar_bg_image{
     opacity: 0;
@@ -548,26 +570,31 @@ span.dropDown-bow{
     bottom:0px;
 }
 .are-you-sure .cancleInfo{
-    color: #444;
     display: inline-block;
-    width: 70px;
+    width: 55px;
     height: 25px;
     line-height: 25px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 6px;
+    color: #595F61;
+    font-size: 12px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
 }
 .are-you-sure .cancleInfo:hover{
     background-color: #ebebeb;
 }
 .are-you-sure .commitInfo{
-    color: #07abff;
     display: inline-block;
-    width: 70px;
+    width: 55px;
     height: 25px;
     line-height: 25px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 6px;
+    color: #07abff;
+    font-size: 12px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
 }
+
 .are-you-sure .commitInfo:hover{
     background-color: #a6e1ec;
 }
@@ -956,13 +983,121 @@ select.year,select.mouth,select.day{
 }
 
 
-.mf-content-BottLeft-publish{     /*内容部分的低端的左边发表文章部分*/
+.mf-content-BottLeft-record{     /*内容部分的低端的左边发表文章部分*/
     width:600px;
-    height:400px;
+    height:207px;
     background: #fff;
-    border-radius:10px;
+    border-radius:8px;
     margin-top:20px;
+    box-shadow: #D8D8D8 0px 0px 10px;
+    position: relative;
 }
+.mf-conn-BottLeft-up{
+    width:600px;
+    height:62px;
+    padding:10px 20px;
+}
+.mf-conn-BottLeft-upIcon{
+    width:38px;
+    height:38px;
+    border-radius: 50%;
+    background: #b8ccb9;
+}
+.mf-conn-BottLeft-upTitle{
+    margin-top:-36px;
+    margin-left:50px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.mf-BottLeft-upTitle-name{
+    color:#4093C6;
+    font-weight: bold;
+    font-size: 15px;
+}
+.mf-BottLeft-upTitle-date{
+    color:#A1A1A1;
+    font-size: 12px;
+    margin-top: 4px;
+}
+
+.mf-conn-BottLeft-middle{
+    width:560px;
+    padding:0px 20px 15px;
+}
+.mf-conn-BottLeft-middleConn h4{
+    width:560px;
+    height:34px;
+    text-align: center;
+    font-size: 25px;
+    font-family: "华文行楷";
+    letter-spacing:4px;
+    cursor: pointer;
+}
+.mf-conn-BottLeft-middleConn span{
+    display: inline-block;
+    line-height: 24px;
+    font-size: 14px;
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, Helvetica, Tahoma, sans-serif;
+    color: rgb(51, 51, 51);
+    margin-top:10px;
+}
+
+.mf-conn-BottLeft-down{
+    width:570px;
+    height:40px;
+    margin: 0px 15px;
+    position: absolute;
+    bottom: 0px;
+    border-top: 2px solid #F6F5F6;
+}
+.mf-conn-BottLeft-downike{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+.mf-conn-BottLeft-downike em{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 20px;
+}
+.mf-conn-BottLeft-downike span{
+    padding-left:15px;
+}
+.mf-conn-BottLeft-downComment{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    float:left;
+    margin-top:-40px;
+    margin-left:100px;
+    cursor: pointer;
+}
+.mf-conn-BottLeft-downComment em{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 20px;
+}
+.mf-conn-BottLeft-downComment span{
+    padding-left:15px;
+}
+.mf-conn-BottLeft-downMore{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    float:left;
+    margin-top:-40px;
+    margin-left:200px;
+    cursor: pointer;
+}
+.mf-conn-BottLeft-downMore span{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 12px;
+}
+
 
 
 .mf-content-BottRight{     /*内容部分的低端的右边*/
