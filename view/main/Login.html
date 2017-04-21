@@ -10,8 +10,14 @@
     <link rel="stylesheet" type="text/css" href="../../public/css/Login.css"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <style>
+        @font-face{       /*特定字体*/
+            font-family:'wbficon';
+            src:url(../../public/woff/wbficon.woff),url(../../public/woff/wbficon.woff) format('woff');
+        }
         *{  font-size: 14px;padding:0;}
+        body{overflow: hidden;}
         a{text-decoration: none;}
+        a:hover{text-decoration: none;}
         .container-fluid{  height:662px;  background: url("../../public/images/login_bg1.jpg") 0/cover ;/*box-shadow: 100px 100px 1000px #8A8791 inset;*/  }
         #login-index-header{height:40px;}
         #login-index-header h1{display:inline-block;width:136px;height:40px;}
@@ -35,8 +41,20 @@
         #login-index-form-check label{color: #e5e5e5;}
         #login-index-form-check a{display: block;float: right;color: #fff;font-size: 13px;}
         .form-btn{background: #00B4FF;width: 300px;border-radius: 16px; padding: 9px;border: none;color:#fff;}
+        .form-login{font-family:wbficon;margin-left:10px;position:relative;animation:loginmove 4s infinite;}
+        @-webkit-keyframes loginmove {
+            0% {left:0px;color:rgba(255,255,255,0.5);}
+            50% {left:25px; color:rgba(255,255,255,1);}
+            100% {left:0px; color:rgba(255,255,255,0.5);}
+        }
         #login-index-desc {  color: #eee;  letter-spacing: 2px;  text-align: center;  width: 100%;  margin-top: 75px;  }
         #login-index-desc p{  font-size: 10px;  }
+        .ty-login-next{font-family:wbficon;font-size: 16px;color:#fff;position: relative;animation:loginNextMove 4s infinite;}
+        @-webkit-keyframes loginNextMove {
+            0% {top:0px;color:rgba(255,255,255,0.5);}
+            50% {top:25px; color:rgba(255,255,255,1);}
+            100% {top:0px; color:rgba(255,255,255,0.5);}
+        }
         #forget_pwd_form{ background: #fff none repeat scroll 0 0; border: 1px solid #ddd;  font-size: 14px;  border-radius: 3px; box-shadow: 0 0 12px #ddd;  height: 240px;  padding: 20px;  width: 300px;}
         .forget-pwd-form-group{  color: #333;  font-size: 14px;  height: 40px;  margin-bottom: 15px;  position: relative;  width: 100%;  }
         .forget-fixed-content-close{  font-size: 18px;  font-weight: 400;  color:#666;  margin-left: 180px;  cursor: pointer;  }
@@ -68,12 +86,18 @@
             <div id="a" style="position: absolute;">
                 <div id="login-index-form-group">
                     <input type="text"  id="login-index-form-inp" class="form-control" placeholder="邮箱和手机号"/>
-                    <span id="login-index-form-inp-span"></span>
+                    <div id="login-index-form-name" style="display:none">
+                        <span id="login-index-form-inp-span">邮箱或手机号不能为空</span>
+                        <span class="login-index-formname-left"></span>
+                    </div>
                 </div>
 
                 <div id="login-index-form-password">
                     <input type="password" id="login-index-form-pwd" class="form-control"  placeholder="密码"/>
-                    <span id="login-index-form-pwd-span"></span>
+                    <div id="login-index-form-loginpwd" style="display:none">
+                        <span id="login-index-form-pwd-span">密码不能为空</span>
+                        <span class="login-index-formpwd-left"></span>
+                    </div>
                 </div>
 
                 <div id="login-index-form-check">
@@ -82,17 +106,23 @@
                     </label>
                     <a  id="forget_pwd" style="cursor: pointer;" class="md-trigger md-setperspective" data-modal="modal-1">忘记密码？</a>
                 </div>
-                <button type="button" class="form-btn">登录</button>
+                <button type="button" class="form-btn">登录<span class="form-login">a</span></button>
             </div>
             <!--去未来-->
             <div  id="b" style="position: absolute; display: none;">
                 <div id="login-index-form-group-register">
                     <input type="text"  id="login-index-form-inp-register" class="form-control" placeholder="邮箱"/>
-                    <span id="login-index-form-inp-register-span"></span>
+                    <div id="index-form-inp-register-name" style="display:none">
+                        <span id="login-index-form-inp-register-span">邮箱不能为空</span>
+                        <span class="index-form-inp-register-name-left"></span>
+                    </div>
                 </div>
-                <div id="login-index-form-password-register">
+                <div id="login-index-form-password-register" >
                     <input type="password" id="login-index-form-pwd-register" class="form-control"  placeholder="密码"/>
-                    <span id="login-index-form-pwd-register-span"></span>
+                    <div id="index-form-pwd-register-span" style="display:none">
+                        <span id="login-index-form-pwd-register-span">密码不能为空</span>
+                        <span class="index-form-pwd-register-span-left"></span>
+                    </div>
                 </div>
                 <button type="button" class="form-btn">去未来</button>
             </div>
@@ -101,10 +131,9 @@
             <p>「十年后」是一个基于梦想的经验交流社区。</p>
             <p>在这里，你可以自由的分享关于未来梦想的真实想法，</p>
             <p>并探索更多有趣的梦想，结交志同道合的人。</p>
+            <a class="ty-login-next" href="javascript:void(0);">c</a>
         </div>
-        <a id="ty_login_next" class="ty-login-next" href="javascript:void(0);">
-            <i class="ty-icon-arrow-down"></i>
-        </a>
+
     </div>
 
 </div>
@@ -194,6 +223,86 @@
                 $("#a").fadeIn("slow");
             }
         })
+    });
+
+    /*正则表达式*/
+    //登陆——邮箱或手机验证
+    var emailPhone;
+    var emailPhoneLen;
+    $("#login-index-form-inp").keyup(function(){
+        emailPhone=$("#login-index-form-inp");
+        emailPhoneLen=$("#login-index-form-inp").val().length;
+        //console.log(emailPhone+"--"+emailPhoneLen);
+        var phone=/(^1\d{10}$)|(^0\d{2,3}-?\d{7,8}$)/;
+        var email=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+
+        if(emailPhoneLen<1){
+            $("#login-index-form-name").show();
+            $("#login-index-form-inp-span").html("邮箱或手机号不能为空");
+        }else if(phone.test(emailPhone.val()) || email.test(emailPhone.val())){
+            $("#login-index-form-name").hide();
+        }else{
+            $("#login-index-form-name").show();
+            $("#login-index-form-inp-span").html("邮箱或手机号格式不正确");
+        }
+    });
+
+
+    //登陆——密码验证
+    var verifyPwd;
+    var verifyPwdLen;
+    $("#login-index-form-pwd").keyup(function(){
+        verifyPwd=$("#login-index-form-pwd");
+        verifyPwdLen=$("#login-index-form-pwd").val().length;
+        var setpwd=/^(\w){6,16}$/;
+        if(verifyPwdLen<1){
+            $("#login-index-form-loginpwd").show();
+            $("#login-index-form-loginpwd").html("密码不能为空");
+        }else if(setpwd.test(verifyPwd.val())){
+            $("#login-index-form-loginpwd").hide();
+        }else{
+            $("#login-index-form-loginpwd").show();
+            $("#login-index-form-pwd-span").html("密码不能低于6位");
+        }
+    });
+
+    //注册——邮箱验证
+    var RegisterEmail;
+    var RegisterEmailLen;
+    $("#login-index-form-inp-register").keyup(function(){
+        RegisterEmail=$("#login-index-form-inp-register");
+        RegisterEmailLen=$("#login-index-form-inp-register").val().length;
+        //console.log(emailPhone+"--"+emailPhoneLen);
+        var registeremail=/^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/;
+
+        if(RegisterEmailLen<1){
+            $("#index-form-inp-register-name").show();
+            $("#login-index-form-inp-register-span").html("邮箱不能为空");
+        }else if(registeremail.test(RegisterEmail.val())){
+            $("#index-form-inp-register-name").hide();
+        }else{
+            $("#index-form-inp-register-name").show();
+            $("#login-index-form-inp-register-span").html("邮箱格式不正确");
+        }
+    });
+    //注册——密码验证
+    var RegisterPwd;
+    var RegisterPwdLen;
+    $("#login-index-form-pwd-register").keyup(function(){
+        RegisterPwd=$("#login-index-form-pwd-register");
+        RegisterPwdLen=$("#login-index-form-pwd-register").val().length;
+        //console.log(emailPhone+"--"+emailPhoneLen);
+        var setpwd=/^(\w){6,16}$/;
+
+        if(RegisterEmailLen<1){
+            $("#index-form-pwd-register-span").show();
+            $("#login-index-form-pwd-register-span").html("密码不能为空");
+        }else if(setpwd.test(RegisterPwd.val())){
+            $("#index-form-pwd-register-span").hide();
+        }else{
+            $("#index-form-pwd-register-span").show();
+            $("#login-index-form-pwd-register-span").html("密码格式不正确");
+        }
     });
 </script>
 

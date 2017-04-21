@@ -115,6 +115,153 @@ span.dropDown-bow{
     line-height: 30px;
     border-radius: 50%;
 }
+/*来往的弹出框*/
+.more{
+    width: 100%;
+    height: 0px;
+    top:50px;
+    z-index: 99;
+    background-color: #fff;
+    overflow: hidden;
+    position: fixed;
+}
+.more ul{
+    width: 70%;
+    height:60px;
+    border-bottom: 2px solid #ebebeb;
+    margin: auto;
+}
+.more ul li{
+    margin-top: 10px;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+.more-show{
+    -webkit-animation: myfirst 1s ;
+    -webkit-animation-timing-function:ease;/*速度加快 然后缓慢*/
+    animation-fill-mode:forwards;
+}
+@-webkit-keyframes myfirst
+{
+    from {
+        height: 0px;
+    }
+    to {
+        height: 605px;
+    }
+}
+.more-hide{
+    -webkit-animation: my 1s;
+    -webkit-animation-timing-function:ease;/*速度加快 然后缓慢*/
+    animation-fill-mode:forwards;
+}
+@-webkit-keyframes my
+{
+    from {
+        height: 605px;
+    }
+    to {
+        height: 0px;
+    }
+}
+.more #back {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color:#999;
+    background-color: #E6E6E6;
+    position: absolute;
+    top:565px;
+    z-index: 10;
+}
+.more #back .back-top{
+    font-family: wbficon;
+    font-size: 28px;
+    line-height: 50px;
+}
+
+.contact-box{
+    width: 348px;
+    height: 400px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #999;
+    background: #fff;
+    float: left;
+    position: relative;
+    top:52px;
+    left:130px;
+    z-index: 100;
+
+}
+.contact-box span {
+    position: absolute;
+    left: 158px;
+    height: 0px;
+    width: 0px;
+}
+.contact-box span.out {
+    line-height: 0;
+    border-width: 10px;
+    border-color: transparent transparent #CCC transparent;
+    border-style: dashed dashed solid dashed;
+    top: -20px;
+}
+.contact-box span.iner {
+    border-width: 10px;
+    border-color: transparent transparent #FFF transparent;
+    border-style: dashed dashed solid dashed;
+    top: -19px;
+    line-height: 0;
+}
+.contact-box-nav{
+    height:44px;
+    border-bottom: 1px solid #ddd;
+}
+.contact-box-nav li{
+    width:25%;
+    line-height: 44px;
+    text-align: center;
+    font-family: wbficon;
+    font-size: 20px;
+    color: #ddd;
+    float: left;
+    cursor: pointer;
+}
+.contact-box-nav li:hover{
+    color:#00B4FF;
+}
+.contactBoxTitle{
+    font-size: 18px;
+    padding-top: 100px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #666;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.contactBoxWord{
+    font-size: 13px;
+    vertical-align: middle;
+    text-align: center;
+    color: #999;
+}
+.contact-box-foot{
+    width:348px;
+    height:38px;
+    line-height: 38px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+    font-size: 12px;
+    color:#5E5E5E;
+    position: absolute;
+    bottom: 0px;
+    cursor: pointer;
+}
+
 
 
 /*内容的上半部分*/
@@ -365,8 +512,356 @@ span.dropDown-bow{
     transform: scale(0);
 
 }
+/*内容编辑*/
+.mf-profile-modify-content-change{
+    margin:auto;
+    text-align: center;
+    margin-top: -30px;
+    position: relative;
+}
+.mf-profile-modify-content-change input{
+    border: none;
+    border-bottom: 1px solid #ebebeb;
+    outline:none;
+    text-align: center;
+}
+.name-change{
+    line-height: 30px;
+    font-size: 30px;
+    max-width: 100px;
+}
+.age-change{
+    max-width: 50px;
+}
+.street-change{
+    max-width: 50px;
+}
+.status-change{
+    max-width: 80px;
+}
+.wantto-change{
+    max-width: 80px;
+}
+.are-you-sure {
+    position: absolute;
+    right: 30px;
+    bottom:0px;
+}
+.are-you-sure .cancleInfo{
+    color: #444;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+.are-you-sure .cancleInfo:hover{
+    background-color: #ebebeb;
+}
+.are-you-sure .commitInfo{
+    color: #07abff;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 10px;
+}
+.are-you-sure .commitInfo:hover{
+    background-color: #a6e1ec;
+}
+
+/*梦想编辑*/
+
+.change{
+    width:320px;
+    height: 577px;
+
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+}
+.change-header{
+    height: 50px;
+    width: 100%;
+    border-bottom:2px solid #F6F5F6 ;
+    position: absolute;
+    top:0;
+}
+.change-content{
+    width: 80%;
+    height: 200px;
+    line-height: 30px;
+    padding-left: 10px;
+    border-radius: 5px;
+    color:#666;
+    font-size: 13px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    border-color: #ddd;
+    position: absolute;
+    top:80px;
+    left: 20px;
+    resize:none;
+}
+.change-duixiang{
+    margin-left: 18px;
+    margin-top: 28px;
+    text-align: left;
+    line-height: 0px;
+    font-size: 14px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.change-duixiang span{
+    font-size: 13px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    color:#666;
+}
+.cancle-sure{
+    float: right;
+    margin-right: 20px;
+    margin-top: 320px;
+}
+.cancel{
+    margin:20px;
+    font-size: 14px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    color:#666;
+}
+.sure{
+    width: 58px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    color:#fff;
+    background: #00B4FF;
+    border-radius: 15px;
+
+}
+
+.radio{
+    position: absolute;
+    top:150px;
+    left: 50px;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+.radio input[type=radio],input[type=checkbox]  {
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    outline: 0 !important;
+    line-height: 20px;
+    color: #d8d8d8;
+}
+.radio input[type=radio]:after  {
+    content: "";
+    display:block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 14px;
+    font-size: 16px;
+    color: #fff;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-sizing:border-box;
+}
+
+.radio input[type=checkbox]:after  {
+    content: "";
+    display:block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 14px;
+    font-size: 16px;
+    color: #fff;
+    border: 2px solid #ddd;
+    background-color: #fff;
+    box-sizing:border-box;
+}
+.radio input[type=checkbox]:checked:after  {
+    border: 4px solid #ddd;
+    background-color: #37AF6E;
+}
+
+.radio input[type=radio]:checked:after  {
+    content: "L";
+    transform:matrix(-0.766044,-0.642788,-0.642788,0.766044,0,0);
+    -webkit-transform:matrix(-0.766044,-0.642788,-0.642788,0.766044,0,0);
+    border-color: #37AF6E;
+    background-color: #37AF6E;
+}
+.radio-dream{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius:50%;
+    background:#0099FF;
+    font-size:13px;
+    color:white;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.radio-success{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius:50%;
+    background:#2ECC71;
+    font-size:13px;
+    color:white;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.radio-fail{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    line-height: 24px;
+    text-align: center;
+    border-radius:50%;
+    background:#FF3366;
+    font-size:13px;
+    color:white;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.time{
+    position: absolute;
+    top:90px;
+    left: 30px;
+    font-size: 20px;
+    text-align: center;
+}
+select.year,select.mouth,select.day{
+    padding:8px 0px 8px 8px;
+    border-radius: 5px;
+    border-color:#bdbdbd;
+    color:#333;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.off{
+    font-family:wbficon;
+    font-size: 20px;
+    color: #A8A8A8;
+    position: absolute;
+    top:15px;
+    right: 15px;
+}
+.Num{
+    font-size: 13px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    position: absolute;
+    top:295px;
+    right: 35px;
+}
+.into-num{
+    color: #65D1FF;
+}
+.guding-num{
+    color:#8E8E8E;
+}
+.mf-BottRight-DreamInfo-Pbtn{
+    position: relative;
+    left: 110px;
+    top:-60px;
+    width:50px ;
+    height: 20px;
+    display: inline-block;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    color:#9A9A9A;
+    font-size: 14px;
+}
+.model-1{
+    position: relative;
+    width:50px ;
+    height: 20px;
+}
+.checkbox {
+    position: relative;
+    display: inline-block;
+    left: 50px;
+    top:-36px;
+}
+.checkbox:after, .checkbox:before {
+    font-family: FontAwesome;
+    -webkit-font-feature-settings: normal;
+    -moz-font-feature-settings: normal;
+    font-feature-settings: normal;
+    -webkit-font-kerning: auto;
+    -moz-font-kerning: auto;
+    font-kerning: auto;
+    -webkit-font-language-override: normal;
+    -moz-font-language-override: normal;
+    font-language-override: normal;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant: normal;
+    font-weight: normal;
+    text-rendering: auto;
+}
+.checkbox label {
+    width: 50px;
+    height: 20px;
+    background: #ccc;
+    position: relative;
+    display: inline-block;
+    border-radius: 10px;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.checkbox label:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    left: 0;
+    top: 0px;
+    z-index: 2;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+.checkbox input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    opacity: 0;
+    cursor: pointer;
+}
+.checkbox input:hover + label:after {
+    box-shadow: 0 2px 15px 0 rgba(0, 0, 0, 0.2), 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
+.checkbox input:checked + label:after {
+    left: 30px;
+}
 
 
+.model-1 .checkbox input:checked + label {
+    background: #00B4FF;
+}
+.model-1 .checkbox input:checked + label:after {
+    background: white;
+}
 
 /*内容部分的低端*/
 .mf-content-bottom{
@@ -489,7 +984,7 @@ span.dropDown-bow{
 }
 .mf-BottRight-DreamInfo-headline .deleteInfo{
     font-family: wbficon;
-    font-size:20px;
+    font-size:18px;
     color:#999;
     float:right;
     margin-right:10px;

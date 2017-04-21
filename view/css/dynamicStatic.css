@@ -109,6 +109,75 @@ span.dropDown-bow{
     line-height: 30px;
     border-radius: 50%;
 }
+.more{
+    width: 100%;
+    height: 0px;
+    top:50px;
+    z-index: 99;
+    background-color: #fff;
+    overflow: hidden;
+    position: fixed;
+}
+.more ul{
+    width: 70%;
+    height:60px;
+    border-bottom: 2px solid #ebebeb;
+    margin: auto;
+}
+.more ul li{
+    margin-top: 10px;
+    width: 25%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+.more-show{
+    -webkit-animation: myfirst 1s ;
+    -webkit-animation-timing-function:ease;/*速度加快 然后缓慢*/
+    animation-fill-mode:forwards;
+}
+@-webkit-keyframes myfirst
+{
+    from {
+        height: 0px;
+    }
+    to {
+        height: 605px;
+    }
+}
+.more-hide{
+    -webkit-animation: my 1s;
+    -webkit-animation-timing-function:ease;/*速度加快 然后缓慢*/
+    animation-fill-mode:forwards;
+}
+@-webkit-keyframes my
+{
+    from {
+        height: 605px;
+    }
+    to {
+        height: 0px;
+    }
+}
+.more #back {
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color:#999;
+    background-color: #E6E6E6;
+    position: absolute;
+    top:565px;
+    z-index: 10;
+}
+.more #back .back-top{
+    font-family: wbficon;
+    font-size: 28px;
+    line-height: 50px;
+}
+
+
 /*来往的弹出框*/
 .contact-box{
     width: 348px;
@@ -185,6 +254,7 @@ span.dropDown-bow{
     color:#5E5E5E;
     position: absolute;
     bottom: 0px;
+    cursor: pointer;
 }
 
 

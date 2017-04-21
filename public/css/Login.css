@@ -1,10 +1,4 @@
-/* General styles for the modal */
-
-/* 
-Styles for the html/body for special modal where we want 3d effects
-Note that we need a container wrapping all content on the page for the 
-perspective effects (not including the modals and the overlay).
-*/
+/*弹出框的插件*/
 .md-perspective,
 .md-perspective body {
 	height: 100%;
@@ -731,4 +725,78 @@ perspective effects (not including the modals and the overlay).
 
 @media screen and (max-width: 32em) {
 	body { font-size: 75%; }
+}
+
+
+/*正则表达式*/
+#login-index-form-name{
+	width:170px;
+	text-align: center;
+	padding:4px;
+	border:1px solid #F2F6F9;
+	background: #F2F6F9;
+	border-radius: 3px;
+	color:#7E8B8E;
+	font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+	position: absolute;
+	left:325px;
+	top:4px;
+}
+.login-index-formname-left,.login-index-formpwd-left{
+	line-height: 0;
+	border-width: 8px;
+	border-color: transparent #F2F6F9 transparent transparent;
+	border-style: dashed dashed solid dashed;
+	position:absolute;
+	left:-17px;
+}
+#login-index-form-loginpwd{
+	width:120px;
+	text-align: center;
+	padding:4px;
+	border:1px solid #F2F6F9;
+	background: #F2F6F9;
+	border-radius: 3px;
+	color:#7E8B8E;
+	font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+	position: absolute;
+	left:325px;
+	top:60px;
+}
+
+
+/*去未来*/
+#index-form-inp-register-name{
+	width:120px;
+	text-align: center;
+	padding:4px;
+	border:1px solid #F2F6F9;
+	background: #F2F6F9;
+	border-radius: 3px;
+	color:#7E8B8E;
+	font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+	position: absolute;
+	left:325px;
+	top:4px;
+}
+.index-form-inp-register-name-left,.index-form-pwd-register-span-left{
+	line-height: 0;
+	border-width: 8px;
+	border-color: transparent #F2F6F9 transparent transparent;
+	border-style: dashed dashed solid dashed;
+	position:absolute;
+	left:-17px;
+}
+#index-form-pwd-register-span{
+	width:120px;
+	text-align: center;
+	padding:4px;
+	border:1px solid #F2F6F9;
+	background: #F2F6F9;
+	border-radius: 3px;
+	color:#7E8B8E;
+	font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+	position: absolute;
+	left:325px;
+	top:60px;
 }

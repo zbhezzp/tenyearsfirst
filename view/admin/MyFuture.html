@@ -12,8 +12,8 @@
         <ul class="nav-information">
             <li class="nav-info-lis"><a href="">动态</a></li>
             <li class="nav-info-lis"><a href="">发现</a></li>
-            <li class="nav-info-three nav-info-third"><a href="">我的未来</a></li>
-            <li class="nav-info-lis"><a href="">来往<span class="dropDown-bow">c</span></a></li>
+            <li class="nav-info-lis nav-info-third"><a href="">我的未来</a></li>
+            <li class="nav-info-lis nav-info-fourth"><a>来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -27,13 +27,77 @@
         </div>
     </nav>
 
+    <!--来往的弹出框-->
+    <div class="contact-box" style="display: none;">
+        <span class="out"></span><span class="iner"></span>
+        <div class="contact-box-nav">
+            <li class="contact-box-nav-concern" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message" onclick="contactNav(3)">I</li>
+        </div>
+        <div class="contact-box-content">
+            <div class="contact-box-conn contact-conn0" style="display: none">
+                <p class="contactBoxTitle">目前还没有人关注你</p>
+                <p class="contactBoxWord">有时候主动一点，会有意想不到的收获</p>
+            </div>
+            <div class="contact-box-conn contact-conn1" >
+                <p class="contactBoxTitle">目前还没有钦佩哦</p>
+                <p class="contactBoxWord">有时候多做比多说更容易得到别人的钦佩</p>
+            </div>
+            <div class="contact-box-conn contact-conn2" style="display: none">
+                <p class="contactBoxTitle">目前还没有人评论</p>
+                <p class="contactBoxWord">成为改变世界的人之前，先改变自己</p>
+            </div>
+            <div class="contact-box-conn contact-conn3" style="display: none">
+                <p class="contactBoxTitle">目前还没有消息</p>
+                <p class="contactBoxWord">我们总是在抱怨事与愿违，却不愿意回头看看自己</p>
+            </div>
+        </div>
+        <div class="contact-box-foot">查看更多</div>
+    </div>
+    <div class="more">
+        <ul class="contact-box-nav">
+            <li class="contact-box-nav-concern contactNav0" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire contactNav1" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment contactNav2" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message contactNav3" onclick="contactNav(3)">I</li>
+        </ul>
+        <div class="contact-box-content">
+            <div class="contact-box-conn contact-conn0" style="display: none">
+                <p class="contactBoxTitle">目前还没有人关注你</p>
+                <p class="contactBoxWord">有时候主动一点，会有意想不到的收获</p>
+            </div>
+            <div class="contact-box-conn contact-conn1" >
+                <p class="contactBoxTitle">目前还没有钦佩哦</p>
+                <p class="contactBoxWord">有时候多做比多说更容易得到别人的钦佩</p>
+            </div>
+            <div class="contact-box-conn contact-conn2" style="display: none">
+                <p class="contactBoxTitle">目前还没有人评论</p>
+                <p class="contactBoxWord">成为改变世界的人之前，先改变自己</p>
+            </div>
+            <div class="contact-box-conn contact-conn3" style="display: none">
+                <p class="contactBoxTitle">目前还没有消息</p>
+                <p class="contactBoxWord">我们总是在抱怨事与愿违，却不愿意回头看看自己</p>
+            </div>
+        </div>
+
+        <a href="javascript:back()" id="back">
+            <span class="back-top">d</span>
+        </a>
+    </div>
+
+
     <div class="mf-content-top">
         <textarea cols="45" rows="1" id="proverbs" class="mf-profile-motto-container">在这里输入个人箴言</textarea>
     </div>
 
     <div class="mf-profile-content">
         <div class="mf-profile-content-row">
+<<<<<<< Updated upstream
             <p id="mf-profile-content-row-p"></p>
+=======
+>>>>>>> Stashed changes
             <img src="" id="preImg" />
             <a class="mf-profile-content-row-a" id="mf-profile-content-row-a" >编辑头像</a>
         </div>
@@ -73,11 +137,36 @@
             </div>
         </div>
         <div class="mf-profile-modify-content">
-            <div class="mf-profile-modcon-name"><h2>某某某</h2></div>
-            <div class="mf-profile-modcon-tro">生活了 <span>22</span> 年的 <span>男生</span> ，在 <span>湖南</span></div>
-            <div class="mf-profile-modcon-futrue">现在是 <span>文艺小清新</span> 丨 想成为 <span>成功男士</span></div>
+            <div class="mf-profile-modcon-name">
+                <h2 class="name">某某某</h2></div>
+            <div class="mf-profile-modcon-tro">生活了 <span class="age">22</span>
+                年的 <span class="sex">男生</span> ，在 <span class="street">湖南</span></div>
+            <div class="mf-profile-modcon-futrue">现在是
+                <span class="status">文艺小清新</span> 丨 想成为
+                <span class="wantto">成功男士</span></div>
         </div>
-        <div class="mf-profile-modify-btn-container"><a href="javascript:;">编辑资料</a></div>
+        <div class="mf-profile-modify-content-change" style="display: none"  >
+            <div class="mf-profile-modcon-name" >
+                <input class="name-change"/></div>
+            <div class="mf-profile-modcon-tro">
+                生活了 <input class="age-change"/> 年的
+                <input type="radio" name="sex" value="男生"/>
+                <span>男生</span>
+                <input type="radio" name="sex" value="女生"/>
+                <span>女生</span>
+                <input type="radio" name="sex" value="不详"/>
+                <span>不详</span>
+                ，在
+                <input type="text" class="street-change"/></div>
+            <div class="mf-profile-modcon-futrue">现在是 <input type="text" class="status-change"/>丨 想成为 <input
+                    type="text" class="wantto-change"/></div>
+            <div class="are-you-sure">
+                <a href="javascript:cancleInfo()" class="cancleInfo">取消</a>
+                <a href="javascript:commitInfo()" class="commitInfo">确认</a>
+            </div>
+        </div>
+
+        <div class="mf-profile-modify-btn-container"><a href="javascript:imfomationChange();">编辑资料</a></div>
     </div>
 
 
@@ -104,8 +193,45 @@
                 <div class="mf-content-BottLeft-publish"></div>
             </div>
 
-            <div class="mf-content-BottRight">         <!--内容部分的低端的右边-->
-                <div class="mf-BottRight-DreamInfo">
+            <div class="mf-content-BottRight">
+                <div class="change" style="display:none">
+                    <div class="change-header">
+                        <div class="change-duixiang"><span class="change-Info"></span><span>修改</span></div>
+                        <a class="off" href="javascript:off()">X</a>
+                    </div>
+                    <div class="areaFather">
+                        <form name="reg_testdate" style="display:none;" class="time">
+                            <select name="YYYY" onchange="YYYYDD(this.value)" class="year">
+                                <option value="">请选择 年</option>
+                            </select>
+                            <select name="MM" onchange="MMDD(this.value)" class="mouth">
+                                <option value="">选择 月</option>
+                            </select>
+                            <select name="DD" class="day">
+                                <option value="">选择 日</option>
+                            </select>
+                        </form>
+                        <div class="radio" style="display:none;margin-top:-80px;">
+                            <input type="radio" name="dr" value="梦" class="input1" checked="checked"/>
+                            <span class="radio-dream">梦</span>
+                            <input type="radio" name="dr" value="成" class="input2"/>
+                            <span class="radio-success">成</span>
+                            <input type="radio" name="dr" value="败" class="input3"/>
+                            <span class="radio-fail">败</span>
+                        </div>
+                        <textarea class="change-content" id="textarea" style="display:none"></textarea>
+                    </div>
+                    <div class="Num" style="display:none">
+                        <span class="into-num"></span>&nbsp;/
+                        <span class="guding-num">&nbsp;22</span>
+                    </div>
+                    <div class="cancle-sure">
+                        <a href="javascript:off()" class="cancel">取消</a>
+                        <a href="javascript:sure()" class="sure">确认</a>
+                    </div>
+                </div>
+                <!--内容部分的低端的右边-->
+                <div class="mf-BottRight-DreamInfo" >
                     <div class="mf-BottRight-DreamInfo-headline">
                         梦想信息
                         <a href="" class="deleteInfo">%</a>
@@ -113,36 +239,41 @@
                     <div class="mf-BottRight-DreamInfo-img"><a href="">
                         <div class="mf-BottRight-DreamInfo-changeImg"></div>
                     </a></div>
-                    <div class="mf-BottRight-DreamInfo-Name">
-                        <span class="mf-BottRight-DreamInfo-name">名称</span>
-                        <span class="mf-BottRight-DreamInfo-Nword">理解「十年后」以及人生</span>
-                        <span class="mf-BottRight-DreamInfo-Neditor"><a href="">编辑</a></span>
+                    <div class="mf-BottRight-DreamInfo-Name change1">
+                        <span class="mf-BottRight-DreamInfo-name changeInfo1">名称</span>
+                        <span class="mf-BottRight-DreamInfo-Nword changeContent1">理解「十年后」以及人生</span>
+                        <span class="mf-BottRight-DreamInfo-Neditor BJ1"><a href="javascript:change(1)">编辑</a></span>
                     </div>
-                    <div class="mf-BottRight-DreamInfo-Dispict">
-                        <span class="mf-BottRight-DreamInfo-dispict">描述</span>
-                        <span class="mf-BottRight-DreamInfo-Dword">
-                            关注自我的状态，关注内心，把现有这个状态的你当作最终的你，而不把外在的干扰当作敌人，因为现在的你具有的一切就已经是所有过去的结果了。
-                        </span>
-                        <span class="mf-BottRight-DreamInfo-Deditor"><a href="">编辑</a></span>
+                    <div class="mf-BottRight-DreamInfo-Dispict change2">
+                        <span class="mf-BottRight-DreamInfo-dispict  changeInfo2">描述</span>
+                        <span class="mf-BottRight-DreamInfo-Dword changeContent2">关注自我的状态，关注内心，把现有这个状态的你当作最终的你，而不把外在的干扰当作敌人，因为现在的你具有的一切就已经是所有过去的结果了。</span>
+                        <span class="mf-BottRight-DreamInfo-Deditor BJ2"><a href="javascript:change(2)">编辑</a></span>
                     </div>
-                    <div class="mf-BottRight-DreamInfo-State">
-                        <span class="mf-BottRight-DreamInfo-state">描述</span>
-                        <span class="mf-BottRight-DreamInfo-Sword">梦</span>
-                        <span class="mf-BottRight-DreamInfo-Seditor"><a href="">编辑</a></span>
+                    <div class="mf-BottRight-DreamInfo-State change3">
+                        <span class="mf-BottRight-DreamInfo-state  changeInfo3">状态</span>
+                        <span class="mf-BottRight-DreamInfo-Sword changeContent3">梦</span>
+                        <span class="mf-BottRight-DreamInfo-Seditor BJ3"><a href="javascript:change(3)">编辑</a></span>
                     </div>
-                    <div class="mf-BottRight-DreamInfo-Time">
-                        <span class="mf-BottRight-DreamInfo-time">时间</span>
-                        <span class="mf-BottRight-DreamInfo-Tword">2017 年 04 月 06 日</span>
-                        <span class="mf-BottRight-DreamInfo-Teditor"><a href="">编辑</a></span>
+                    <div class="mf-BottRight-DreamInfo-Time change4">
+                        <span class="mf-BottRight-DreamInfo-time  changeInfo4">时间</span>
+                        <span class="mf-BottRight-DreamInfo-Tword changeContent4">2017 年 04 月 06 日</span>
+                        <span class="mf-BottRight-DreamInfo-Teditor BJ4"><a href="javascript:change(4)">编辑</a></span>
                     </div>
                     <div class="mf-BottRight-DreamInfo-Privacy">
                         <span class="mf-BottRight-DreamInfo-privacy">隐私</span>
-                        <span class="mf-BottRight-DreamInfo-Pbtn"></span>
+                        <section class="model-1">
+                            <div class="checkbox">
+                                <input type="checkbox"/>
+                                <label></label>
+                            </div>
+                        </section>
+                        <span class="mf-BottRight-DreamInfo-Pbtn">公开</span>
                     </div>
-                    <div class="mf-BottRight-DreamInfo-Lable">
-                        <span class="mf-BottRight-DreamInfo-lable">标签</span>
-                        <span class="mf-BottRight-DreamInfo-Beditor"><a href="">编辑</a></span>
+                    <div class="mf-BottRight-DreamInfo-Lable change5">
+                        <span class="mf-BottRight-DreamInfo-lable changeContent5">标签</span>
+                        <span class="mf-BottRight-DreamInfo-Beditor BJ5"><a href="javascript:change(5)">编辑</a></span>
                     </div>
+
                 </div>
 
                 <div class="mf-BottRight-app-download">
@@ -165,13 +296,314 @@
         </div>
     </div>
 
-
     <!--锚点-->
     <div class="goTop"><a href="#top" class="goTopBtn" title="返回顶部">Ú</a></div>
 
 
     <script src="../../public/js/jquery-1.9.1.min.js"></script>
     <script>
+        //修改个人信息
+        var span=$(".mf-BottRight-DreamInfo-Nword");
+        /* console.log(span.html("sss"))*/
+        function off() {
+            $(".change").css({
+                "display":"none"
+            })
+            $(".mf-BottRight-DreamInfo").css({
+                "display":"block"
+            })
+        }
+        for(var i=1;i<6;i++){
+            (function (i) {
+                $(".BJ"+i).hide();
+                $(".change"+i).hover(function (){
+                    $(".BJ"+i).show();
+                },function (){
+                    $(".BJ"+i).hide();
+                });
+            })(i);
+
+        }
+        var public=true;
+        $(".checkbox").click(function () {
+            if(public==true){
+                $(".mf-BottRight-DreamInfo-Pbtn").html("私密");
+                $(".mf-BottRight-DreamInfo-Pbtn").css({
+                    "color":"#2FC1FF"
+                })
+                console.log(public);
+                public=false;
+            }else {
+                $(".mf-BottRight-DreamInfo-Pbtn").html("公开");
+                $(".mf-BottRight-DreamInfo-Pbtn").css({
+                    "color":"#9A9A9A"
+                })
+                public=true;
+            }
+
+        });
+        //资料编辑
+        function imfomationChange() {
+            $(".mf-profile-modify-content").hide();
+            $(".mf-profile-modify-content-change").show();
+            $(".mf-profile-modify-btn-container").hide();
+            //编辑资料界面和原有显示界面先隐藏  编辑界面显示
+            //设置默认元素
+            var name;
+            name=$(".name").html();
+            var age;
+            age=$(".age").html();
+            var street;
+            street=$(".street").html();
+            var status;
+            status=$(".status").html();
+            var wantto;
+            wantto=$(".wantto").html();
+            /*   console.log(name+"=="+age+"=="+street+"=="+status+"=="+wantto);*/
+            //赋值
+            $(".name-change").val(name);
+            $(".age-change").val(age);
+            $(".street-change").val(street);
+            $(".status-change").val(status);
+            $(".wantto-change").val(wantto);
+        }
+        //取消
+        function cancleInfo() {
+            $(".mf-profile-modify-content").show();
+            $(".mf-profile-modify-content-change").hide();
+            $(".mf-profile-modify-btn-container").show();
+        }
+        //确认
+        function commitInfo() {
+            $(".mf-profile-modify-content").show();
+            $(".mf-profile-modify-content-change").hide();
+            $(".mf-profile-modify-btn-container").show();
+            //设置默认元素
+            var namechange;
+            namechange=$(".name-change").val();
+            var agechange;
+            agechange=$(".age-change").val();
+            var streetchange;
+            streetchange=$(".street-change").val();
+            var statuschange;
+            statuschange=$(".status-change").val();
+            var wanttochange;
+            wanttochange=$(".wantto-change").val();
+            console.log(namechange+"=="+agechange+"=="+streetchange+"=="+statuschange+"=="+wanttochange);
+            //赋值
+            $(".name").html(namechange);
+            $(".age").html(agechange);
+            var val=$('input:radio[name="sex"]:checked').val();
+            $(".sex").html(val);
+            $(".street").html(streetchange);
+            $(".status").html(statuschange);
+            $(".wantto").html(wanttochange);
+        }
+        //下划线
+        $(".mf-profile-motto-container").keyup(function () {
+            var H=$(".mf-profile-motto-container").height();
+            console.log(H);
+            if(H<40){
+                $(".mf-profile-motto-container").css({
+                    "text-decoration":"underline ",
+                    "border-bottom":"none",
+                    "text-underline-position":"under"
+                })
+            }else{
+                $(".mf-profile-motto-container").css({
+                    "text-decoration":"none",
+                    "border-bottom":"2px solid #ccc"
+                })
+            }
+        })
+        $(".mf-profile-motto-container").blur(function(){
+            $(".mf-profile-motto-container").css({
+                "border-bottom":"none",
+                "text-decoration":"none"
+            })
+        });
+        //textarea自适应高度
+        var observe;
+        if (window.attachEvent) {
+            observe = function (element, event, handler) {
+                element.attachEvent('on'+event, handler);
+            };
+        }else{
+            observe = function (element, event, handler) {
+                element.addEventListener(event, handler, false);
+            };
+        }
+        function init () {
+            var proverbs = document.getElementById('proverbs');
+            function resize () {
+                proverbs.style.height = 'auto';
+                proverbs.style.height = proverbs.scrollHeight+'px';
+            }
+            /* 0-timeout to get the already changed text */
+            function delayedResize () {
+                window.setTimeout(resize, 0);
+            }
+            observe(proverbs, 'change',  resize);
+            observe(proverbs, 'cut',     delayedResize);
+            observe(proverbs, 'paste',   delayedResize);
+            observe(proverbs, 'drop',    delayedResize);
+            observe(proverbs, 'keydown', delayedResize);
+            proverbs.focus();
+            proverbs.select();
+            resize();
+        }
+
+
+        //编辑信息
+        $(".change-content").keyup(function () {
+            var textarea="";
+            var intonum=0;
+            var intonumVal="";
+            var MaxVal=0;
+
+            textarea=$(".change-content").val();
+            intonum=textarea.length;
+            $(".into-num").html(intonum);
+            intonumVal= $(".into-num").html();
+            MaxVal=$(".guding-num").html();
+            // console.log( intonumVal+"===="+MaxVal);
+            if(intonumVal>MaxVal){
+                textarea=textarea.substring(0,MaxVal);
+                //  console.log(textarea);
+                $(".change-content").val(textarea);
+            }
+        });
+        function  sure(){
+            var changeInfo="";
+            var changeContent="";
+            changeInfo=$(".change-Info").html();
+            changeContent=$(".change-content").val();
+            switch (changeInfo){
+                case "名称":
+                    $(".changeContent1").html(changeContent);
+                    break;
+                case "描述":
+                    $(".changeContent2").html(changeContent);
+                    break;
+                case "状态":
+                    var val=$('input:radio[name="dr"]:checked').val();
+                    $(".changeContent3").html(val);
+                    break;
+                case "时间":
+                    var Y;
+                    var M;
+                    var D;
+                    Y=$(".year").val();
+                    M=$(".mouth").val();
+                    D=$(".day").val();
+                    $(".changeContent4").html(Y+"年&nbsp;"+M+"月&nbsp;"+D+"日&nbsp;");
+                    break;
+                case "标签":
+                    $(".changeContent5").html();
+                    break;
+            }
+            $(".change").hide();
+            $(".mf-BottRight-DreamInfo").show();
+        }
+        function change(index) {
+            var object="";
+            var content="";
+            $(".mf-BottRight-DreamInfo").hide()
+            $(".change").show();
+            $(".into-num").html("0");
+            object=$(".changeInfo"+index).html();
+            //   console.log(object)
+            $(".change-Info").html(object);
+            content=$(".changeContent"+index).html();
+            $(".change-content").val(content);
+            switch (index){
+                case 1:
+                    $("#textarea").show();
+                    $(".Num").show();
+                    $(".radio").hide();
+                    $(".time").hide();
+                    $(".guding-num").html("12");
+                    break;
+                case 2:
+                    $("#textarea").show();
+                    $(".Num").show();
+                    $(".radio").hide();
+                    $(".time").hide();
+                    $(".guding-num").html("120");
+                    break;
+                case 3:
+                    $("#textarea").hide();
+                    $(".Num").hide();
+                    $(".radio").show();
+                    $(".time").hide();
+                    break;
+                case 4:
+                    $("#textarea").hide();
+                    $(".Num").hide();
+                    $(".radio").hide();
+                    $(".time").show();
+                    break;
+                case 5:
+                    $(".guding-num").html("7");
+                    $("#textarea").show();
+                    $(".Num").show();
+                    break;
+
+            }
+        }
+        function YYYYMMDDstart()
+        {
+            MonHead = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+            //先给年下拉框赋内容
+            var y  = new Date().getFullYear();
+            for (var i = (y-30); i < (y+30); i++) //以今年为准，前30年，后30年
+                document.reg_testdate.YYYY.options.add(new Option(" "+ i +" 年", i));
+
+            //赋月份的下拉框
+            for (var i = 1; i < 13; i++)
+                document.reg_testdate.MM.options.add(new Option(" " + i + " 月", i));
+
+            document.reg_testdate.YYYY.value = y;
+            document.reg_testdate.MM.value = new Date().getMonth() + 1;
+            var n = MonHead[new Date().getMonth()];
+            if (new Date().getMonth() ==1 && IsPinYear(YYYYvalue)) n++;
+            writeDay(n); //赋日期下拉框Author:meizz
+            document.reg_testdate.DD.value = new Date().getDate();
+        }
+        if(document.attachEvent)
+            window.attachEvent("onload", YYYYMMDDstart);
+        else
+            window.addEventListener('load', YYYYMMDDstart, false);
+        function YYYYDD(str) //年发生变化时日期发生变化(主要是判断闰平年)
+        {
+            var MMvalue = document.reg_testdate.MM.options[document.reg_testdate.MM.selectedIndex].value;
+            if (MMvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}
+            var n = MonHead[MMvalue - 1];
+            if (MMvalue ==2 && IsPinYear(str)) n++;
+            writeDay(n)
+        }
+        function MMDD(str)   //月发生变化时日期联动
+        {
+            var YYYYvalue = document.reg_testdate.YYYY.options[document.reg_testdate.YYYY.selectedIndex].value;
+            if (YYYYvalue == ""){ var e = document.reg_testdate.DD; optionsClear(e); return;}
+            var n = MonHead[str - 1];
+            if (str ==2 && IsPinYear(YYYYvalue)) n++;
+            writeDay(n)
+        }
+        function writeDay(n)   //据条件写日期的下拉框
+        {
+            var e = document.reg_testdate.DD; optionsClear(e);
+            for (var i=1; i<(n+1); i++)
+                e.options.add(new Option(" "+ i + " 日", i));
+        }
+        function IsPinYear(year)//判断是否闰平年
+        {     return(0 == year%4 && (year%100 !=0 || year%400 == 0));}
+        function optionsClear(e)
+        {
+            e.options.length = 1;
+        }
+
         <!--下拉滚动条导航栏的变化以及锚点的变化-->
         $(window.onscroll=function () {
             var top=$(document).scrollTop() ? $(document).scrollTop() : $("body").scrollTop();
@@ -194,37 +626,6 @@
             }
         });
 
-        //textarea自适应高度
-        var observe;
-        if (window.attachEvent) {
-            observe = function (element, event, handler) {
-                element.attachEvent('on'+event, handler);
-            };
-        }else{
-            observe = function (element, event, handler) {
-                element.addEventListener(event, handler, false);
-            };
-        }
-        function init () {
-            var proverbs = document.getElementById('proverbs');
-            function resize () {
-                proverbs.style.height = 'auto';
-                proverbs.style.height = proverbs.scrollHeight+'px';
-            }
-            /* 0-timeout to get the already changed text */
-            function delayedResize () {
-                window.setTimeout(resize, 0);
-                proverbs.style.borderBottom='1px solid red';
-            }
-            observe(proverbs, 'change',  resize);
-            observe(proverbs, 'cut',     delayedResize);
-            observe(proverbs, 'paste',   delayedResize);
-            observe(proverbs, 'drop',    delayedResize);
-            observe(proverbs, 'keydown', delayedResize);
-            proverbs.focus();
-            proverbs.select();
-            resize();
-        }
 
         /*鼠标移入进行晃动*/
         var mfIdeaLis=$(".mf-content-BottLeft-idea li");
@@ -347,8 +748,67 @@
         });
 
 
+        /*来往的弹出框效果*/
+        var flag=1;
+        $(".nav-info-fourth").click(function(){
+            if(flag==true){
+                $(".dropDown-bow").html("&nbsp;d");
+                $('.contact-box').show();
+                flag=2;
+            }else if(flag==2){
+                $(".dropDown-bow").html("&nbsp;c");
+                $('.contact-box').hide();
+                flag=1;
+            }else {
+                return;
+            }
+        });
+        //先动态添加hover样式
+        for(var z=0;z<4;z++){
+            $(".contactNav" + z).mouseenter(function () {
+                $(this).css({"color": "#00B4FF"});
+            });
+            $(".contactNav" + z).mouseleave(function () {
+                $(this).css({"color": "#ddd"});
+            })
+        }
+        function contactNav(i){
 
+            for(var j=0;j<4;j++){
 
+                if(i==j){
+                    $(".contact-conn"+j).show();
+                    $(".contactNav"+j).mouseleave(function () {
+                        $(this).css({"color":"#00B4FF"});
+                    });
+                    $(this).css({"color":"#00B4FF"});
+                }else {
+                    $(".contact-conn" + j).hide();
+                    $(".contactNav" + j).mouseenter(function () {
+                        $(this).css({"color": "#00B4FF"});
+                    });
+                    $(".contactNav" + j).mouseleave(function () {
+                        $(this).css({"color": "#ddd"});
+                    })
+                    $(".contactNav"+j).css({"color":"#ddd"});
+                }
+
+            }
+        }
+        //查看更多
+        $(".contact-box-foot").click(function () {
+            $(".contact-box").hide();
+            $(".more").show()
+            $(".more").addClass("more-show");
+            $(".more").removeClass("more-hide");
+            flag=3;
+        })
+        function back() {
+            $(".more").removeClass("more-show");
+            $(".more").addClass("more-hide");
+            $(".dropDown-bow").html("&nbsp;c");
+            flag=1;
+        }
     </script>
 </body>
 </html>

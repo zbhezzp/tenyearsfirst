@@ -14,7 +14,7 @@
             <li><a href="">动态</a></li>
             <li class="nav-info-second"><a href="">发现</a></li>
             <li><a href="">我的未来</a></li>
-            <li><a href="">来往<span class="dropDown-bow">c</span></a></li>
+            <li class="nav-info-fourth"><a>来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
@@ -27,6 +27,66 @@
             </div>
         </div>
     </nav>
+
+    <!--来往的弹出框-->
+    <div class="contact-box" style="display: none;">
+        <span class="out"></span><span class="iner"></span>
+        <div class="contact-box-nav">
+            <li class="contact-box-nav-concern" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message" onclick="contactNav(3)">I</li>
+        </div>
+        <div class="contact-box-content">
+            <div class="contact-box-conn contact-conn0" style="display: none">
+                <p class="contactBoxTitle">目前还没有人关注你</p>
+                <p class="contactBoxWord">有时候主动一点，会有意想不到的收获</p>
+            </div>
+            <div class="contact-box-conn contact-conn1" >
+                <p class="contactBoxTitle">目前还没有钦佩哦</p>
+                <p class="contactBoxWord">有时候多做比多说更容易得到别人的钦佩</p>
+            </div>
+            <div class="contact-box-conn contact-conn2" style="display: none">
+                <p class="contactBoxTitle">目前还没有人评论</p>
+                <p class="contactBoxWord">成为改变世界的人之前，先改变自己</p>
+            </div>
+            <div class="contact-box-conn contact-conn3" style="display: none">
+                <p class="contactBoxTitle">目前还没有消息</p>
+                <p class="contactBoxWord">我们总是在抱怨事与愿违，却不愿意回头看看自己</p>
+            </div>
+        </div>
+        <div class="contact-box-foot">查看更多</div>
+    </div>
+    <div class="more">
+        <ul class="contact-box-nav">
+            <li class="contact-box-nav-concern contactNav0" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire contactNav1" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment contactNav2" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message contactNav3" onclick="contactNav(3)">I</li>
+        </ul>
+        <div class="contact-box-content">
+            <div class="contact-box-conn contact-conn0" style="display: none">
+                <p class="contactBoxTitle">目前还没有人关注你</p>
+                <p class="contactBoxWord">有时候主动一点，会有意想不到的收获</p>
+            </div>
+            <div class="contact-box-conn contact-conn1" >
+                <p class="contactBoxTitle">目前还没有钦佩哦</p>
+                <p class="contactBoxWord">有时候多做比多说更容易得到别人的钦佩</p>
+            </div>
+            <div class="contact-box-conn contact-conn2" style="display: none">
+                <p class="contactBoxTitle">目前还没有人评论</p>
+                <p class="contactBoxWord">成为改变世界的人之前，先改变自己</p>
+            </div>
+            <div class="contact-box-conn contact-conn3" style="display: none">
+                <p class="contactBoxTitle">目前还没有消息</p>
+                <p class="contactBoxWord">我们总是在抱怨事与愿违，却不愿意回头看看自己</p>
+            </div>
+        </div>
+
+        <a href="javascript:back()" id="back">
+            <span class="back-top">d</span>
+        </a>
+    </div>
 
     <div class="explore-channel-content">
         <ul class="ec-images">
@@ -690,6 +750,68 @@
            $(".ec-content"+j).hide();
            $(".ec-content"+l).hide();
        }
+
+        /*来往的弹出框效果*/
+        var flag=1;
+        $(".nav-info-fourth").click(function(){
+            if(flag==true){
+                $(".dropDown-bow").html("&nbsp;d");
+                $('.contact-box').show();
+                flag=2;
+            }else if(flag==2){
+                $(".dropDown-bow").html("&nbsp;c");
+                $('.contact-box').hide();
+                flag=1;
+            }else {
+                return;
+            }
+        });
+        //先动态添加hover样式
+        for(var z=0;z<4;z++){
+            $(".contactNav" + z).mouseenter(function () {
+                $(this).css({"color": "#00B4FF"});
+            });
+            $(".contactNav" + z).mouseleave(function () {
+                $(this).css({"color": "#ddd"});
+            })
+        }
+        function contactNav(i){
+
+            for(var j=0;j<4;j++){
+
+                if(i==j){
+                    $(".contact-conn"+j).show();
+                    $(".contactNav"+j).mouseleave(function () {
+                        $(this).css({"color":"#00B4FF"});
+                    });
+                    $(this).css({"color":"#00B4FF"});
+                }else {
+                    $(".contact-conn" + j).hide();
+                    $(".contactNav" + j).mouseenter(function () {
+                        $(this).css({"color": "#00B4FF"});
+                    });
+                    $(".contactNav" + j).mouseleave(function () {
+                        $(this).css({"color": "#ddd"});
+                    })
+                    $(".contactNav"+j).css({"color":"#ddd"});
+                }
+
+            }
+        }
+        //查看更多
+        $(".contact-box-foot").click(function () {
+            $(".contact-box").hide();
+            $(".more").show()
+            $(".more").addClass("more-show");
+            $(".more").removeClass("more-hide");
+            flag=3;
+        })
+        function back() {
+            $(".more").removeClass("more-show");
+            $(".more").addClass("more-hide");
+            $(".dropDown-bow").html("&nbsp;c");
+            flag=1;
+        }
     </script>
 </body>
 </html>
