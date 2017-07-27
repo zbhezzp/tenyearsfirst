@@ -38,7 +38,7 @@
                 <a href="./Login.html">注册</a>
             </div>
             <!--时间轴-->
-            <div class="bg impress-not-supported"><img src="../../public/images/bg01.jpg" width="100%" /></div>
+            <div class="bg impress-not-supported"><img src="../../public/images/timeline1.jpg" width="100%" /></div>
 
             <header class="top" id="top">
                 <h1><a href="http://www.lanrenzhijia.com/"><img src="../../public/images/160_os_logo.png" /></a><em>2016大记事</em></h1>
@@ -514,11 +514,11 @@
     </div>
 
     <script>
+
         var index=1;
         function light(x) {
             change(x);
         }
-
 
         var flag=true;
         function scrollFun(event,x) {
@@ -631,10 +631,10 @@
         /*时间轴*/
         var impress = $.browser.msie?undefined:impress();
         //预加载图片
-        new Image().src = "../../public/images/bg04.jpg";
-        new Image().src = "../../public/images/bg01.jpg";
-        new Image().src = "../../public/images/bg02.jpg";
-        new Image().src = "../../public/images/bg03.jpg";
+        new Image().src = "../../public/images/timeline4.jpg";
+        new Image().src = "../../public/images/timeline1.jpg";
+        new Image().src = "../../public/images/timeline2.jpg";
+        new Image().src = "../../public/images/timeline3.jpg";
 
         var replay = function(){
             if(impress){
@@ -670,7 +670,6 @@
             };
 
             var resize = function(){
-
                 var width = $(window).width();
                 var height = $(window).height();
                 $(".bg img").css("width",width);
@@ -742,7 +741,7 @@
                 if(last_month==4)
                     return;
                 last_month = 4;
-                url = "../../public/images/bg04.jpg";
+                url = "../../public/images/timeline4.jpg";
                 $("header").css("background-color","rgba(255,255,255,0.2)");
                 $(".impress-supported .list_show h2").css("color","#0087f1");
                 $(".impress-not-supported .timeList_item_title").css("color","#0087f1");
@@ -750,7 +749,7 @@
                 if(last_month==1)
                     return;
                 last_month = 1;
-                url = "../../public/images/bg01.jpg";
+                url = "../../public/images/timeline1.jpg";
                 $("header").css("background-color","rgba(255,255,255,0.2)");
                 $(".impress-supported .list_show h2").css("color","#fff");
                 $(".impress-not-supported .timeList_item_title").css("color","#eca200");
@@ -758,7 +757,7 @@
                 if(last_month==2)
                     return;
                 last_month = 2;
-                url = "../../public/images/bg02.jpg";
+                url = "../../public/images/timeline2.jpg";
                 $("header").css("background-color","rgba(0,0,0,0.2)");
                 $(".impress-supported .list_show h2").css("color","#82e211");
                 $(".impress-not-supported .timeList_item_title").css("color","#82e211");
@@ -766,7 +765,7 @@
                 if(last_month==3)
                     return;
                 last_month = 3;
-                url = "../../public/images/bg03.jpg";
+                url = "../../public/images/timeline3.jpg";
                 /* $("header").css("background-color","rgba(255,255,255,0.2)");*/
                 $(".impress-supported .list_show h2").css("color","#ffca00");
                 $(".impress-not-supported .timeList_item_title").css("color","#ffca00");

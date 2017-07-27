@@ -196,6 +196,7 @@ span.dropDown-bow{
     top:52px;
     left:130px;
     z-index: 100;
+    position: fixed;
 
 }
 .contact-box span {
@@ -231,10 +232,9 @@ span.dropDown-bow{
     color: #ddd;
     float: left;
     cursor: pointer;
+
 }
-.contact-box-nav li:hover{
-    color:#00B4FF;
-}
+
 .contactBoxTitle{
     font-size: 18px;
     padding-top: 100px;
@@ -924,15 +924,31 @@ select.year,select.mouth,select.day{
     transition: color 1s;
     cursor: pointer;
 }
-.mf-Content-BottLeft-nav li:hover{
-    color:#16BAFF;
-}
 .mf-Content-BottLeft-nav li .record{
     padding:12px;
     color:#16BAFF;
-    border-bottom: 2px solid #16BAFF;
+    border-bottom:2px solid #16BAFF;
 }
 
+.mf-Content-BottLeft-Sum{
+    width:600px;
+    height:400px;
+    position:relative;
+    overflow: hidden;
+}
+.mf-Content-BottLeft-SumList{
+    position:absolute;
+    left:0px;
+    top:0px;
+    margin:0;
+    padding:0;
+    width:300%;
+
+}
+.mf-Content-BottLeft-record{
+    position: relative;
+    float:left;
+}
 .mf-content-BottLeft-idea{      /*内容部分的低端的左边想法部分*/
     width:600px;
     height:120px;
@@ -982,14 +998,14 @@ select.year,select.mouth,select.day{
     }
 }
 
-
-.mf-content-BottLeft-record{     /*内容部分的低端的左边发表文章部分*/
+/*内容部分的低端的左边的记录*/
+.mf-content-BottLeft-essay{
     width:600px;
     height:207px;
     background: #fff;
     border-radius:8px;
     margin-top:20px;
-    box-shadow: #D8D8D8 0px 0px 10px;
+   /* box-shadow: #D8D8D8 0px 0px 10px;*/
     position: relative;
 }
 .mf-conn-BottLeft-up{
@@ -1039,6 +1055,38 @@ select.year,select.mouth,select.day{
     font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, Helvetica, Tahoma, sans-serif;
     color: rgb(51, 51, 51);
     margin-top:10px;
+}
+.mf-conn-BottLeft-btn{
+    display:inline-block;
+    width:119px;
+    height:33px;
+    text-align: center;
+    line-height:33px;
+    border: 1px solid #ddd;
+    border-radius:30px;
+    font-size: 14px;
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, Helvetica, Tahoma, sans-serif;
+    color:#247446;
+    position: relative;
+    top:-37px;
+    left:440px;
+}
+.mf-conn-BottLeft-btn:hover{
+    border-color:#247446;
+}
+.mf-conn-BottLeft-btn span{
+    width:24px;
+    height:24px;
+    text-align:center;
+    line-height: 25px;
+    border-radius: 6px;
+    display:inline-block;
+    margin:0px 3px;
+    background:#247446;
+    font-size: 13px;
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, Helvetica, Tahoma, sans-serif;
+    color:#fff;
+
 }
 
 .mf-conn-BottLeft-down{
@@ -1098,9 +1146,135 @@ select.year,select.mouth,select.day{
     font-size: 12px;
 }
 
+/*内容部分的低端的左边的计划*/
+.mf-content-BottLeft-plan{
+    width:600px;
+    height:227px;
+    background: #fff;
+    border-radius:8px;
+    margin-top:20px;
+    /*box-shadow: #D8D8D8 0px 0px 2px;*/
+    position: relative;
+    float:left;
+}
+
+/*内容部分的低端的左边的讨论*/
+.mf-content-BottLeft-discuss{
+    width:600px;
+    height:130px;
+    background: #fff;
+    border-radius:8px;
+    margin-top:20px;
+    /*box-shadow: #D8D8D8 0px 0px 2px;*/
+    position: relative;
+    float:left;
+}
+.mf-BottLeft-discuss-up{
+    width:600px;
+    height:90px;
+    position:absolute;
+    top:0px;
+}
+.mf-BottLeft-discuss-up textarea{
+    width:538px;
+    height:20px;
+    line-height: 20px;
+    padding: 5px 10px;
+    border:1px solid #F1F1F1;
+    background: #f1f1f1;
+    border-radius: 5px;
+    color:#757575;
+    resize:none;
+    margin:15px;
+}
+.mf-BottLeft-discuss-public{
+    margin-left: 456px;
+    margin-top:-10px;
+}
+.mf-BottLeft-discuss-public span{
+    display: inline-block;
+    width:60px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: Arial, "Hiragino Sans GB", 冬青黑, "Microsoft YaHei", 微软雅黑, SimSun, Helvetica, Tahoma, sans-serif;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.mf-BottLeft-discuss-public span:nth-of-type(1){
+    color:#bbb;
+}
+.mf-BottLeft-discuss-public span:nth-of-type(1) em{
+    font-family: wbficon;
+    font-size: 13px;
+    margin-right:4px;
+}
+.mf-BottLeft-discuss-public span:nth-of-type(2){
+    background:#00B4FF;
+    color:#fff;
+}
+.mf-BottLeft-discuss-bottom{
+    width:560px;
+    height:40px;
+    padding:0px 20px;
+    position:absolute;
+    bottom:0px;
+    border-top: 2px solid #F6F5F6;
+}
+.mf-BottLeft-discuss-downike{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    cursor: pointer;
+}
+.mf-BottLeft-discuss-downike em{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 20px;
+}
+.mf-BottLeft-discuss-downike span{
+    padding-left:15px;
+}
+.mf-BottLeft-discuss-downComment{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    float:left;
+    margin-top:-40px;
+    margin-left:100px;
+    cursor: pointer;
+}
+.mf-BottLeft-discuss-downComment em{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 20px;
+}
+.mf-BottLeft-discuss-downComment span{
+    padding-left:15px;
+}
+.mf-BottLeft-discuss-downMore{
+    width:70px;
+    height:40px;
+    line-height: 40px;
+    margin: 0px 5px;
+    float:left;
+    margin-top:-40px;
+    margin-left:200px;
+    cursor: pointer;
+}
+.mf-BottLeft-discuss-downMore span{
+    font-family:'wbficon';
+    color:#BBB;
+    font-size: 12px;
+}
 
 
-.mf-content-BottRight{     /*内容部分的低端的右边*/
+
+/*内容部分的低端的右边*/
+.mf-content-BottRight{
     float:right;
     width:320px;
 }

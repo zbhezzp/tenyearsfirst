@@ -109,6 +109,9 @@ span.dropDown-bow{
     line-height: 30px;
     border-radius: 50%;
 }
+
+
+
 .more{
     width: 100%;
     height: 0px;
@@ -257,6 +260,107 @@ span.dropDown-bow{
     cursor: pointer;
 }
 
+/*搜索的弹出页面*/
+.search{
+    width: 100%;
+    height: 0px;
+    display: block;
+    position: fixed;
+    top:50px;
+    background-color: #ebebeb;
+    z-index: 100;
+}
+.search-header{
+    width: 70%;
+    margin: 40px auto;
+    height: 52px;
+    text-align: center;
+    position: relative;
+}
+.search-img span{
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-family: "wbficon";
+    font-size: 28px;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+.search-content{
+    height: 52px;
+    width: 86%;
+    line-height: 52px;
+    font-size: 25px;
+    border:none;
+    background: #ebebeb;
+    position: absolute;
+    top:0px;
+    left:60px;
+    outline:none;
+}
+.search-off-img span{
+    display:inline-block;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    font-family: "wbficon";
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    right:0px;
+}
+
+.hot-b{
+    position: relative;
+    top: 0px;
+    left: 215px;
+}
+.search-ul1,.search-ul2{
+    display: inline-block;
+    height: 25px;
+    position: absolute;
+    left: 215px;
+}
+.search-ul1{
+    top:170px;
+}
+.search-ul2{
+    top:208px;
+}
+.search-ul1 li,.search-ul2 li{
+    float: left;
+    display: inline-block;
+    height: 25px;
+    width: 50px;
+    text-align: center;
+    line-height: 25px;
+    border-radius:10px;
+    border: 1px solid #00b4ff;
+    margin-right: 15px;
+    color: #07abff;
+}
+.search ul li:hover{
+    background-color: #07abff;
+    color: whitesmoke;
+}
+.search .search-to{
+    height: 30px;
+    background-color: white;
+    width: 60%;
+    position: absolute;
+    left: 270px;
+    top:  250px;
+}
+.search .search-to li{
+    float: left;
+    display: inline-block;
+    width: 33%;
+    line-height: 30px;
+    text-align: center;
+    color: #9d9d9d;
+}
 
 
 
@@ -651,4 +755,310 @@ span.dropDown-bow{
     font-weight: bolder;
     color:#333;
     display:inline-block;
+}
+
+
+/*想法的弹框*/
+.think-shrapnel-bg{
+    position:relative;
+    width:100%;
+    height:100%;
+    background: rgba(146,146,146,0.4);
+    display: inline-block;
+    z-index: 100;
+    position: fixed;
+    top:0;
+    left:0;
+}
+.think-shrapnel-content{
+    width:600px;
+    height:381px;
+    background: #fff;
+    margin: 142px auto;
+    border-radius: 5px;
+}
+.think-shrapnel-connTop{
+    width:560px;
+    height:40px;
+    margin: 15px 20px;
+    position: relative;
+    top:15px;
+}
+.think-shrapnel-connTop-icon img{
+    float:left;
+    width:38px;
+    height:38px;
+    border-radius: 50%;
+    margin: 1px;
+}
+.think-shrapnel-connTop-name{
+    float:left;
+    display: inline-block;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #4093c6;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    margin-left:10px;
+}
+.think-shrapnel-connTop-toWhere{
+    float:left;
+    line-height: 40px;
+    margin-left: 10px;
+    color:#A7A7A7;
+    font-size: 16px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.think-shrapnel-connTop-choose{
+    float:left;
+    line-height: 40px;
+    margin-left: 10px;
+    color:#666;
+    font-size: 16px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.think-shrapnel-connTop-choose span:nth-of-type(1){
+    display: inline-block;
+    width:20px;
+    height:20px;
+    text-align: center;
+    line-height: 20px;
+    background:#9A9A9A;
+    border-radius:5px;
+    color:#fff;
+    font-size: 12px;
+    margin-right:4px;
+}
+.think-shrapnel-connTop-choose span:nth-of-type(2){
+    font-family: wbficon;
+}
+
+.think-shrapnel-connCenter{
+    width:560px;
+    height:260px;
+    margin: 15px 20px 0px;
+    position: relative;
+    top:15px;
+
+}
+.think-shrapnel-connCenter-container{
+    width:560px;
+    height:210px;
+
+}
+.think-shrapnel-connCenter-container textarea{
+    width:560px;
+    height:50px;
+    line-height: 22px;
+    resize:none;
+    border:none;
+    font-size: 15px;
+    color:#757575;
+}
+.think-shrapnel-connCenter-container .think-shrapnel-connCenter-pic{
+    width:560px;
+    height:160px;
+    overflow: auto;
+}
+.think-shrapnel-connCenter-picIcon2{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    float: left;
+    opacity: 0;
+}
+.think-shrapnel-connCenter-picIcon{
+    display: inline-block;
+    width:50px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    font-family: wbficon;
+    font-size: 24px;
+    color:#bbb;
+    margin-left: -50px;
+    margin-top: -10px;
+}
+.think-shrapnel-connDown{
+    width:600px;
+    height:50px;
+    border-top:2px solid #eee;
+    position: relative;
+    bottom: -15px;
+}
+.think-shrapnel-connDown a{
+    display: inline-block;
+    width:70px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    position: absolute;
+}
+#img-change{
+    min-height: 200px;
+}
+.think-shrapnel-cansel{
+    color: #9f97a7;
+    right:90px;
+    top:10px;
+    transition: all 0.3s ease-in-out;
+}
+.think-shrapnel-cansel:hover{
+    color:#666;
+}
+.think-shrapnel-publish{
+    background: #00B4FF;
+    border-radius: 5px;
+    color:#fff;
+    right:20px;
+    top:10px;
+    transition: all 0.3s ease-in-out;
+}
+.think-shrapnel-publish:hover{
+    color:#fff;
+    background: #0885f0;
+}
+
+
+
+/*计划的弹框*/
+.plan-shrapnel-bg{
+    position:relative;
+    width:100%;
+    height:100%;
+    background: rgba(146,146,146,0.4);
+    display: inline-block;
+    z-index: 100;
+    position: fixed;
+    top:0;
+    left:0;
+}
+.plan-shrapnel-content{
+    width:600px;
+    height:332px;
+    background: #fff;
+    margin: 142px auto;
+    border-radius: 5px;
+    position:relative;
+}
+.plan-shrapnel-connTop{
+    width:560px;
+    height:40px;
+    margin: 15px 20px;
+    position: absolute;
+    top:0px;
+}
+.plan-shrapnel-connTop-icon img{
+    float:left;
+    width:38px;
+    height:38px;
+    border-radius: 50%;
+    margin: 1px;
+}
+.plan-shrapnel-connTop-name{
+    float:left;
+    display: inline-block;
+    line-height: 40px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #4093c6;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    margin-left:10px;
+}
+.plan-shrapnel-connTop-toWhere{
+    float:left;
+    line-height: 40px;
+    margin-left: 10px;
+    color:#A7A7A7;
+    font-size: 16px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.plan-shrapnel-connTop-choose{
+    float:left;
+    line-height: 40px;
+    margin-left: 10px;
+    color:#666;
+    font-size: 16px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+}
+.plan-shrapnel-connTop-choose span:nth-of-type(1){
+    display: inline-block;
+    width:20px;
+    height:20px;
+    text-align: center;
+    line-height: 20px;
+    background:#9A9A9A;
+    border-radius:5px;
+    color:#fff;
+    font-size: 12px;
+    margin-right:4px;
+}
+.plan-shrapnel-connTop-choose span:nth-of-type(2){
+    font-family: wbficon;
+}
+.plan-shrapnel-connCenter{
+    width:560px;
+    height:210px;
+    position: absolute;
+    bottom: 50px;
+    left:20px;
+    overflow-y:auto;
+}
+.plan-shrapnel-connCenter textarea{
+    line-height: 20px;
+    padding-left:3px;
+    background: #fff;
+    resize: none;
+    border: none;
+    overflow: hidden;
+    outline: none;
+}
+.plan-shrapnel-timeline{
+    margin-top:10px;
+    font-size: 14px;
+    color: #666;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    font-weight: 600;
+    cursor:pointer;
+}
+
+.plan-shrapnel-connDown{
+    width:600px;
+    height:50px;
+    border-top:2px solid #eee;
+    position: absolute;
+    bottom: 0px;
+}
+.plan-shrapnel-connDown a{
+    display: inline-block;
+    width:70px;
+    height:30px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    font-family: Arial,"Hiragino Sans GB","冬青黑","Microsoft YaHei","微软雅黑",SimSun,Helvetica,Tahoma,sans-serif;
+    position: absolute;
+}
+.plan-shrapnel-cansel{
+    color: #9f97a7;
+    right:90px;
+    top:10px;
+    transition: all 0.3s ease-in-out;
+}
+.plan-shrapnel-cansel:hover{
+    color:#666;
+}
+.plan-shrapnel-publish{
+    background: #00B4FF;
+    border-radius: 5px;
+    color:#fff;
+    right:20px;
+    top:10px;
+    transition: all 0.3s ease-in-out;
+}
+.plan-shrapnel-publish:hover{
+    color:#fff;
+    background: #0885f0;
 }

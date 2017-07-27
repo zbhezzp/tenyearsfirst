@@ -12,13 +12,14 @@
     <nav class="navbar">
         <ul class="nav-information">
             <li class="nav-info-first"><a href="">动态</a></li>
-            <li><a href="">发现</a></li>
-            <li><a href="">我的未来</a></li>
+            <li><a href="./discover.html">发现</a></li>
+            <li><a href="./MyFuture.html">我的未来</a></li>
             <li class="nav-info-fourth"><a>来往<span class="dropDown-bow">c</span></a></li>
         </ul>
         <div class="nav-img-position"></div>
         <div class="nav-person">
-            <a class="nav-person-search" href=""><span class="nav-search-icon">f</span></a>
+            <a class="nav-person-search" href="javascript:search()">
+                <span class="nav-search-icon">f</span></a>
             <div class="nav-person-img">
                 <figure>
                     <a href=""><img src="../../public/images/blank.png" /></a>
@@ -94,23 +95,23 @@
                 <div class="content-left">
                     <div class="cl-btn-container">
                         <ul>
-                            <li><a href="">
+                            <li><a href="javascript:shrapnel(1)">
                                 <div class="cl-add-img cl-add-mood-img">
                                     <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;" />
                                 </div>
-                                <p>想法</p>
+                                <p class="shrapnel-bg-p1">想法</p>
                             </a></li>
                             <li><a href="">
                                 <div class="cl-add-img cl-add-article-img">
                                     <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;" />
                                 </div>
-                                <p>日志</p>
+                                <p >日志</p>
                             </a></li>
-                            <li class="last"><a href="">
+                            <li class="last"><a href="javascript:shrapnel(2)">
                                 <div class="cl-add-img cl-add-play-img">
                                     <img id="waggleImgs2" src="../../public/images/cl-icon-plan.png" style="width:58px;height:50px;" />
                                 </div>
-                                <p>计划</p>
+                                <p class="shrapnel-bg-p2"  >计划</p>
                             </a></li>
                         </ul>
                     </div>
@@ -126,7 +127,7 @@
                             </div>
                             <div class="cl-loading-middle">
                                 <div class="cl-loading-middleConn">
-                                    <img src="../../public/images/13.jpeg" />
+                                    <img src="../../public/images/ex_bg.jpeg" />
                                     <div class="cl-loading-middleConnBg">
                                         <div class="cl-middleConnBg-title"><em>梦</em>新疆</div>
                                         <div class="cl-middleConnBg-date"> 2017年04月09日 </div>
@@ -217,9 +218,186 @@
     <!--锚点-->
     <div class="goTop"><a href="#top" class="goTopBtn" title="返回顶部">Ú</a></div>
 
+    <!--想法的弹框-->
+    <div class="think-shrapnel-bg shrapnel-bg1" style="outline:none;display: none">
+        <div class="think-shrapnel-content">
+            <div class="think-shrapnel-connTop">
+                <a href="" class="think-shrapnel-connTop-icon"><img src="../../public/images/blank.png" /></a>
+                <a href="" class="think-shrapnel-connTop-name">捧上天</a>
+                <div class="think-shrapnel-connTop-toWhere">发布到梦想</div>
+                <div class="think-shrapnel-connTop-choose"><span>梦</span>请选择梦想<span>c</span></div>
+            </div>
+            <div class="think-shrapnel-connCenter">
+                <div class="think-shrapnel-connCenter-container">
+                    <textarea placeholder="分享你的追梦历程"  style="outline:none;"></textarea>
+                    <div class="think-shrapnel-connCenter-pic">
+                        <img src="" width="100%"   id="img-change">
+                        <input class="think-shrapnel-connCenter-picIcon2" type="file" id="file" name="" onchange="filechange(event)" />
+                        <span class="think-shrapnel-connCenter-picIcon"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="think-shrapnel-connDown">
+                <a href="javascript:shrapnel(3)" class="think-shrapnel-cansel">取消</a>
+                <a href="" class="think-shrapnel-publish">发布</a>
+            </div>
+        </div>
+    </div>
+
+    <!--计划的弹框-->
+    <div class="plan-shrapnel-bg shrapnel-bg2" style="display: none" >
+        <div class="plan-shrapnel-content">
+            <div class="plan-shrapnel-connTop">
+                <a href="" class="plan-shrapnel-connTop-icon"><img src="../../public/images/blank.png" /></a>
+                <a href="" class="plan-shrapnel-connTop-name">捧上天</a>
+                <div class="plan-shrapnel-connTop-toWhere">发布到梦想</div>
+                <div class="plan-shrapnel-connTop-choose"><span>梦</span>请选择梦想<span>c</span></div>
+            </div>
+            <div class="plan-shrapnel-connCenter">
+                <div class="plan-shrapnel-connCenter-container">
+                    <textarea placeholder="为实现梦想，你决定做什么？" rows="1" cols="77" onfocus="javascript:ResizeTextarea(this,1);" onclick="javascript:ResizeTextarea(this,1);" onkeyup="javascript:ResizeTextarea(this,1);"></textarea>
+                    <div class="plan-shrapnel-timeline">选择完成日期</div>
+                </div>
+            </div>
+            <div class="plan-shrapnel-connDown">
+                <a href="javascript:shrapnel(4)" class="plan-shrapnel-cansel">取消</a>
+                <a href="" class="plan-shrapnel-publish">发布</a>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索的弹出页面-->
+    <div class="search" style="height: 600px;display: none">
+        <div class="search-header">
+            <div class="search-img"><span>f</span></div>
+            <input type="text" class="search-content" placeholder="请输入搜索内容"/>
+            <div class="search-off-img"><span>X</span></div>
+        </div>
+        <span class="hot-b">热门标签</span>
+        <ul class="search-ul1">
+            <li>学习</li>
+            <li>英语</li>
+            <li>考试</li>
+            <li>生活</li>
+            <li>梦想</li>
+            <li>工作</li>
+            <li>坚持</li>
+            <li>旅行</li>
+            <li>减肥</li>
+            <li>爱情</li>
+            <li>职业</li>
+            <li>读书</li>
+            <li>健康</li>
+            <li>考研</li>
+        </ul>
+        <ul class="search-ul2">
+            <li>健身</li>
+            <li>高考</li>
+            <li>创业</li>
+            <li>努力</li>
+            <li>阅读</li>
+            <li>加油</li>
+        </ul>
+        <div class="search-to" style="display: none">
+            <a href="javascript:searchDreame(0)"><li class="search-to-li0">动态</li></a>
+            <a href="javascript:searchDreame(1)"><li class="search-to-li1">梦想</li></a>
+            <a href="javascript:searchDreame(2)"><li class="search-to-li2">梦想家</li></a>
+        </div>
+    </div>
 
     <script src="../../public/js/jquery-1.9.1.min.js"></script>
+
     <script>
+        $(".plan-shrapnel-timeline").click(function () {
+
+        })
+        function shrapnel(index) {
+            for(var i=1;i<5;i++){
+                if(i==index){
+                    $(".shrapnel-bg"+i).show();
+                }else {
+                    $(".shrapnel-bg"+i).hide();
+                }
+            }
+        }
+        /*$("#file").change(function (event) {*/
+        var filechange=function(event){
+            var files = event.target.files, file;
+            if (files && files.length > 0) {
+                // 获取目前上传的文件
+                file = files[0];// 文件大小校验的动作
+                if(file.size > 1024 * 1024 * 2) {
+                    alert('图片大小不能超过 2MB!');
+                    return false;
+                }
+                // 获取 window 的 URL 工具
+                var URL = window.URL || window.webkitURL;
+                // 通过 file 生成目标 url
+                var imgURL = URL.createObjectURL(file);
+                //用attr将img的src属性改成获得的url
+                $("#img-change").attr("src",imgURL);
+                // 使用下面这句可以在内存中释放对此 url 的伺服，跑了之后那个 URL 就无效了
+                // URL.revokeObjectURL(imgURL);
+            }
+        };
+        /*搜索*/
+        function search() {
+            $(".search").fadeIn();
+            $(".search-content").focus();
+        }
+        $(".search-off-img").bind("click",function () {
+            $(".search").fadeOut();
+        })
+        //先动态添加hover属性
+        for(var i=0;i<4;i++){
+            $(".search-to-li"+i).mouseover(function () {
+                $(this).css({
+                    "color":"#07abff"
+                })
+            });
+            $(".search-to-li"+i).mouseout(function () {
+                $(this).css({
+                    "color":"#9d9d9d"
+                })
+            })
+        }
+        function searchDreame(index) {
+            for(var i=0;i<4;i++){
+                $(".search-to-li"+i).mouseout(function () {
+                    $(this).css({
+                        "color":"#9d9d9d"
+                    })
+                });
+                if(i==index){
+                    $(".search-to-li"+i).css({
+                        "color":"#07abff",
+                        "border-bottom":"2px solid #07abff"
+                    });
+                    $(".search-to-li"+i).mouseout(function () {
+                        $(this).css({
+                            "color":"#07abff"
+                        })
+                    })
+                }else{
+                    $(".search-to-li"+i).css({
+                        "color":"#9d9d9d",
+                        "border-bottom":"none"
+                    })
+                }
+            }
+        }
+        $(".search-content").keyup(function () {
+            var searchContent;
+            searchContent=$(".search-content").val();
+           /* console.log(searchContent)*/
+            if(searchContent.length>0){
+                $(".search-to").show();
+            }else {
+                $(".search-to").hide();
+            }
+        });
+
+        /*锚点的显示与隐藏*/
         $(window.onscroll=function () {
             var top=$(document).scrollTop() ? $(document).scrollTop() : $("body").scrollTop();
             /*console.log(top);*/
@@ -268,9 +446,7 @@
             })
         }
         function contactNav(i){
-
             for(var j=0;j<4;j++){
-
                 if(i==j){
                     $(".contact-conn"+j).show();
                     $(".contactNav"+j).mouseleave(function () {
@@ -293,7 +469,7 @@
         //查看更多
         $(".contact-box-foot").click(function () {
             $(".contact-box").hide();
-            $(".more").show()
+            $(".more").show();
             $(".more").addClass("more-show");
             $(".more").removeClass("more-hide");
             flag=3;
@@ -304,6 +480,35 @@
             $(".dropDown-bow").html("&nbsp;c");
             flag=1;
         }
+
+        /*想法的弹出框效果*/
+
+
+        /*计划的弹出框效果*/
+        //计划中的文本框的自适应高度
+        var agt = navigator.userAgent.toLowerCase();
+        var is_op = (agt.indexOf("opera") != -1);
+        var is_ie = (agt.indexOf("msie") != -1) && document.all && !is_op;
+        function ResizeTextarea(a,row){
+            if(!a){return}
+            if(!row)
+                row=5;
+            var b=a.value.split("\n");
+            var c=is_ie?1:0;
+            c+=b.length;
+            var d=a.cols;
+            if(d<=20){d=40}
+            for(var e=0;e<b.length;e++){
+                if(b[e].length>=d){
+                    c+=Math.ceil(b[e].length/d)
+                }
+            }
+            c=Math.max(c,row);
+            if(c!=a.rows){
+                a.rows=c;
+            }
+        }
+
     </script>
 </body>
 </html>

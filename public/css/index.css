@@ -4,7 +4,7 @@
 }
 html,body{
     height:100%;
-    background: url("../../public/images/body-img2.jpg") no-repeat -100px;
+    background: url("../../public/images/timeline1.jpg") no-repeat -100px;
     -webkit-box-shadow:10px 10px 1000px inset #eee;
 }
 @font-face{       /*特定字体*/
@@ -165,11 +165,14 @@ ul li{
     line-height:50px;
     color: #193233;
 }
-.bt-channel-content-wordsum p:nth-of-type(2){
+.bt-channel-content-wordsum p:nth-of-type(1){
     margin-left:120px;
 }
-.bt-channel-content-wordsum p:nth-of-type(3){
+.bt-channel-content-wordsum p:nth-of-type(2){
     margin-left:240px;
+}
+.bt-channel-content-wordsum p:nth-of-type(3){
+    margin-left:330px;
 }
 .bt-channel{
     float:left;

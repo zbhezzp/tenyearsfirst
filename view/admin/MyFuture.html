@@ -10,8 +10,8 @@
 <body onload="init();">
     <nav class="navbar">
         <ul class="nav-information">
-            <li class="nav-info-lis"><a href="">动态</a></li>
-            <li class="nav-info-lis"><a href="">发现</a></li>
+            <li class="nav-info-lis"><a href="./dynamicStatic.html">动态</a></li>
+            <li class="nav-info-lis"><a href="./discover.html">发现</a></li>
             <li class="nav-info-lis nav-info-third"><a href="">我的未来</a></li>
             <li class="nav-info-lis nav-info-fourth"><a>来往<span class="dropDown-bow">c</span></a></li>
         </ul>
@@ -20,7 +20,7 @@
             <a class="nav-person-search" href=""><span class="nav-search-icon">f</span></a>
             <div class="nav-person-img">
                 <figure>
-                    <a href=""><img src="../../public/images/blank.png" /></a>
+                    <a href="../main/Login.html"><img src="../../public/images/blank.png" /></a>
                 </figure>
                 <div class="nav-logout"></div>
             </div>
@@ -31,10 +31,10 @@
     <div class="contact-box" style="display: none;">
         <span class="out"></span><span class="iner"></span>
         <div class="contact-box-nav">
-            <li class="contact-box-nav-concern" onclick="contactNav(0)">H</li>
-            <li class="contact-box-nav-admire" onclick="contactNav(1)">C</li>
-            <li class="contact-box-nav-comment" onclick="contactNav(2)">-</li>
-            <li class="contact-box-nav-message" onclick="contactNav(3)">I</li>
+            <li class="contact-box-nav-concern contactNav0" onclick="contactNav(0)">H</li>
+            <li class="contact-box-nav-admire contactNav1" onclick="contactNav(1)">C</li>
+            <li class="contact-box-nav-comment contactNav2" onclick="contactNav(2)">-</li>
+            <li class="contact-box-nav-message contactNav3" onclick="contactNav(3)">I</li>
         </div>
         <div class="contact-box-content">
             <div class="contact-box-conn contact-conn0" style="display: none">
@@ -174,51 +174,77 @@
         <div class="mf-content-BottConn">
             <div class="mf-content-BottLeft">               <!--内容部分的低端的左边-->
                 <ul class="mf-Content-BottLeft-nav">
-                    <li><span class="record">记录</span></li>
-                    <li><span class="plan">计划</span></li>
-                    <li><span class="discuss">讨论</span></li>
+                    <li onclick="liNav(0)"><span class="record linav0">记录</span></li>
+                    <li onclick="liNav(1)"><span class="plan linav1">计划</span></li>
+                    <li onclick="liNav(2)"><span class="discuss linav2">讨论</span></li>
                 </ul>
 
-                <div class="mf-Content-BottLeft-record">
-                    <ul class="mf-content-BottLeft-idea">
-                        <li class="first"><a href="">
-                            <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
-                            <p>想法</p>
-                        </a></li>
-                        <li class="second"><a href="">
-                            <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
-                            <p>日志</p>
-                        </a></li>
-                    </ul>
+                <div class="mf-Content-BottLeft-Sum">
+                    <div class="mf-Content-BottLeft-SumList">
+                        <div class="mf-Content-BottLeft-record">
+                            <ul class="mf-content-BottLeft-idea">
+                                <li class="first"><a href="">
+                                    <img id="waggleImgs0" src="../../public/images/cl-icon-light.png" style="width:58px;height:50px;">
+                                    <p>想法</p>
+                                </a></li>
+                                <li class="second"><a href="">
+                                    <img id="waggleImgs1" src="../../public/images/cl-icon-log.png" style="width:58px;height:50px;">
+                                    <p>日志</p>
+                                </a></li>
+                            </ul>
 
-                    <div class="mf-content-BottLeft-record">
-                        <div class="mf-conn-BottLeft-up">
-                            <div class="mf-conn-BottLeft-upIcon"></div>
-                            <div class="mf-conn-BottLeft-upTitle">
-                                <div class="mf-BottLeft-upTitle-name">彭敬亭</div>
-                                <div class="mf-BottLeft-upTitle-date">几秒前</div>
+                            <div class="mf-content-BottLeft-essay" >
+                                <div class="mf-conn-BottLeft-up">
+                                    <div class="mf-conn-BottLeft-upIcon"></div>
+                                    <div class="mf-conn-BottLeft-upTitle">
+                                        <div class="mf-BottLeft-upTitle-name">彭敬亭</div>
+                                        <div class="mf-BottLeft-upTitle-date">几秒前</div>
+                                    </div>
+                                    <a href="" class="mf-conn-BottLeft-btn"><span>梦</span>继续抢红包</a>
+                                </div>
+                                <div class="mf-conn-BottLeft-middle">
+                                    <div class="mf-conn-BottLeft-middleConn">
+                                        <h4>旅行</h4>
+                                        <span>来一场说走就走的旅行</span>
+                                    </div>
+                                </div>
+                                <div class="mf-conn-BottLeft-down">
+                                    <div class="mf-conn-BottLeft-downike">
+                                        <em>â</em><span></span>
+                                    </div>
+                                    <div class="mf-conn-BottLeft-downComment">
+                                        <em>-</em><span></span>
+                                    </div>
+                                    <div class="mf-conn-BottLeft-downMore">
+                                        <span>D</span><span>D</span><span>D</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="mf-conn-BottLeft-middle">
-                            <div class="mf-conn-BottLeft-middleConn">
-                                <h4>旅行</h4>
-                                <span>来一场说走就走的旅行</span>
+
+                        <div class="mf-content-BottLeft-plan" ></div>
+
+                        <div class="mf-content-BottLeft-discuss" >
+                            <div class="mf-BottLeft-discuss-up">
+                                <textarea cols="20" rows="2" placeholder="写下你的建议..."></textarea>
+                                <div class="mf-BottLeft-discuss-public">
+                                    <span><em>3</em>公开</span><span>发布</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="mf-conn-BottLeft-down">
-                            <div class="mf-conn-BottLeft-downike">
-                                <em>â</em><span></span>
-                            </div>
-                            <div class="mf-conn-BottLeft-downComment">
-                                <em>-</em><span></span>
-                            </div>
-                            <div class="mf-conn-BottLeft-downMore">
-                                <span>D</span><span>D</span><span>D</span>
+                            <div class="mf-BottLeft-discuss-bottom">
+                                <div class="mf-BottLeft-discuss-downike">
+                                    <em>â</em><span></span>
+                                </div>
+                                <div class="mf-BottLeft-discuss-downComment">
+                                    <em>-</em><span></span>
+                                </div>
+                                <div class="mf-BottLeft-discuss-downMore">
+                                    <span>D</span><span>D</span><span>D</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
 
             <div class="mf-content-BottRight">
@@ -738,8 +764,6 @@
                        });
 
                    });
-
-
                }
             });
             if($("#mf-avatar-name-input").css('display')=='block'&&$("#mf-avatar-upload-image-btn").css('display')=='none'){
@@ -793,40 +817,39 @@
         });
         //先动态添加hover样式
         for(var z=0;z<4;z++){
-            $(".contactNav" + z).mouseenter(function () {
+            $(".contactNav" + z).mouseover(function () {
                 $(this).css({"color": "#00B4FF"});
             });
-            $(".contactNav" + z).mouseleave(function () {
+            $(".contactNav" + z).mouseout(function () {
                 $(this).css({"color": "#ddd"});
             })
         }
-        function contactNav(i){
+        function contactNav(n){
+            for(var z=0;z<4;z++) {
+                $(".contactNav"+z).mouseout(function () {
+                    $(this).css({"color": "#ddd"});
+                })
+                    if (z == n) {
+                        $(".contact-conn"+z).show();
+                        $(".contactNav"+z).css({"color": "#00B4FF"});
+                        $(".contactNav"+z).mouseout(function () {
+                            $(this).css({
+                                color:"#00B4FF"
+                            })
+                        })
+                    } else {
 
-            for(var j=0;j<4;j++){
+                        $(".contact-conn"+z).hide();
+                        $(".contactNav"+z).css({"color": "#ddd"});
+                    }
 
-                if(i==j){
-                    $(".contact-conn"+j).show();
-                    $(".contactNav"+j).mouseleave(function () {
-                        $(this).css({"color":"#00B4FF"});
-                    });
-                    $(this).css({"color":"#00B4FF"});
-                }else {
-                    $(".contact-conn" + j).hide();
-                    $(".contactNav" + j).mouseenter(function () {
-                        $(this).css({"color": "#00B4FF"});
-                    });
-                    $(".contactNav" + j).mouseleave(function () {
-                        $(this).css({"color": "#ddd"});
-                    })
-                    $(".contactNav"+j).css({"color":"#ddd"});
-                }
 
             }
         }
         //查看更多
         $(".contact-box-foot").click(function () {
             $(".contact-box").hide();
-            $(".more").show()
+            $(".more").show();
             $(".more").addClass("more-show");
             $(".more").removeClass("more-hide");
             flag=3;
@@ -837,6 +860,63 @@
             $(".dropDown-bow").html("&nbsp;c");
             flag=1;
         }
+
+        /*内容部分的左边导航栏进行调换*/
+
+        for(var i=0;i<3;i++){
+            $(".linav"+i).mouseover(function () {
+                $(this).css({
+                    color:"#16BAFF"
+                })
+            })
+            $(".linav"+i).mouseout(function () {
+                $(this).css({
+                    color:"#919191"
+                })
+            })
+        }
+
+        function liNav(index) {
+            for(var i=0;i<3;i++){
+                $(".linav"+i).mouseout(function () {
+                    $(this).css({
+                        color:"#919191"
+                    })
+                })
+
+                if(i==index){
+                    $(".linav"+i).css({
+                        padding:"12px",
+                        color:"#16BAFF",
+                        "border-bottom":"2px solid #16BAFF"
+                    })
+                    $(".linav"+i).mouseout(function () {
+                        $(this).css({
+                            color:"#16BAFF"
+                        })
+                    })
+
+                }else{
+                    $(".linav"+i).css({
+                        padding:"0px",
+                        color:"#919191",
+                        "border-bottom":"none"
+                    })
+                }
+
+            }
+
+            if(index==0){
+                $(".mf-Content-BottLeft-SumList").animate({left:'0px'});
+            }else if(index==1){
+                $(".mf-Content-BottLeft-SumList").animate({left:'-600px'});
+            }else if(index==2){
+                $(".mf-Content-BottLeft-SumList").animate({left:'-1200px'});
+            }
+        }
+
+
+
     </script>
 </body>
 </html>
